@@ -1,0 +1,5868 @@
+[
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:25.90",
+    "time_sec": 145.9,
+    "meet": "Ste",
+    "month": "Mar",
+    "year": 1981,
+    "pct": 65,
+    "swimmers": [
+      "C.Ducharme",
+      "Jacquelin",
+      "R.Houde",
+      "J.Fortier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:59.33",
+    "time_sec": 119.33,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 80,
+    "swimmers": [
+      "F.Bedard",
+      "M.Filteau",
+      "Lei",
+      "Lim",
+      "A.Nolet"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:58.20",
+    "time_sec": 118.2,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 81,
+    "swimmers": [
+      "N.St-Laurent",
+      "Lei",
+      "Lim",
+      "M.Girard",
+      "A.Nolet"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:05.24",
+    "time_sec": 125.24,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 76,
+    "swimmers": [
+      "P.Svartman",
+      "G.Grenier",
+      "D.Plante",
+      "P.Brunet"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:32.40",
+    "time_sec": 152.4,
+    "meet": "Bro",
+    "month": "Fev",
+    "year": 1981,
+    "pct": 70,
+    "swimmers": [
+      "H.Lamarche",
+      "J.Fortier",
+      "M.Malo",
+      "N.Viens"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:21.90",
+    "time_sec": 141.9,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 76,
+    "swimmers": [
+      "A.Tanner",
+      "P.Primeau",
+      "C.Vallieres",
+      "A.San",
+      "Cristobal"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:28.66",
+    "time_sec": 148.66,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 72,
+    "swimmers": [
+      "H.Lamarche",
+      "G.Gosselin",
+      "M.Malo",
+      "G.Grenier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:27.07",
+    "time_sec": 327.07,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1984,
+    "pct": 65,
+    "swimmers": [
+      "P.Dussault",
+      "P.Trudeau",
+      "J.Berard",
+      "Lei",
+      "Lim"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:25.32",
+    "time_sec": 265.32,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1992,
+    "pct": 80,
+    "swimmers": [
+      "S.Bouffard",
+      "B.Charette",
+      "P.Svartman",
+      "D.Pham"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:06.80",
+    "time_sec": 246.8,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2005,
+    "pct": 86,
+    "swimmers": [
+      "S.Proulx",
+      "P.Taylor",
+      "M.Noel",
+      "B.Dalpe"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:51.80",
+    "time_sec": 291.8,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 72,
+    "swimmers": [
+      "G.Grenier",
+      "G.Gosselin",
+      "N.Viens",
+      "M.Malo"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:39.87",
+    "time_sec": 279.87,
+    "meet": "LSL",
+    "month": "Mar",
+    "year": 2018,
+    "pct": 75,
+    "swimmers": [
+      "Fortin",
+      "A.De",
+      "Tonnancour",
+      "Filiatrault",
+      "Berger-Latour"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:45.67",
+    "time_sec": 165.67,
+    "meet": "Bro",
+    "month": "Mar",
+    "year": 1983,
+    "pct": 65,
+    "swimmers": [
+      "C.Marsan",
+      "A.Robert",
+      "D.Morel",
+      "J.Desmarais"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:32.19",
+    "time_sec": 152.19,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 70,
+    "swimmers": [
+      "S.Archambault",
+      "D.Morel",
+      "MJ.St-Charles",
+      "G.Desjardins"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:28.64",
+    "time_sec": 148.64,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 72,
+    "swimmers": [
+      "F.Tremblay",
+      "D.Picard",
+      "MG.Bizier",
+      "E.Gagnon"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:27.40",
+    "time_sec": 147.4,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1987,
+    "pct": 73,
+    "swimmers": [
+      "R.Brosseau",
+      "D.Morel",
+      "M.Lemay",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:10.51",
+    "time_sec": 130.51,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 82,
+    "swimmers": [
+      "M.Girard",
+      "N.Labrecque",
+      "D.Sylvestre",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:09.96",
+    "time_sec": 129.96,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1991,
+    "pct": 83,
+    "swimmers": [
+      "M.Girard",
+      "C.Seguin",
+      "E.Demers",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:05.66",
+    "time_sec": 125.66,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 85,
+    "swimmers": [
+      "M.Girard",
+      "E.Demers",
+      "AM.Stringer",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:02.41",
+    "time_sec": 122.41,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 88,
+    "swimmers": [
+      "E.Demers",
+      "C.Boulanger",
+      "M.Girard",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:29.31",
+    "time_sec": 149.31,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 72,
+    "swimmers": [
+      "N.Kane",
+      "M.Rouillard",
+      "AM.Stringer",
+      "C.Grondin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:18.84",
+    "time_sec": 138.84,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 77,
+    "swimmers": [
+      "E.Demers",
+      "D.Lagace",
+      "J.Racine",
+      "C.Seguin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:00.80",
+    "time_sec": 180.8,
+    "meet": "Bro",
+    "month": "Mar",
+    "year": 1983,
+    "pct": 68,
+    "swimmers": [
+      "C.Marsan",
+      "J.Desmarais",
+      "L.Rochon",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:46.06",
+    "time_sec": 166.06,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1987,
+    "pct": 74,
+    "swimmers": [
+      "M.Lemay",
+      "R.Brosseau",
+      "D.Morel",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:31.96",
+    "time_sec": 151.96,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 81,
+    "swimmers": [
+      "D.Sylvestre",
+      "N.Labrecque",
+      "M.Girard",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:29.37",
+    "time_sec": 149.37,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1991,
+    "pct": 83,
+    "swimmers": [
+      "E.Demers",
+      "C.Seguin",
+      "M.Girard",
+      "D.Lagace"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:22.41",
+    "time_sec": 142.41,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 87,
+    "swimmers": [
+      "J.Grondin",
+      "C.Seguin",
+      "M.Girard",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:21.77",
+    "time_sec": 141.77,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 87,
+    "swimmers": [
+      "G.Delorme",
+      "M.Girard",
+      "C.Boulanger",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:11.30",
+    "time_sec": 191.3,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 64,
+    "swimmers": [
+      "L.Rochon",
+      "L.Godbout",
+      "S.Caron",
+      "Dansereau-Lavoie"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:46.34",
+    "time_sec": 166.34,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 74,
+    "swimmers": [
+      "N.Kane",
+      "D.Morel",
+      "AM.Stringer",
+      "M.Rouillard"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:03.46",
+    "time_sec": 303.46,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1990,
+    "pct": 80,
+    "swimmers": [
+      "M.Girard",
+      "E.Demers",
+      "C.Vallee",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:57.40",
+    "time_sec": 297.4,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 81,
+    "swimmers": [
+      "M.Girard",
+      "J.Grondin",
+      "E.Demers",
+      "G.Delorme"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:46.45",
+    "time_sec": 286.45,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1994,
+    "pct": 84,
+    "swimmers": [
+      "A.Remillard",
+      "C.Seguin",
+      "C.Spickler",
+      "C.Besner"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "6:06.60",
+    "time_sec": 366.6,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 66,
+    "swimmers": [
+      "S.Caron",
+      "S.Koch",
+      "Dansereau-Lavoie",
+      "L.Rochon"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 80,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "5:23.64",
+    "time_sec": 323.64,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 84,
+    "swimmers": [
+      "G.Delorme",
+      "C.Seguin",
+      "M.Girard",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:08.82",
+    "time_sec": 128.82,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 79,
+    "swimmers": [
+      "MJ.St-Charles",
+      "Lei",
+      "Lim",
+      "S.Archambault",
+      "F.Bedard"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:05.88",
+    "time_sec": 125.88,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1998,
+    "pct": 81,
+    "swimmers": [
+      "AM.Stringer",
+      "M.Rouillard",
+      "Prefontaine",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:03.02",
+    "time_sec": 123.02,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1989,
+    "pct": 82,
+    "swimmers": [
+      "P.Svartman",
+      "M.Rouillard",
+      "M.Girard",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:57.67",
+    "time_sec": 117.67,
+    "meet": "Sfy",
+    "month": "Mai",
+    "year": 1989,
+    "pct": 86,
+    "swimmers": [
+      "P.Svartman",
+      "N.Labrecque",
+      "M.Girard",
+      "L.Bessette"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:54.21",
+    "time_sec": 114.21,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2008,
+    "pct": 89,
+    "swimmers": [
+      "C.Aviles",
+      "C.DeRepentigny",
+      "S.Tonnancour",
+      "LM.Gibeau"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:11.15",
+    "time_sec": 131.15,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 77,
+    "swimmers": [
+      "L.Delaney",
+      "D.Plante",
+      "N.Kane",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:04.82",
+    "time_sec": 124.82,
+    "meet": "PPO",
+    "month": "Avr",
+    "year": 2009,
+    "pct": 81,
+    "swimmers": [
+      "LM.Gibeau",
+      "N.Seguin",
+      "L.Gervais",
+      "J.St-Louis"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:33.84",
+    "time_sec": 153.84,
+    "meet": "PC",
+    "month": "Nov",
+    "year": 1982,
+    "pct": 75,
+    "swimmers": [
+      "L.Rochon",
+      "J.Desmarais",
+      "C.Berger",
+      "G.Blais"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:29.53",
+    "time_sec": 149.53,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1986,
+    "pct": 77,
+    "swimmers": [
+      "M.Lemay",
+      "D.Morel",
+      "E.Soucy",
+      "N.St-Laurent"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:15.78",
+    "time_sec": 135.78,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1988,
+    "pct": 85,
+    "swimmers": [
+      "N.Kane",
+      "P.Svartman",
+      "G.Dorion",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:08.46",
+    "time_sec": 128.46,
+    "meet": "Jon",
+    "month": "Avr",
+    "year": 1993,
+    "pct": 90,
+    "swimmers": [
+      "D.Pham",
+      "C.Seguin",
+      "M.Girard",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:20.38",
+    "time_sec": 140.38,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 82,
+    "swimmers": [
+      "N.Kane",
+      "P.Svartman",
+      "G.Dorion",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:07.97",
+    "time_sec": 127.97,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 90,
+    "swimmers": [
+      "D.Pham",
+      "C.Boulanger",
+      "F.Damour",
+      "C.Rouleau"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 80,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:37.59",
+    "time_sec": 277.59,
+    "meet": "POM",
+    "month": "Mar",
+    "year": 1993,
+    "pct": 82,
+    "swimmers": [
+      "C.Du",
+      "Souich",
+      "C.Seguin",
+      "F.Damour",
+      "D.Pham"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:24.60",
+    "time_sec": 144.6,
+    "meet": "Ste",
+    "month": "Mar",
+    "year": 1981,
+    "pct": 66,
+    "swimmers": [
+      "JD.Godbout",
+      "P.Kalouf",
+      "J.Chevrier",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:09.80",
+    "time_sec": 129.8,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 73,
+    "swimmers": [
+      "G.Germain",
+      "J.Berard",
+      "P.Trudeau",
+      "P.Lessard"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:51.31",
+    "time_sec": 111.31,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 86,
+    "swimmers": [
+      "G.Grenier",
+      "L.Bessette",
+      "G.Dorion",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:49.15",
+    "time_sec": 109.15,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 87,
+    "swimmers": [
+      "E.Beaudet",
+      "G.Dorion",
+      "P.Svartman",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:32.25",
+    "time_sec": 152.25,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1985,
+    "pct": 63,
+    "swimmers": [
+      "H.Vroom",
+      "L.Charette",
+      "C.Berger",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "1:54.05",
+    "time_sec": 114.05,
+    "meet": "Pom",
+    "month": "Fev",
+    "year": 1989,
+    "pct": 84,
+    "swimmers": [
+      "G.Grenier",
+      "M.Gervais",
+      "G.Dorion",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "1:50.65",
+    "time_sec": 110.65,
+    "meet": "PPO",
+    "month": "Avr",
+    "year": 2009,
+    "pct": 86,
+    "swimmers": [
+      "B.Raymond",
+      "C.Aviles",
+      "L.Gervais",
+      "LM.Gibeau"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:39.28",
+    "time_sec": 159.28,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1983,
+    "pct": 67,
+    "swimmers": [
+      "F.Fowlie",
+      "G.Blais",
+      "C.Berger",
+      "G.Remillard"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:10.98",
+    "time_sec": 130.98,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 82,
+    "swimmers": [
+      "G.Dorion",
+      "P.Svartman",
+      "G.Grenier",
+      "L.Bessette"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:05.15",
+    "time_sec": 125.15,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 86,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "S.Pelland",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:00.95",
+    "time_sec": 120.95,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 89,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "P.Svartman",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:48.16",
+    "time_sec": 168.16,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1982,
+    "pct": 64,
+    "swimmers": [
+      "C.Gagnon",
+      "J.Fortier",
+      "C.Berger",
+      "R.Houde"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:13.97",
+    "time_sec": 133.97,
+    "meet": "PPO",
+    "month": "Avr",
+    "year": 2009,
+    "pct": 80,
+    "swimmers": [
+      "B.Raymond",
+      "D.Chartrand",
+      "C.Aviles",
+      "L.Gervais"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:12.96",
+    "time_sec": 312.96,
+    "meet": "Bro",
+    "month": "Fev",
+    "year": 1982,
+    "pct": 68,
+    "swimmers": [
+      "R.Houde",
+      "C.Berger",
+      "J.Fortier",
+      "C.Gagnon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:28.45",
+    "time_sec": 268.45,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1989,
+    "pct": 79,
+    "swimmers": [
+      "G.Dorion",
+      "L.Picard",
+      "D.Messier",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:17.33",
+    "time_sec": 257.33,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 82,
+    "swimmers": [
+      "F.Damour",
+      "P.Svartman",
+      "E.Beaudet",
+      "P.Prefontaine"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:17.06",
+    "time_sec": 257.06,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1994,
+    "pct": 82,
+    "swimmers": [
+      "B.Charette",
+      "R.Tousignant",
+      "L.Nowicki",
+      "J.Isbister"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:11.78",
+    "time_sec": 251.78,
+    "meet": "Bro",
+    "month": "Nov",
+    "year": 2009,
+    "pct": 84,
+    "swimmers": [
+      "C.Aviles",
+      "B.Raymond",
+      "L.Gervais",
+      "A.DeTonnancour"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:36.90",
+    "time_sec": 336.9,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1983,
+    "pct": 63,
+    "swimmers": [
+      "Labrecque",
+      "H.Mongeon",
+      "G.Remillard",
+      "G.Blais"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 100,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "4:46.17",
+    "time_sec": 286.17,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 82,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "P.Svartman",
+      "P.Prefontaine"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:24.43",
+    "time_sec": 144.43,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 74,
+    "swimmers": [
+      "J.Fortier",
+      "C.Seguin",
+      "R.Brosseau",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:20.70",
+    "time_sec": 140.7,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 76,
+    "swimmers": [
+      "M.Lemay",
+      "L.Lapointe",
+      "N.Fredette",
+      "C.Seguin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:17.61",
+    "time_sec": 137.61,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1993,
+    "pct": 78,
+    "swimmers": [
+      "M.Lemay",
+      "B.Primeau",
+      "C.Seguin",
+      "C.Boulanger"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:09.99",
+    "time_sec": 129.99,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1994,
+    "pct": 83,
+    "swimmers": [
+      "B.Primeau",
+      "C.Mills",
+      "C.Boulanger",
+      "J.Garneau"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:58.07",
+    "time_sec": 118.07,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 91,
+    "swimmers": [
+      "C.Rouleau",
+      "J.Garneau",
+      "C.Dusouich",
+      "N.Cassivi"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:56.30",
+    "time_sec": 116.3,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2005,
+    "pct": 92,
+    "swimmers": [
+      "N.Rolland",
+      "S.Larouche",
+      "J.Dufour",
+      "S.SaintFuscien"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:44.56",
+    "time_sec": 224.56,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 48,
+    "swimmers": [
+      "C.Marsan",
+      "M.Vaillancourt",
+      "C.Viens",
+      "S.Koch"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:19.44",
+    "time_sec": 139.44,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 77,
+    "swimmers": [
+      "C.Seguin",
+      "M.Lemay",
+      "C.Massicotte",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:09.27",
+    "time_sec": 129.27,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 83,
+    "swimmers": [
+      "AM.Stringer",
+      "C.Massicotte",
+      "C.Boulanger",
+      "C.Du",
+      "Souich"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:46.90",
+    "time_sec": 166.9,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 74,
+    "swimmers": [
+      "E.Demers",
+      "D.Morel",
+      "R.Brosseau",
+      "J.Fortier"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:30.96",
+    "time_sec": 150.96,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 82,
+    "swimmers": [
+      "N.Fredette",
+      "C.Seguin",
+      "E.Demers",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:15.16",
+    "time_sec": 135.16,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 91,
+    "swimmers": [
+      "J.Garneau",
+      "C.Rouleau",
+      "C.Dusouich",
+      "N.Cassivi"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:44.56",
+    "time_sec": 224.56,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 55,
+    "swimmers": [
+      "C.Marsan",
+      "M.Vaillancourt",
+      "C.Viens",
+      "S.Koch"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:28.81",
+    "time_sec": 148.81,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 83,
+    "swimmers": [
+      "C.Du",
+      "Souich",
+      "J.Fortier",
+      "C.Boulanger",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "5:15.36",
+    "time_sec": 315.36,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1989,
+    "pct": 77,
+    "swimmers": [
+      "L.Gervais",
+      "M.Lemay",
+      "R.Brosseau",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "7:33.60",
+    "time_sec": 453.6,
+    "meet": "Oly",
+    "month": "Jan",
+    "year": 1981,
+    "pct": 53,
+    "swimmers": [
+      "Plamondon",
+      "C.Viens",
+      "M.Vaillancourt",
+      "C.Marsan"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "6:10.60",
+    "time_sec": 370.6,
+    "meet": "Oly",
+    "month": "Jun",
+    "year": 1984,
+    "pct": 65,
+    "swimmers": [
+      "C.Marsan",
+      "D.Morel",
+      "G.Desjardins",
+      "MJ.St-Charles"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 100,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "5:43.90",
+    "time_sec": 343.9,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1998,
+    "pct": 79,
+    "swimmers": [
+      "K.Bell",
+      "M.Leclair",
+      "M.Caron",
+      "C.Daoust"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:24.92",
+    "time_sec": 144.92,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 70,
+    "swimmers": [
+      "P.DuSouich",
+      "D.Morel",
+      "G.Desjardins",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:18.54",
+    "time_sec": 138.54,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 73,
+    "swimmers": [
+      "N.St-Laurent",
+      "D.Picard",
+      "MG.Bizier",
+      "G.Germain"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:58.06",
+    "time_sec": 118.06,
+    "meet": "Sfy",
+    "month": "Nov",
+    "year": 1989,
+    "pct": 86,
+    "swimmers": [
+      "P.Svartman",
+      "M.Girard",
+      "G.Dorion",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:47.42",
+    "time_sec": 167.42,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1985,
+    "pct": 60,
+    "swimmers": [
+      "J.Lippinghof",
+      "G.Desjardins",
+      "C.Berger",
+      "C.Marsan"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:14.90",
+    "time_sec": 134.9,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 75,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "C.Seguin",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:55.10",
+    "time_sec": 175.1,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1984,
+    "pct": 66,
+    "swimmers": [
+      "MJ.StCharles",
+      "G.Blais",
+      "C.Berger",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:44.50",
+    "time_sec": 164.5,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 70,
+    "swimmers": [
+      "M.Provencher",
+      "D.Morel",
+      "M.Lemay",
+      "P.Brossard"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:27.00",
+    "time_sec": 147.0,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 78,
+    "swimmers": [
+      "G.Desjardins",
+      "L.Bessette",
+      "M.Gervais",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:23.17",
+    "time_sec": 143.17,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1990,
+    "pct": 81,
+    "swimmers": [
+      "AM.Stringer",
+      "P.Svartman",
+      "G.Dorion",
+      "J.Racine"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:09.60",
+    "time_sec": 129.6,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 89,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "M.Girard",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:09.09",
+    "time_sec": 129.09,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2008,
+    "pct": 89,
+    "swimmers": [
+      "C.DeRepentigny",
+      "LM.Gibeau",
+      "S.Tonnancour",
+      "B.Hart"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:47.42",
+    "time_sec": 167.42,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1985,
+    "pct": 69,
+    "swimmers": [
+      "J.Lippinghof",
+      "G.Desjardins",
+      "C.Berger",
+      "C.Marsan"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:14.90",
+    "time_sec": 134.9,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 85,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "C.Seguin",
+      "J.Grondin"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:40.95",
+    "time_sec": 280.95,
+    "meet": "Bro",
+    "month": "Nov",
+    "year": 2009,
+    "pct": 81,
+    "swimmers": [
+      "A.DeTonnancour",
+      "N.Seguin",
+      "J.Coronel",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:09.58",
+    "time_sec": 309.58,
+    "meet": "POM",
+    "month": "Mar",
+    "year": 1993,
+    "pct": 73,
+    "swimmers": [
+      "J.Fortier",
+      "B.Charette",
+      "C.Massicotte",
+      "S.Bouffard"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 100,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:33.30",
+    "time_sec": 273.3,
+    "meet": "Pom",
+    "month": "Nov",
+    "year": 1993,
+    "pct": 83,
+    "swimmers": [
+      "C.Du",
+      "Souich",
+      "G.Dorion",
+      "R.Tousignant",
+      "C.Rouleau"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:10.29",
+    "time_sec": 130.29,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1983,
+    "pct": 73,
+    "swimmers": [
+      "H.Mongeon",
+      "G.Remillard",
+      "C.Berger",
+      "G.Blais"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:09.62",
+    "time_sec": 129.62,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 74,
+    "swimmers": [
+      "J.Lippinghof",
+      "H.Mongeon",
+      "P.DuSouich",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:04.81",
+    "time_sec": 124.81,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 76,
+    "swimmers": [
+      "J.Lippinghof",
+      "M.Filteau",
+      "P.DuSouich",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:53.59",
+    "time_sec": 113.59,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1990,
+    "pct": 84,
+    "swimmers": [
+      "D.Messier",
+      "S.Pelland",
+      "G.Dorion",
+      "P.Svartman"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:52.32",
+    "time_sec": 112.32,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2015,
+    "pct": 85,
+    "swimmers": [
+      "JF.Daviault",
+      "C.Aviles",
+      "P.Samson",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:49.03",
+    "time_sec": 109.03,
+    "meet": "BRO",
+    "month": "Oct",
+    "year": 2019,
+    "pct": 88,
+    "swimmers": [
+      "G.Fortin",
+      "D.Pena",
+      "B.Raymond",
+      "J.Le",
+      "Siege"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:48.30",
+    "time_sec": 108.3,
+    "meet": "PC",
+    "month": "Feb",
+    "year": 2024,
+    "pct": 88,
+    "swimmers": [
+      "B.Raymond",
+      "R.Beaudoin",
+      "F.Vincent",
+      "V.Lima"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:04.51",
+    "time_sec": 124.51,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 77,
+    "swimmers": [
+      "L.Picard",
+      "D.Messier",
+      "G.Dorion",
+      "P.Lamoureux"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:00.16",
+    "time_sec": 120.16,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 79,
+    "swimmers": [
+      "P.Ladouceur",
+      "D.Messier",
+      "G.Grenier",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "1:56.56",
+    "time_sec": 116.56,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 82,
+    "swimmers": [
+      "F.Damour",
+      "E.Beaudet",
+      "G.Grenier",
+      "S.Pelland"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:41.72",
+    "time_sec": 161.72,
+    "meet": "Bro",
+    "month": "Fev",
+    "year": 1982,
+    "pct": 66,
+    "swimmers": [
+      "C.Gagnon",
+      "J.Fortier",
+      "C.Berger",
+      "R.Bastien"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:31.54",
+    "time_sec": 151.54,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1984,
+    "pct": 71,
+    "swimmers": [
+      "J.Lippinghof",
+      "P.DuSouich",
+      "C.Berger",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:09.86",
+    "time_sec": 129.86,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1990,
+    "pct": 83,
+    "swimmers": [
+      "S.Pelland",
+      "P.Svartman",
+      "G.Dorion",
+      "D.Messier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "1:57.59",
+    "time_sec": 117.59,
+    "meet": "PC",
+    "month": "Apr",
+    "year": 2024,
+    "pct": 91,
+    "swimmers": [
+      "F.Vincent",
+      "JF.Crevier",
+      "B.Raymond",
+      "V.Lima"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:32.81",
+    "time_sec": 152.81,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 70,
+    "swimmers": [
+      "J.Lussier",
+      "B.Lemay",
+      "S.Pelland",
+      "R.Bonneville"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:58.53",
+    "time_sec": 298.53,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1984,
+    "pct": 71,
+    "swimmers": [
+      "C.Berger",
+      "P.DuSouich",
+      "J.Lippinghof",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:40.09",
+    "time_sec": 280.09,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1990,
+    "pct": 76,
+    "swimmers": [
+      "L.Picard",
+      "G.Grenier",
+      "C.Seguin",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:29.55",
+    "time_sec": 269.55,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 79,
+    "swimmers": [
+      "G.Dorion",
+      "S.Pelland",
+      "D.Messier",
+      "R.Delisle"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:22.98",
+    "time_sec": 262.98,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1992,
+    "pct": 80,
+    "swimmers": [
+      "F.Damour",
+      "D.Messier",
+      "S.Pelland",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "3:55.38",
+    "time_sec": 235.38,
+    "meet": "PC",
+    "month": "Apr",
+    "year": 2024,
+    "pct": 90,
+    "swimmers": [
+      "B.Raymond",
+      "F.Vincent",
+      "JF.Crevier",
+      "V.Lima"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "6:24.60",
+    "time_sec": 384.6,
+    "meet": "Oly",
+    "month": "Jun",
+    "year": 1984,
+    "pct": 55,
+    "swimmers": [
+      "C.Hamel",
+      "J.Philion",
+      "D.Ainscow",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:22.40",
+    "time_sec": 322.4,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1986,
+    "pct": 65,
+    "swimmers": [
+      "E.Soucy",
+      "P.Lamoureux",
+      "G.Desjardins",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:07.47",
+    "time_sec": 247.47,
+    "meet": "Lon",
+    "month": "Jun",
+    "year": 2018,
+    "pct": 85,
+    "swimmers": [
+      "P.Samson",
+      "G.Fortin",
+      "C.Aviles",
+      "J.Le",
+      "Siege"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "5:20.78",
+    "time_sec": 320.78,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 73,
+    "swimmers": [
+      "D.Messier",
+      "S.Pelland",
+      "G.Dorion",
+      "R.Delisle"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 120,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 50,
+    "time": "5:04.49",
+    "time_sec": 304.49,
+    "meet": "LSL",
+    "month": "Mar",
+    "year": 2018,
+    "pct": 77,
+    "swimmers": [
+      "C.Aviles",
+      "P.Samson",
+      "G.Fortin",
+      "A.De",
+      "Tonnancour"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:41.59",
+    "time_sec": 221.59,
+    "meet": "Bro",
+    "month": "Dec",
+    "year": 1984,
+    "pct": 48,
+    "swimmers": [
+      "G.Blais",
+      "H.Janelle",
+      "C.Deba",
+      "G.Delorme"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:39.20",
+    "time_sec": 159.2,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 67,
+    "swimmers": [
+      "M.Lemay",
+      "G.Desjardins",
+      "A.Martel",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:20.20",
+    "time_sec": 140.2,
+    "meet": "Jon",
+    "month": "Avr",
+    "year": 1993,
+    "pct": 77,
+    "swimmers": [
+      "B.Primeau",
+      "J.Fortier",
+      "M.Lemay",
+      "C.Massicotte"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:15.87",
+    "time_sec": 135.87,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 79,
+    "swimmers": [
+      "C.Massicotte",
+      "M.Lemay",
+      "B.Primeau",
+      "N.Berger"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:24.63",
+    "time_sec": 144.63,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 74,
+    "swimmers": [
+      "M.Lemay",
+      "D.Sylvestre",
+      "L.Nantel",
+      "R.Brosseau"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:13.74",
+    "time_sec": 133.74,
+    "meet": "Mtl",
+    "month": "Jul",
+    "year": 1994,
+    "pct": 80,
+    "swimmers": [
+      "C.Massicotte",
+      "B.Primeau",
+      "J.Fortier",
+      "J.Garneau"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "4:29.60",
+    "time_sec": 269.6,
+    "meet": "PC",
+    "month": "Dec",
+    "year": 1980,
+    "pct": 45,
+    "swimmers": [
+      "MP.Gagnon",
+      "C.Marsan",
+      "S.Koch",
+      "D.Nolet"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:56.46",
+    "time_sec": 176.46,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 70,
+    "swimmers": [
+      "G.Desjardins",
+      "D.Morel",
+      "M.Lemay",
+      "N.Lavergne"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:45.42",
+    "time_sec": 165.42,
+    "meet": "Stl",
+    "month": "Nov",
+    "year": 1989,
+    "pct": 74,
+    "swimmers": [
+      "M.Lemay",
+      "D.Morel",
+      "M.Girard",
+      "D.Sylvestre"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:35.50",
+    "time_sec": 155.5,
+    "meet": "Stl",
+    "month": "Nov",
+    "year": 1992,
+    "pct": 79,
+    "swimmers": [
+      "B.Primeau",
+      "J.Fortier",
+      "M.Lemay",
+      "C.Massicotte"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:32.04",
+    "time_sec": 152.04,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 81,
+    "swimmers": [
+      "C.Massicotte",
+      "J.Fortier",
+      "M.Lemay",
+      "N.Berger"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:30.23",
+    "time_sec": 150.23,
+    "meet": "Que",
+    "month": "Avr",
+    "year": 1997,
+    "pct": 82,
+    "swimmers": [
+      "M.Lemay",
+      "J.Fortier",
+      "M.Caron",
+      "C.Massicotte"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:25.73",
+    "time_sec": 145.73,
+    "meet": "CSL",
+    "month": "Apr",
+    "year": 2023,
+    "pct": 85,
+    "swimmers": [
+      "V.Nawrot",
+      "K.Lalonde",
+      "A.St-Pierre",
+      "N.Cassivi"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:47.61",
+    "time_sec": 167.61,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 73,
+    "swimmers": [
+      "M.Lemay",
+      "L.Nantel",
+      "R.Brosseau",
+      "D.Sylvestre"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "6:03.27",
+    "time_sec": 363.27,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1989,
+    "pct": 66,
+    "swimmers": [
+      "A.Robert",
+      "D.Bernard",
+      "M.Bisson",
+      "D.Sylvestre"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:53.57",
+    "time_sec": 353.57,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1992,
+    "pct": 68,
+    "swimmers": [
+      "J.Fortier",
+      "D.Morel",
+      "D.Sylvestre",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:41.35",
+    "time_sec": 341.35,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1994,
+    "pct": 71,
+    "swimmers": [
+      "C.Massicotte",
+      "D.Morel",
+      "M.Lemay",
+      "J.Fortier"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:25.06",
+    "time_sec": 325.06,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2002,
+    "pct": 74,
+    "swimmers": [
+      "N.Berger",
+      "C.Seguin",
+      "L.Martineau",
+      "J.Coronel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:09.93",
+    "time_sec": 309.93,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2005,
+    "pct": 78,
+    "swimmers": [
+      "A.Ouellette",
+      "N.Cassivi",
+      "S.Larouche",
+      "M.Bisson"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "6:38.88",
+    "time_sec": 398.88,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 68,
+    "swimmers": [
+      "M.Lemay",
+      "AG.Martin",
+      "E.Demers",
+      "M.Bisson"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "6:23.51",
+    "time_sec": 383.51,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2003,
+    "pct": 71,
+    "swimmers": [
+      "AM.Stringer",
+      "R.Bedard",
+      "C.Seguin",
+      "P.Clement"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 120,
+    "relay_type": "4x200lib",
+    "relay_en": "4×200 freestyle",
+    "pool": 25,
+    "time": "12:16.52",
+    "time_sec": 736.52,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 2023,
+    "pct": 70,
+    "swimmers": [
+      "C.Moreira",
+      "C.Daoust",
+      "N.Cassivi",
+      "A.St-Pierre"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:02.94",
+    "time_sec": 122.94,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 82,
+    "swimmers": [
+      "H.Vallee",
+      "J.Grondin",
+      "M.Girard",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:01.66",
+    "time_sec": 121.66,
+    "meet": "PC",
+    "month": "Jan",
+    "year": 2015,
+    "pct": 83,
+    "swimmers": [
+      "J.Coronel",
+      "C.Aviles",
+      "C.Gagne",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:11.97",
+    "time_sec": 131.97,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 77,
+    "swimmers": [
+      "D.Lagace",
+      "J.Fortier",
+      "D.Messier",
+      "S.Pelland"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:00.25",
+    "time_sec": 120.25,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 84,
+    "swimmers": [
+      "C.Rouleau",
+      "B.Primeau",
+      "G.Grenier",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:58.38",
+    "time_sec": 178.38,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1986,
+    "pct": 65,
+    "swimmers": [
+      "G.Desjardins",
+      "H.Vroom",
+      "C.Berger",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:34.73",
+    "time_sec": 154.73,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1987,
+    "pct": 74,
+    "swimmers": [
+      "M.Lemay",
+      "D.Morel",
+      "P.Messier",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:27.15",
+    "time_sec": 147.15,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 78,
+    "swimmers": [
+      "AM.Stringer",
+      "S.Pelland",
+      "E.Demers",
+      "H.Vallee"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:20.21",
+    "time_sec": 140.21,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 82,
+    "swimmers": [
+      "C.Massicotte",
+      "C.Seguin",
+      "S.Pelland",
+      "D.Messier"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:12.66",
+    "time_sec": 132.66,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 87,
+    "swimmers": [
+      "J.Garneau",
+      "C.Rouleau",
+      "P.Bayard",
+      "A.Williams"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:12.55",
+    "time_sec": 132.55,
+    "meet": "Cam",
+    "month": "Mai",
+    "year": 1995,
+    "pct": 87,
+    "swimmers": [
+      "P.Arsenault",
+      "C.Rouleau",
+      "C.Besner",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:11.16",
+    "time_sec": 131.16,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2005,
+    "pct": 88,
+    "swimmers": [
+      "F.Poiker",
+      "N.Rolland",
+      "S.Larouche",
+      "B.Hart"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:35.56",
+    "time_sec": 155.56,
+    "meet": "Pom",
+    "month": "Fev",
+    "year": 1989,
+    "pct": 74,
+    "swimmers": [
+      "G.Desjardins",
+      "P.Svartman",
+      "G.Dorion",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:43.96",
+    "time_sec": 283.96,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1995,
+    "pct": 80,
+    "swimmers": [
+      "G.Couture",
+      "C.Besner",
+      "M.Girard",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:52.54",
+    "time_sec": 352.54,
+    "meet": "Pom",
+    "month": "Nov",
+    "year": 1993,
+    "pct": 64,
+    "swimmers": [
+      "N.Fredette",
+      "L.Beaudoin",
+      "M.Breton",
+      "C.Vallieres"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:29.00",
+    "time_sec": 329.0,
+    "meet": "PPO",
+    "month": "Fev",
+    "year": 1998,
+    "pct": 69,
+    "swimmers": [
+      "D.Morel",
+      "B.Charette",
+      "J.Tessier",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "4:36.44",
+    "time_sec": 276.44,
+    "meet": "Lon",
+    "month": "Jun",
+    "year": 2015,
+    "pct": 81,
+    "swimmers": [
+      "B.Raymond",
+      "C.Aviles",
+      "J.Coronel",
+      "C.Gagne"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 120,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "5:23.54",
+    "time_sec": 323.54,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1996,
+    "pct": 78,
+    "swimmers": [
+      "N.Berger",
+      "J.Fortier",
+      "P.Arsenault",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:10.90",
+    "time_sec": 130.9,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1987,
+    "pct": 73,
+    "swimmers": [
+      "C.Berger",
+      "J.Lippinghof",
+      "H.Mongeon",
+      "P.Messier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:07.59",
+    "time_sec": 127.59,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1991,
+    "pct": 75,
+    "swimmers": [
+      "G.Dorion",
+      "C.Berger",
+      "H.Mongeon",
+      "F.Damour"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:02.28",
+    "time_sec": 122.28,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1992,
+    "pct": 78,
+    "swimmers": [
+      "S.Pelland",
+      "J.Lippinghof",
+      "P.Messier",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:58.59",
+    "time_sec": 118.59,
+    "meet": "Cam",
+    "month": "Mai",
+    "year": 1995,
+    "pct": 80,
+    "swimmers": [
+      "P.Arsenault",
+      "J.Botbol",
+      "D.Dinev",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:58.05",
+    "time_sec": 118.05,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2022,
+    "pct": 81,
+    "swimmers": [
+      "B.Delpech",
+      "B.Raymond",
+      "C.Aviles",
+      "V.Cholette"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "1:53.21",
+    "time_sec": 113.21,
+    "meet": "DRU",
+    "month": "Apr",
+    "year": 2025,
+    "pct": 84,
+    "swimmers": [
+      "J.Le",
+      "Siege",
+      "M.Escamilla",
+      "F.Pare",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:08.66",
+    "time_sec": 128.66,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 74,
+    "swimmers": [
+      "J.Lippinghof",
+      "C.Berger",
+      "P.Messier",
+      "P.Brossard"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:02.81",
+    "time_sec": 122.81,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 78,
+    "swimmers": [
+      "P.DuSouich",
+      "J.Lippinghof",
+      "S.Pelland",
+      "G.Dorion"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:30.00",
+    "time_sec": 150.0,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1987,
+    "pct": 72,
+    "swimmers": [
+      "C.Berger",
+      "J.Lippinghof",
+      "P.Messier",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:27.31",
+    "time_sec": 147.31,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1992,
+    "pct": 73,
+    "swimmers": [
+      "G.Dorion",
+      "L.Picard",
+      "P.Messier",
+      "H.Vallee"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:20.28",
+    "time_sec": 140.28,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 76,
+    "swimmers": [
+      "D.Dinev",
+      "A.Cantin",
+      "G.Grenier",
+      "J.Botbol"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:19.88",
+    "time_sec": 139.88,
+    "meet": "Cam",
+    "month": "Mai",
+    "year": 1995,
+    "pct": 77,
+    "swimmers": [
+      "L.Nowicki",
+      "J.Botbol",
+      "D.Dinev",
+      "P.Arsenault"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:12.25",
+    "time_sec": 132.25,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 1999,
+    "pct": 81,
+    "swimmers": [
+      "F.Auger",
+      "J.Nowicki",
+      "L.Nowicki",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:26.35",
+    "time_sec": 146.35,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 73,
+    "swimmers": [
+      "J.Lippinghof",
+      "P.Brunet",
+      "P.Messier",
+      "D.Messier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:25.25",
+    "time_sec": 145.25,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 74,
+    "swimmers": [
+      "J.Lippinghof",
+      "P.Primeau",
+      "F.Damour",
+      "M.Breton"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:10.03",
+    "time_sec": 310.03,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1989,
+    "pct": 68,
+    "swimmers": [
+      "C.Berger",
+      "P.Messier",
+      "P.Dussault",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:53.35",
+    "time_sec": 293.35,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1990,
+    "pct": 72,
+    "swimmers": [
+      "C.Berger",
+      "P.Messier",
+      "R.Delisle",
+      "S.Pelland"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:30.24",
+    "time_sec": 270.24,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1999,
+    "pct": 78,
+    "swimmers": [
+      "C.Berger",
+      "J.Nowicki",
+      "L.Nowicki",
+      "F.Auger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 160,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "5:29.16",
+    "time_sec": 329.16,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1998,
+    "pct": 72,
+    "swimmers": [
+      "S.Tessier",
+      "G.Couture",
+      "L.Nowicki",
+      "J.Nowicki"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:51.66",
+    "time_sec": 171.66,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 62,
+    "swimmers": [
+      "C.Grondin",
+      "D.Bernard",
+      "G.Delorme",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:35.15",
+    "time_sec": 155.15,
+    "meet": "Cam",
+    "month": "Mai",
+    "year": 1995,
+    "pct": 69,
+    "swimmers": [
+      "M.Lemay",
+      "H.Trudel",
+      "D.Morel",
+      "J.Fortier"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:34.47",
+    "time_sec": 154.47,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 2004,
+    "pct": 69,
+    "swimmers": [
+      "M.Lemay",
+      "C.Seguin",
+      "M.Bisson",
+      "A.Paquet"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:34.10",
+    "time_sec": 154.1,
+    "meet": "Mtl",
+    "month": "Avr",
+    "year": 2006,
+    "pct": 70,
+    "swimmers": [
+      "M.Lemay",
+      "K.Vear",
+      "G.Desjardins",
+      "S.Larouche"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:32.81",
+    "time_sec": 152.81,
+    "meet": "Bro",
+    "month": "Nov",
+    "year": 2021,
+    "pct": 70,
+    "swimmers": [
+      "C.Daoust",
+      "I.Desroches",
+      "V.Nawrot",
+      "S.Tremblay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:22.85",
+    "time_sec": 142.85,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2022,
+    "pct": 75,
+    "swimmers": [
+      "R.Fernandez",
+      "I.Desroches",
+      "V.Nawrot",
+      "S.Tremblay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:15.84",
+    "time_sec": 135.84,
+    "meet": "PC",
+    "month": "Feb",
+    "year": 2024,
+    "pct": 79,
+    "swimmers": [
+      "K.Lalonde",
+      "V.Nawrot",
+      "N.Cassivi",
+      "M.Gaudreault"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:52.89",
+    "time_sec": 172.89,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 62,
+    "swimmers": [
+      "G.Delorme",
+      "M.Bisson",
+      "A.Martel",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:10.61",
+    "time_sec": 190.61,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 65,
+    "swimmers": [
+      "G.Delorme",
+      "C.Grondin",
+      "G.Desjardins",
+      "M.Bisson"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:53.92",
+    "time_sec": 173.92,
+    "meet": "Cam",
+    "month": "Mai",
+    "year": 1995,
+    "pct": 71,
+    "swimmers": [
+      "M.Lemay",
+      "D.Morel",
+      "J.Fortier",
+      "H.Trudel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:53.27",
+    "time_sec": 173.27,
+    "meet": "Mtl",
+    "month": "Avr",
+    "year": 1998,
+    "pct": 71,
+    "swimmers": [
+      "C.Massicotte",
+      "D.Morel",
+      "M.Lemay",
+      "A.Martin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "6:05.47",
+    "time_sec": 365.47,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2004,
+    "pct": 64,
+    "swimmers": [
+      "M.Lemay",
+      "M.Bisson",
+      "L.Martineau",
+      "AM.Stringer"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:48.09",
+    "time_sec": 348.09,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2010,
+    "pct": 67,
+    "swimmers": [
+      "G.Desjardins",
+      "C.Mills",
+      "J.Coronel",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 160,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "7:55.07",
+    "time_sec": 475.07,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1998,
+    "pct": 57,
+    "swimmers": [
+      "C.Massicotte",
+      "L.Kanash",
+      "D.Morel",
+      "R.Szittner"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:01.56",
+    "time_sec": 181.56,
+    "meet": "PC",
+    "month": "Mar",
+    "year": 1984,
+    "pct": 56,
+    "swimmers": [
+      "M.Berger",
+      "G.Blais",
+      "H.Mongeon",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:30.99",
+    "time_sec": 150.99,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 67,
+    "swimmers": [
+      "H.Mongeon",
+      "G.Desjardins",
+      "P.Brossard",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:24.04",
+    "time_sec": 144.04,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 70,
+    "swimmers": [
+      "M.Bisson",
+      "G.Desjardins",
+      "J.Philion",
+      "L.Picard"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:14.00",
+    "time_sec": 134.0,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 76,
+    "swimmers": [
+      "D.Morel",
+      "P.Messier",
+      "C.Boulanger",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:22.47",
+    "time_sec": 142.47,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 71,
+    "swimmers": [
+      "D.Hebert",
+      "J.Racine",
+      "H.Mongeon",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:15.00",
+    "time_sec": 135.0,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 75,
+    "swimmers": [
+      "M.Lemay",
+      "J.Lippinghof",
+      "JP.Lafond",
+      "M.Lethiecq"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:39.51",
+    "time_sec": 159.51,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1987,
+    "pct": 72,
+    "swimmers": [
+      "J.Lippinghof",
+      "D.Morel",
+      "M.Lemay",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:28.77",
+    "time_sec": 148.77,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 77,
+    "swimmers": [
+      "G.Delorme",
+      "J.Lippinghof",
+      "M.Lemay",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:28.69",
+    "time_sec": 148.69,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 78,
+    "swimmers": [
+      "M.Lemay",
+      "M.Lethiecq",
+      "D.Dinev",
+      "A.Lefebvre"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:26.98",
+    "time_sec": 146.98,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1996,
+    "pct": 78,
+    "swimmers": [
+      "Massicotte",
+      "Lippinghof",
+      "Nowicki",
+      "J.Fortier"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:26.56",
+    "time_sec": 146.56,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 1996,
+    "pct": 72,
+    "swimmers": [
+      "Massicotte",
+      "Lippinghof",
+      "J.Fortier",
+      "Nowicki"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:30.11",
+    "time_sec": 150.11,
+    "meet": "Pom",
+    "month": "Mar",
+    "year": 1988,
+    "pct": 77,
+    "swimmers": [
+      "M.Lemay",
+      "J.Lippinghof",
+      "P.Messier",
+      "L.Nantel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:41.96",
+    "time_sec": 341.96,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1995,
+    "pct": 66,
+    "swimmers": [
+      "D.Morel",
+      "M.Lemay",
+      "H.Vallee",
+      "M.Breton"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:35.62",
+    "time_sec": 335.62,
+    "meet": "POM",
+    "month": "Mar",
+    "year": 1993,
+    "pct": 67,
+    "swimmers": [
+      "I.Viau",
+      "D.Morel",
+      "C.Berger",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "5:13.43",
+    "time_sec": 313.43,
+    "meet": "Pom",
+    "month": "Nov",
+    "year": 1993,
+    "pct": 72,
+    "swimmers": [
+      "C.Boulanger",
+      "C.Berger",
+      "C.Massicotte",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 160,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "7:04.43",
+    "time_sec": 424.43,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2003,
+    "pct": 60,
+    "swimmers": [
+      "C.Massicotte",
+      "E.Torlaschi",
+      "D.Morel",
+      "S.Gagnon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:27.60",
+    "time_sec": 147.6,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 65,
+    "swimmers": [
+      "H.Vroom",
+      "H.Mongeon",
+      "C.Berger",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:21.54",
+    "time_sec": 141.54,
+    "meet": "MN",
+    "month": "Mar",
+    "year": 1990,
+    "pct": 67,
+    "swimmers": [
+      "J.Lippinghof",
+      "J.Philion",
+      "R.Gauthier",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:11.97",
+    "time_sec": 131.97,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1990,
+    "pct": 72,
+    "swimmers": [
+      "P.Messier",
+      "H.Mongeon",
+      "C.Berger",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:08.12",
+    "time_sec": 128.12,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 74,
+    "swimmers": [
+      "S.Pelland",
+      "J.Lippinghof",
+      "P.Messier",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:07.75",
+    "time_sec": 127.75,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 75,
+    "swimmers": [
+      "H.Vallee",
+      "C.Berger",
+      "A.Cantin",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:06.10",
+    "time_sec": 126.1,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1997,
+    "pct": 76,
+    "swimmers": [
+      "P.Arsenault",
+      "H.Mongeon",
+      "J.Lippinghof",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:29.52",
+    "time_sec": 149.52,
+    "meet": "Pom",
+    "month": "Fev",
+    "year": 1989,
+    "pct": 64,
+    "swimmers": [
+      "C.Berger",
+      "H.Vroom",
+      "P.Messier",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:20.02",
+    "time_sec": 140.02,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 68,
+    "swimmers": [
+      "J.Philion",
+      "H.Mongeon",
+      "P.Messier",
+      "H.Vallee"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:18.29",
+    "time_sec": 138.29,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 69,
+    "swimmers": [
+      "C.Berger",
+      "J.Philion",
+      "H.Vallee",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:17.32",
+    "time_sec": 137.32,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 69,
+    "swimmers": [
+      "C.Berger",
+      "JP.Lafond",
+      "J.Philion",
+      "P.Messier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:38.06",
+    "time_sec": 158.06,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1986,
+    "pct": 68,
+    "swimmers": [
+      "J.Lippinghof",
+      "H.Vroom",
+      "C.Berger",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:31.89",
+    "time_sec": 151.89,
+    "meet": "Shr",
+    "month": "Avr",
+    "year": 1990,
+    "pct": 71,
+    "swimmers": [
+      "C.Berger",
+      "J.Lippinghof",
+      "P.Messier",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:22.16",
+    "time_sec": 142.16,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 75,
+    "swimmers": [
+      "S.Pelland",
+      "J.Lippinghof",
+      "P.Messier",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:41.23",
+    "time_sec": 161.23,
+    "meet": "Pom",
+    "month": "Fev",
+    "year": 1989,
+    "pct": 66,
+    "swimmers": [
+      "J.Lippinghof",
+      "H.Vroom",
+      "P.Messier",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "6:30.71",
+    "time_sec": 390.71,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1989,
+    "pct": 54,
+    "swimmers": [
+      "H.Vroom",
+      "R.Gauthier",
+      "J.Philion",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:21.56",
+    "time_sec": 321.56,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1990,
+    "pct": 66,
+    "swimmers": [
+      "H.Mongeon",
+      "J.Philion",
+      "H.Vallee",
+      "D.Messier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:05.86",
+    "time_sec": 305.86,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1992,
+    "pct": 69,
+    "swimmers": [
+      "C.Berger",
+      "H.Vallee",
+      "P.Messier",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "4:39.48",
+    "time_sec": 279.48,
+    "meet": "DRU",
+    "month": "Apr",
+    "year": 2025,
+    "pct": 75,
+    "swimmers": [
+      "B.Delpech",
+      "F.Pare",
+      "C.Aviles",
+      "B.Jaimes"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "7:07.98",
+    "time_sec": 427.98,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 55,
+    "swimmers": [
+      "J.Philion",
+      "H.Vroom",
+      "P.Messier",
+      "H.Vallee"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "6:44.30",
+    "time_sec": 404.3,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1998,
+    "pct": 58,
+    "swimmers": [
+      "H.Vroom",
+      "J.Lippinghof",
+      "C.Berger",
+      "M.Breton"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 200,
+    "relay_type": "4x200lib",
+    "relay_en": "4×200 freestyle",
+    "pool": 25,
+    "time": "12:16.87",
+    "time_sec": 736.87,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 2023,
+    "pct": 64,
+    "swimmers": [
+      "C.Fortin",
+      "G.Mensink",
+      "B.Raymond",
+      "B.Delpech"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:51.24",
+    "time_sec": 231.24,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1990,
+    "pct": 46,
+    "swimmers": [
+      "H.Janelle",
+      "M.Berger",
+      "R.Szittner",
+      "G.Blais"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:30.71",
+    "time_sec": 210.71,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 51,
+    "swimmers": [
+      "H.Janelle",
+      "A.Martel",
+      "M.Berger",
+      "L.Beaudoin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:21.06",
+    "time_sec": 201.06,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1993,
+    "pct": 52,
+    "swimmers": [
+      "R.Szittner",
+      "H.Janelle",
+      "A.Martel",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:08.98",
+    "time_sec": 188.98,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2001,
+    "pct": 57,
+    "swimmers": [
+      "H.Janelle",
+      "M.Bisson",
+      "D.Morel",
+      "C.Massicotte"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:08.76",
+    "time_sec": 188.76,
+    "meet": "PC",
+    "month": "Jan",
+    "year": 2006,
+    "pct": 57,
+    "swimmers": [
+      "S.Larouche",
+      "H.Janelle",
+      "G.Desjardins",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:45.70",
+    "time_sec": 165.7,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 2007,
+    "pct": 65,
+    "swimmers": [
+      "C.Seguin",
+      "D.Morel",
+      "M.Lemay",
+      "G.Desjardins"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:51.01",
+    "time_sec": 231.01,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 46,
+    "swimmers": [
+      "H.Janelle",
+      "M.Berger",
+      "R.Szittner",
+      "G.Delorme"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:50.88",
+    "time_sec": 230.88,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 46,
+    "swimmers": [
+      "H.Janelle",
+      "R.Szittner",
+      "G.Delorme",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:34.92",
+    "time_sec": 214.92,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 50,
+    "swimmers": [
+      "H.Janelle",
+      "G.Delorme",
+      "R.Szittner",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:45.44",
+    "time_sec": 225.44,
+    "meet": "Stl",
+    "month": "Nov",
+    "year": 1989,
+    "pct": 55,
+    "swimmers": [
+      "G.Delorme",
+      "G.Blais",
+      "A.Martel",
+      "M.Berger"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:00.33",
+    "time_sec": 180.33,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 2007,
+    "pct": 68,
+    "swimmers": [
+      "C.Seguin",
+      "D.Morel",
+      "M.Lemay",
+      "G.Desjardins"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "4:01.37",
+    "time_sec": 241.37,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 51,
+    "swimmers": [
+      "G.Delorme",
+      "H.Janelle",
+      "A.Martel",
+      "R.Szittner"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "8:24.63",
+    "time_sec": 504.63,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1990,
+    "pct": 48,
+    "swimmers": [
+      "H.Janelle",
+      "M.Berger",
+      "R.Szittner",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "8:09.58",
+    "time_sec": 489.58,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1994,
+    "pct": 49,
+    "swimmers": [
+      "H.Janelle",
+      "G.Blais",
+      "R.Szittner",
+      "L.Beaudoin"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "7:37.49",
+    "time_sec": 457.49,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2002,
+    "pct": 53,
+    "swimmers": [
+      "M.Lemay",
+      "D.Morel",
+      "M.Berger",
+      "R.Szittner"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "6:30.55",
+    "time_sec": 390.55,
+    "meet": "LSL",
+    "month": "Fev",
+    "year": 2006,
+    "pct": 62,
+    "swimmers": [
+      "G.Desjardins",
+      "D.Morel",
+      "M.Bisson",
+      "C.Massicotte"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "5:42.86",
+    "time_sec": 342.86,
+    "meet": "DRU",
+    "month": "Apr",
+    "year": 2025,
+    "pct": 68,
+    "swimmers": [
+      "M.Lethiecq",
+      "M.Gaudreault",
+      "J.Dufour",
+      "MC.Audet"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 200,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "9:43.20",
+    "time_sec": 583.2,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1991,
+    "pct": 46,
+    "swimmers": [
+      "G.Delorme",
+      "G.Blais",
+      "R.Szittner",
+      "H.Janelle"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:15.35",
+    "time_sec": 195.35,
+    "meet": "MN",
+    "month": "Jan",
+    "year": 1989,
+    "pct": 52,
+    "swimmers": [
+      "H.Janelle",
+      "D.Sylvestre",
+      "H.Vroom",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:47.23",
+    "time_sec": 167.23,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 60,
+    "swimmers": [
+      "M.Berger",
+      "M.Bisson",
+      "H.Mongeon",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:46.45",
+    "time_sec": 166.45,
+    "meet": "Sfy",
+    "month": "Avr",
+    "year": 1992,
+    "pct": 61,
+    "swimmers": [
+      "R.Szittner",
+      "A.Martel",
+      "H.Mongeon",
+      "D.Messier"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:32.83",
+    "time_sec": 152.83,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 66,
+    "swimmers": [
+      "M.Bisson",
+      "D.Morel",
+      "H.Mongeon",
+      "J.Lippinghof"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:25.73",
+    "time_sec": 145.73,
+    "meet": "PC",
+    "month": "Feb",
+    "year": 2017,
+    "pct": 69,
+    "swimmers": [
+      "P.Samson",
+      "M.Lethiecq",
+      "G.Desjardins",
+      "C.Aviles"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:19.26",
+    "time_sec": 139.26,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2018,
+    "pct": 73,
+    "swimmers": [
+      "D.Lacombe",
+      "L.Nowicki",
+      "N.Girard",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:25.72",
+    "time_sec": 205.72,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1990,
+    "pct": 49,
+    "swimmers": [
+      "H.Janelle",
+      "M.Berger",
+      "H.Vallee",
+      "J.Philion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:20.16",
+    "time_sec": 200.16,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 50,
+    "swimmers": [
+      "G.Delorme",
+      "H.Mongeon",
+      "A.Martel",
+      "J.Philion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "2:27.17",
+    "time_sec": 147.17,
+    "meet": "Mtl",
+    "month": "Aug",
+    "year": 2014,
+    "pct": 69,
+    "swimmers": [
+      "C.Aviles",
+      "N.Cassivi",
+      "M.Lemay",
+      "P.Dussault"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:53.43",
+    "time_sec": 173.43,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 66,
+    "swimmers": [
+      "J.Lippinghof",
+      "G.Blais",
+      "P.Messier",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:20.16",
+    "time_sec": 200.16,
+    "meet": "Pom",
+    "month": "Dec",
+    "year": 1991,
+    "pct": 57,
+    "swimmers": [
+      "G.Delorme",
+      "H.Mongeon",
+      "A.Martel",
+      "J.Philion"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "2:51.61",
+    "time_sec": 171.61,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 67,
+    "swimmers": [
+      "J.Lippinghof",
+      "D.Morel",
+      "M.Lemay",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "6:03.58",
+    "time_sec": 363.58,
+    "meet": "POM",
+    "month": "Mar",
+    "year": 1993,
+    "pct": 62,
+    "swimmers": [
+      "M.Bisson",
+      "C.Marsan",
+      "H.Mongeon",
+      "P.Messier"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "6:59.29",
+    "time_sec": 419.29,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1996,
+    "pct": 60,
+    "swimmers": [
+      "M.Lemay",
+      "R.Szittner",
+      "C.Berger",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "6:54.01",
+    "time_sec": 414.01,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2003,
+    "pct": 61,
+    "swimmers": [
+      "M.Lemay",
+      "M.Breton",
+      "C.Berger",
+      "M.Bisson"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 200,
+    "relay_type": "4x200lib",
+    "relay_en": "4×200 freestyle",
+    "pool": 25,
+    "time": "15:31.11",
+    "time_sec": 931.11,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 1992,
+    "pct": 54,
+    "swimmers": [
+      "J.Philion",
+      "H.Vroom",
+      "L.Beaudoin",
+      "A.Martel"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:43.71",
+    "time_sec": 163.71,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 58,
+    "swimmers": [
+      "J.Philion",
+      "H.Vroom",
+      "R.Gauthier",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:40.65",
+    "time_sec": 160.65,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 59,
+    "swimmers": [
+      "J.Lafond",
+      "H.Vroom",
+      "A.Lister",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:32.96",
+    "time_sec": 152.96,
+    "meet": "Mtl",
+    "month": "Avr",
+    "year": 1998,
+    "pct": 62,
+    "swimmers": [
+      "L.Nowicki",
+      "J.Lippinghof",
+      "H.Mongeon",
+      "H.Vroom"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:02.57",
+    "time_sec": 182.57,
+    "meet": "PC",
+    "month": "Avr",
+    "year": 1991,
+    "pct": 59,
+    "swimmers": [
+      "H.Mongeon",
+      "H.Vroom",
+      "J.Philion",
+      "R.Gauthier"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "2:42.91",
+    "time_sec": 162.91,
+    "meet": "Mtl",
+    "month": "Avr",
+    "year": 1998,
+    "pct": 66,
+    "swimmers": [
+      "J.Lippinghof",
+      "H.Vroom",
+      "P.Arsenault",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:06.22",
+    "time_sec": 186.22,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 57,
+    "swimmers": [
+      "H.Mongeon",
+      "H.Vroom",
+      "H.Vallee",
+      "A.Lister"
+    ]
+  },
+  {
+    "category": "hom",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "6:26.81",
+    "time_sec": 386.81,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1992,
+    "pct": 55,
+    "swimmers": [
+      "J.Philion",
+      "H.Vroom",
+      "A.Lister",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "4:29.59",
+    "time_sec": 269.59,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 40,
+    "swimmers": [
+      "H.Janelle",
+      "N.Peers",
+      "G.Blais",
+      "M.Berger"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:06.09",
+    "time_sec": 186.09,
+    "meet": "BRO",
+    "month": "Oct",
+    "year": 2014,
+    "pct": 58,
+    "swimmers": [
+      "M.Bisson",
+      "C.Grondin",
+      "M.Lemay",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:01.36",
+    "time_sec": 181.36,
+    "meet": "BRO",
+    "month": "Nov",
+    "year": 2016,
+    "pct": 59,
+    "swimmers": [
+      "G.Desjardins",
+      "M.Lemay",
+      "M.Lethiecq",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:58.16",
+    "time_sec": 178.16,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2017,
+    "pct": 60,
+    "swimmers": [
+      "M.Lemay",
+      "G.Desjardins",
+      "M.Bisson",
+      "M.Lethiecq"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:54.71",
+    "time_sec": 174.71,
+    "meet": "Bro",
+    "month": "Nov",
+    "year": 2021,
+    "pct": 61,
+    "swimmers": [
+      "M.Lethiecq",
+      "M.Lemay",
+      "D.Morel",
+      "N.Cassivi"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "4:32.14",
+    "time_sec": 272.14,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 45,
+    "swimmers": [
+      "H.Janelle",
+      "G.Blais",
+      "A.Martel",
+      "N.Peers"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:30.18",
+    "time_sec": 210.18,
+    "meet": "Mtl",
+    "month": "Aug",
+    "year": 2014,
+    "pct": 58,
+    "swimmers": [
+      "M.Bisson",
+      "D.Morel",
+      "C.Grondin",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "7:02.93",
+    "time_sec": 422.93,
+    "meet": "Lon",
+    "month": "Jun",
+    "year": 2018,
+    "pct": 55,
+    "swimmers": [
+      "M.Lethiecq",
+      "G.Desjardins",
+      "M.Bisson",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "fem",
+    "min_age": 240,
+    "relay_type": "4x200lib",
+    "relay_en": "4×200 freestyle",
+    "pool": 25,
+    "time": "15:52.96",
+    "time_sec": 952.96,
+    "meet": "DDO",
+    "month": "Mar",
+    "year": 2023,
+    "pct": 54,
+    "swimmers": [
+      "C.Gaviria",
+      "M.Lethiecq",
+      "M.Lemay",
+      "D.Morel"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:26.66",
+    "time_sec": 206.66,
+    "meet": "Jon",
+    "month": "Avr",
+    "year": 1993,
+    "pct": 49,
+    "swimmers": [
+      "H.Vroom",
+      "A.Martel",
+      "A.Lister",
+      "H.Janelle"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:20.20",
+    "time_sec": 200.2,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 50,
+    "swimmers": [
+      "H.Janelle",
+      "A.Martel",
+      "H.Vroom",
+      "A.Lister"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "3:05.86",
+    "time_sec": 185.86,
+    "meet": "Rep",
+    "month": "Jun",
+    "year": 2007,
+    "pct": 54,
+    "swimmers": [
+      "C.Berger",
+      "H.Janelle",
+      "G.Desjardins",
+      "G.Levesque"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:59.07",
+    "time_sec": 179.07,
+    "meet": "Bro",
+    "month": "Nov",
+    "year": 2021,
+    "pct": 56,
+    "swimmers": [
+      "C.Berger",
+      "P.Dussault",
+      "J.Lesperance",
+      "G.Desjardins"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:48.35",
+    "time_sec": 168.35,
+    "meet": "DRU",
+    "month": "Jan",
+    "year": 2024,
+    "pct": 60,
+    "swimmers": [
+      "B.Raymond",
+      "M.Gaudreault",
+      "M.Lethiecq",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 25,
+    "time": "2:27.39",
+    "time_sec": 147.39,
+    "meet": "SHY",
+    "month": "Nov",
+    "year": 2024,
+    "pct": 69,
+    "swimmers": [
+      "F.Pare",
+      "M.Lethiecq",
+      "M.Gaudreault",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50lib",
+    "relay_en": "4×50 freestyle",
+    "pool": 50,
+    "time": "3:14.82",
+    "time_sec": 194.82,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 52,
+    "swimmers": [
+      "H.Janelle",
+      "A.Lister",
+      "A.Martel",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "4:16.79",
+    "time_sec": 256.79,
+    "meet": "DDO",
+    "month": "Avr",
+    "year": 1989,
+    "pct": 45,
+    "swimmers": [
+      "H.Vroom",
+      "H.Janelle",
+      "J.Philion",
+      "N.Peers"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:52.91",
+    "time_sec": 232.91,
+    "meet": "Jon",
+    "month": "Avr",
+    "year": 1993,
+    "pct": 49,
+    "swimmers": [
+      "A.Lister",
+      "H.Vroom",
+      "A.Martel",
+      "H.Janelle"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:35.72",
+    "time_sec": 215.72,
+    "meet": "Lon",
+    "month": "Avr",
+    "year": 1994,
+    "pct": 53,
+    "swimmers": [
+      "H.Vroom",
+      "M.Berger",
+      "A.Martel",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:33.19",
+    "time_sec": 213.19,
+    "meet": "TRV",
+    "month": "Avr",
+    "year": 2001,
+    "pct": 54,
+    "swimmers": [
+      "D.Morel",
+      "H.Janelle",
+      "J.Lippinghof",
+      "H.Mongeon"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 25,
+    "time": "3:20.72",
+    "time_sec": 200.72,
+    "meet": "MN",
+    "month": "Dec",
+    "year": 2023,
+    "pct": 57,
+    "swimmers": [
+      "M.Lemay",
+      "M.Lethiecq",
+      "C.Berger",
+      "B.Raymond"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x50rqn",
+    "relay_en": "4×50 medley",
+    "pool": 50,
+    "time": "3:45.40",
+    "time_sec": 225.4,
+    "meet": "Pom",
+    "month": "Jun",
+    "year": 1993,
+    "pct": 51,
+    "swimmers": [
+      "H.Vroom",
+      "H.Janelle",
+      "A.Martel",
+      "A.Lister"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "7:20.15",
+    "time_sec": 440.15,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 1995,
+    "pct": 51,
+    "swimmers": [
+      "C.Berger",
+      "J.Lippinghof",
+      "G.Blais",
+      "H.Janelle"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 25,
+    "time": "7:03.04",
+    "time_sec": 423.04,
+    "meet": "LSL",
+    "month": "Fev",
+    "year": 2008,
+    "pct": 53,
+    "swimmers": [
+      "C.Berger",
+      "E.Torlaschi",
+      "G.Desjardins",
+      "H.Janelle"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "8:07.04",
+    "time_sec": 487.04,
+    "meet": "DDO",
+    "month": "Mai",
+    "year": 1994,
+    "pct": 46,
+    "swimmers": [
+      "H.Janelle",
+      "G.Blais",
+      "A.Lister",
+      "C.Berger"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "6:46.27",
+    "time_sec": 406.27,
+    "meet": "LSL",
+    "month": "Mar",
+    "year": 2019,
+    "pct": 55,
+    "swimmers": [
+      "P.Samson",
+      "C.Berger",
+      "D.Morel",
+      "M.Bisson"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "2:40.46",
+    "time_sec": 160.46,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2018,
+    "pct": 59,
+    "swimmers": [
+      "J.Lippinghof",
+      "P.Dussault",
+      "J.Botbol",
+      "L.Nowicki"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "3:15.19",
+    "time_sec": 195.19,
+    "meet": "Ste",
+    "month": "Oct",
+    "year": 2025,
+    "pct": 55,
+    "swimmers": [
+      "M.Rinfret",
+      "M.Lethiecq",
+      "G.Desjardins",
+      "M.Lemay"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 240,
+    "relay_type": "4x100lib",
+    "relay_en": "4×100 freestyle",
+    "pool": 50,
+    "time": "2:59.05",
+    "time_sec": 179.05,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2018,
+    "pct": 56,
+    "swimmers": [
+      "J.Lippinghof",
+      "C.Berger",
+      "M.Lethiecq",
+      "G.Desjardins"
+    ]
+  },
+  {
+    "category": "mix",
+    "min_age": 280,
+    "relay_type": "4x100rqn",
+    "relay_en": "4×100 medley",
+    "pool": 25,
+    "time": "9:27.85",
+    "time_sec": 567.85,
+    "meet": "Bro",
+    "month": "Oct",
+    "year": 2003,
+    "pct": 44,
+    "swimmers": [
+      "H.Mongeon",
+      "H.Vroom",
+      "R.Szittner",
+      "H.Janelle"
+    ]
+  }
+]

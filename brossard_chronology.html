@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Vague de Brossard — Chronologie</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0b0e14;--ink2:#111520;--panel:#161b26;--panel2:#1b2030;
+  --edge:rgba(255,255,255,0.07);--edge2:rgba(255,255,255,0.04);
+  --teal:#00d4c8;--teal-dim:rgba(0,212,200,0.10);
+  --gold:#f5c518;--gold-dim:rgba(245,197,24,0.10);
+  --red:#ff4455;--green:#22c55e;--purple:#9b8cff;
+  --muted:#6b7280;--soft:#9ca3af;--text:#dde2ed;
+  --r:8px;
+}
+html,body{background:var(--ink);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;min-height:100vh}
+body{overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(108deg,transparent,transparent 70px,rgba(255,255,255,.012) 70px,rgba(255,255,255,.012) 71px);pointer-events:none;z-index:0}
+
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ══ HEADER ══ */
+header{position:relative;z-index:2;display:flex;align-items:stretch;border-bottom:1px solid var(--edge);background:linear-gradient(140deg,#0d1321 0%,#10182a 100%)}
+.hd-bar{width:5px;background:var(--teal);flex-shrink:0}
+.hd-brand{padding:18px 26px;border-right:1px solid var(--edge);min-width:300px}
+.eyebrow{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:5px}
+.club{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3.5vw,38px);line-height:.92;color:#fff;letter-spacing:.01em}
+.club em{color:var(--teal);font-style:normal}
+.subtitle{font-size:11px;color:var(--soft);margin-top:6px;letter-spacing:.04em}
+.hd-kpis{display:flex;margin-left:auto;flex-wrap:wrap}
+.kpi{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 22px;border-left:1px solid var(--edge);min-width:90px;gap:3px}
+.kpi-v{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;line-height:1}
+.kpi-v.teal{color:var(--teal)}
+.kpi-v.gold{color:var(--gold)}
+.kpi-l{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center}
+
+/* ══ PAGE NAV ══ */
+.pgnav{position:relative;z-index:2;display:flex;align-items:stretch;border-bottom:1px solid var(--edge);background:var(--ink)}
+.pgnav-tab{display:flex;align-items:center;gap:8px;padding:0 22px;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.06em;color:var(--soft);background:transparent;border:none;border-right:1px solid var(--edge);border-bottom:2px solid transparent;cursor:pointer;transition:all .14s;text-decoration:none;height:42px;text-transform:uppercase}
+.pgnav-tab:hover{color:#fff;background:rgba(255,255,255,.03)}
+.pgnav-tab.on{color:var(--teal);border-bottom-color:var(--teal);background:var(--teal-dim)}
+.pgnav-tab .pg-ic{font-size:11px;color:var(--muted)}
+.pgnav-tab.on .pg-ic{color:var(--teal)}
+.pgnav-spacer{flex:1;border-bottom:1px solid var(--edge)}
+
+/* ══ MODE TOGGLE ══ */
+.modes{display:flex;align-items:center;gap:0;border-bottom:1px solid var(--edge);background:var(--ink2);padding:0 18px}
+.mode-tabs{display:flex;gap:0}
+.mode-tab{padding:11px 18px;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.08em;color:var(--soft);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .14s;text-transform:uppercase}
+.mode-tab:hover{color:#fff}
+.mode-tab.on{color:var(--teal);border-bottom-color:var(--teal)}
+.mode-tabs-lbl{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-right:14px}
+
+/* ══ YEAR SELECTOR ══ */
+.years{position:sticky;top:0;z-index:6;background:var(--ink);padding:14px 18px 12px;border-bottom:1px solid var(--edge)}
+.years-hd{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px;gap:14px}
+.years-title{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.years-hint{font-size:10px;color:var(--muted);font-style:italic}
+.years-strip{display:flex;align-items:flex-end;gap:3px;height:84px;padding:0 1px}
+.ybar{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;min-width:0;position:relative;transition:transform .12s}
+.ybar:hover{transform:translateY(-2px)}
+.ybar-bar{width:100%;background:rgba(255,255,255,.08);border-radius:2px 2px 0 0;transition:background .14s}
+.ybar:hover .ybar-bar{background:rgba(0,212,200,.25)}
+.ybar.on .ybar-bar{background:var(--teal);box-shadow:0 0 0 1px rgba(0,212,200,.35),0 -8px 16px rgba(0,212,200,.15)}
+.ybar.zero .ybar-bar{background:rgba(255,255,255,.04)}
+.ybar-y{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.04em;color:var(--muted);line-height:1}
+.ybar.on .ybar-y{color:var(--teal)}
+.ybar-c{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--teal);opacity:0;pointer-events:none;transition:opacity .14s;white-space:nowrap}
+.ybar:hover .ybar-c,.ybar.on .ybar-c{opacity:1}
+
+/* ══ ANNUAL VIEW ══ */
+.annual{padding:18px}
+.year-banner{display:flex;align-items:baseline;gap:18px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--edge)}
+.year-num{font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:.02em;color:#fff;line-height:.85}
+.year-num em{color:var(--teal);font-style:normal}
+.year-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.year-note{margin-left:auto;font-size:12px;color:var(--gold);font-style:italic;max-width:340px;text-align:right;line-height:1.4}
+
+.year-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:18px}
+.ykpi{background:var(--panel);border:1px solid var(--edge);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden}
+.ykpi::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal)}
+.ykpi.gold::before{background:var(--gold)}
+.ykpi.purple::before{background:var(--purple)}
+.ykpi.green::before{background:var(--green)}
+.ykpi-l{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ykpi-v{font-family:'Bebas Neue',sans-serif;font-size:30px;color:#fff;line-height:1;letter-spacing:.02em}
+.ykpi-sub{font-size:11px;color:var(--soft)}
+
+.year-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;margin-bottom:18px}
+@media(max-width:980px){.year-grid{grid-template-columns:1fr}}
+
+.panel{background:var(--panel);border:1px solid var(--edge);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.panel-hd{padding:11px 14px;border-bottom:1px solid var(--edge);display:flex;align-items:center;gap:10px;background:var(--panel2)}
+.panel-ico{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.06em;color:var(--teal)}
+.panel-ttl{font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;letter-spacing:.04em;flex:1}
+.panel-ct{font-size:11px;color:var(--muted)}
+.panel-bd{padding:8px 0;flex:1;overflow-y:auto;max-height:540px}
+
+/* Chronological log grouped by meet */
+.meet-blk{padding:10px 14px;border-bottom:1px solid var(--edge2)}
+.meet-blk:last-child{border-bottom:none}
+.meet-hd{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+.meet-name{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.05em;color:#fff}
+.meet-meta{font-size:10px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.meet-ct{margin-left:auto;font-size:10px;color:var(--teal);font-weight:700}
+.swim-row{display:grid;grid-template-columns:60px 76px 1fr 50px;gap:8px;padding:3px 0;font-size:12px;align-items:baseline}
+.swim-ev{font-family:'Bebas Neue',sans-serif;font-size:12px;color:#fff;letter-spacing:.03em}
+.swim-tm{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--teal);letter-spacing:.02em;text-align:left}
+.swim-tm.gold{color:var(--gold)}
+.swim-nm{font-size:12px;color:var(--soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.swim-ag{font-size:10px;color:var(--muted);text-align:right}
+.swim-row.relay .swim-nm{color:var(--purple);font-style:italic}
+
+/* Top swimmers bar list */
+.tswim{display:flex;align-items:center;gap:10px;padding:7px 14px}
+.tswim-rk{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--muted);min-width:18px}
+.tswim-nm{flex:1;font-size:12px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:default}
+.tswim-bar{flex:0 0 110px;height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.tswim-bar-fill{height:100%;background:var(--teal);border-radius:3px}
+.tswim-c{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--teal);min-width:24px;text-align:right;letter-spacing:.02em}
+
+/* Notable records */
+.notable{padding:9px 14px;border-bottom:1px solid var(--edge2)}
+.notable:last-child{border-bottom:none}
+.notable-tp{display:flex;align-items:baseline;gap:8px}
+.notable-pct{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);letter-spacing:.02em;min-width:42px}
+.notable-nm{font-size:12px;color:#fff;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.notable-tm{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--teal);letter-spacing:.02em}
+.notable-mt{font-size:10px;color:var(--muted);margin-top:2px;letter-spacing:.04em}
+
+/* Snapshot section */
+.snap-hd{display:flex;align-items:baseline;gap:12px;margin:24px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--edge)}
+.snap-ttl{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#fff;letter-spacing:.04em}
+.snap-sub{font-size:11px;color:var(--soft)}
+.snap-grid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:14px}
+@media(max-width:980px){.snap-grid{grid-template-columns:1fr}}
+
+.lb-row{display:grid;grid-template-columns:30px 1fr 36px;gap:8px;align-items:center;padding:5px 14px;font-size:12px;border-bottom:1px solid var(--edge2)}
+.lb-row:last-child{border-bottom:none}
+.lb-row:nth-child(1) .lb-rk,.lb-row:nth-child(1) .lb-nm{color:var(--gold)}
+.lb-rk{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--muted);text-align:center}
+.lb-nm{color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-c{font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--teal);text-align:right;letter-spacing:.02em}
+
+.old-row{padding:8px 14px;border-bottom:1px solid var(--edge2)}
+.old-row:last-child{border-bottom:none}
+.old-tp{display:flex;align-items:baseline;gap:8px}
+.old-ev{font-family:'Bebas Neue',sans-serif;font-size:12px;color:#fff;letter-spacing:.04em}
+.old-age{font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.old-yr{margin-left:auto;font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--gold);letter-spacing:.02em}
+.old-sub{font-size:12px;color:var(--soft);margin-top:2px}
+.old-tm{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--teal);margin-right:8px}
+
+.no-snap{padding:30px 14px;text-align:center;color:var(--muted);font-size:12px;font-style:italic}
+
+/* Empty state */
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;color:var(--muted);gap:8px;text-align:center}
+
+/* ══ LONGITUDINAL VIEW ══ */
+.longi{padding:18px;display:none}
+.longi.on{display:block}
+.annual.off{display:none}
+.longi-block{margin-bottom:24px;background:var(--panel);border:1px solid var(--edge);border-radius:var(--r);overflow:hidden}
+.longi-hd{padding:14px 18px;border-bottom:1px solid var(--edge);display:flex;align-items:baseline;gap:14px;background:var(--panel2)}
+.longi-ttl{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;letter-spacing:.04em}
+.longi-sub{font-size:11px;color:var(--muted);font-style:italic}
+.longi-bd{padding:18px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;font-size:11px}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-sw{width:14px;height:3px;border-radius:2px}
+
+/* SVG charts */
+svg.chart{width:100%;display:block;font-family:'DM Sans',sans-serif}
+.chart text{fill:var(--soft);font-size:10px}
+.chart .axis{stroke:var(--edge);stroke-width:1}
+.chart .grid{stroke:var(--edge2);stroke-width:1}
+.chart .lbl{fill:var(--muted);font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* Heatmap */
+.hm{display:grid;gap:2px;font-size:10px}
+.hm-row{display:grid;grid-template-columns:50px repeat(12, 1fr);gap:2px;align-items:center}
+.hm-yh{font-family:'Bebas Neue',sans-serif;font-size:11px;color:var(--muted);text-align:right;padding-right:6px}
+.hm-cell{aspect-ratio:1;background:rgba(255,255,255,.04);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0)}
+.hm-cell:hover{outline:1px solid var(--teal);color:#fff}
+.hm-mh{display:grid;grid-template-columns:50px repeat(12, 1fr);gap:2px;margin-bottom:4px}
+.hm-mh-lbl{font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--muted);text-align:center}
+
+/* footer */
+footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);border-top:1px solid var(--edge)}
+
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.09);border-radius:3px}
+
+@media(max-width:680px){
+  .hd-brand{min-width:0;padding:14px 18px}
+  .kpi{padding:10px 14px;min-width:70px}
+  .year-num{font-size:48px}
+  .year-note{display:none}
+  .annual,.longi{padding:14px}
+  .year-grid,.snap-grid{gap:10px}
+  .swim-row{grid-template-columns:54px 64px 1fr 44px}
+  .tswim-bar{flex-basis:60px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd-bar"></div>
+  <div class="hd-brand">
+    <div class="eyebrow">Maîtres Nageurs · Chronologie des records</div>
+    <div class="club">La Vague de <em>Brossard</em></div>
+    <div class="subtitle">Année par année — 1997 à 2026</div>
+  </div>
+  <div class="hd-kpis" id="kpis"></div>
+</header>
+
+<!-- PAGE NAV -->
+<nav class="pgnav" aria-label="Navigation principale">
+  <a class="pgnav-tab" href="brossard_dashboard.html"><span class="pg-ic">▎</span>Records</a>
+  <a class="pgnav-tab on" href="brossard_chronology.html" aria-current="page"><span class="pg-ic">↗</span>Chronologie</a>
+  <div class="pgnav-spacer"></div>
+</nav>
+
+<!-- VIEW MODE -->
+<div class="modes">
+  <span class="mode-tabs-lbl">Vue</span>
+  <div class="mode-tabs">
+    <button class="mode-tab on" data-mode="annual">Annuel</button>
+    <button class="mode-tab" data-mode="longi">Longitudinal</button>
+  </div>
+</div>
+
+<!-- Year selector strip -->
+<div class="years" id="years-wrap">
+  <div class="years-hd">
+    <span class="years-title">Records brisés par année — cliquer pour explorer</span>
+    <span class="years-hint" id="years-hint"></span>
+  </div>
+  <div class="years-strip" id="years-strip"></div>
+</div>
+
+<!-- ANNUAL VIEW -->
+<section class="annual" id="annual">
+  <div class="year-banner">
+    <div class="year-num"><span id="yb-year">—</span></div>
+    <div class="year-tag" id="yb-tag">Année</div>
+    <div class="year-note" id="yb-note"></div>
+  </div>
+  <div class="year-kpis" id="year-kpis"></div>
+  <div class="year-grid">
+    <div class="panel">
+      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Records brisés</span><span class="panel-ct" id="rb-count"></span></div>
+      <div class="panel-bd" id="rb-body"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Vedettes de l'année</span><span class="panel-ct">Top 10</span></div>
+      <div class="panel-bd" id="ts-body"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Performances remarquables</span><span class="panel-ct">FINA %</span></div>
+      <div class="panel-bd" id="nr-body"></div>
+    </div>
+  </div>
+
+  <div id="snap-section">
+    <div class="snap-hd">
+      <div class="snap-ttl">Au 31 décembre <span id="snap-year">—</span></div>
+      <div class="snap-sub">Records détenus au tournant de l'année</div>
+    </div>
+    <div class="snap-grid">
+      <div class="panel">
+        <div class="panel-hd"><span class="panel-ico">♀</span><span class="panel-ttl">Femmes — détentrices</span><span class="panel-ct">Top 10</span></div>
+        <div class="panel-bd" id="sw-body"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-hd"><span class="panel-ico">♂</span><span class="panel-ttl">Hommes — détenteurs</span><span class="panel-ct">Top 10</span></div>
+        <div class="panel-bd" id="sm-body"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-hd"><span class="panel-ico">⏳</span><span class="panel-ttl">Records les plus anciens</span><span class="panel-ct">Encore en vigueur</span></div>
+        <div class="panel-bd" id="so-body"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LONGITUDINAL VIEW -->
+<section class="longi" id="longi">
+  <div class="longi-block">
+    <div class="longi-hd">
+      <div class="longi-ttl">Records brisés — vue d'ensemble</div>
+      <div class="longi-sub">Volume annuel sur 30 ans · 1997 → 2026</div>
+    </div>
+    <div class="longi-bd"><svg class="chart" id="big-bar" viewBox="0 0 920 280" preserveAspectRatio="none"></svg></div>
+  </div>
+
+  <div class="longi-block">
+    <div class="longi-hd">
+      <div class="longi-ttl">Records détenus au fil des ans</div>
+      <div class="longi-sub">Top 5 — femmes &amp; hommes · d'après les bilans du 31 décembre</div>
+    </div>
+    <div class="longi-bd">
+      <div class="legend" id="line-legend"></div>
+      <svg class="chart" id="line-chart" viewBox="0 0 920 380" preserveAspectRatio="none"></svg>
+    </div>
+  </div>
+
+  <div class="longi-block">
+    <div class="longi-hd">
+      <div class="longi-ttl">Saison des records</div>
+      <div class="longi-sub">Carte de chaleur · mois × année</div>
+    </div>
+    <div class="longi-bd"><div class="hm" id="heatmap"></div></div>
+  </div>
+</section>
+
+<footer>
+  Données : <a href="https://www.statsman.ca/index0.html" target="_blank">statsman.ca</a> · Mis à jour automatiquement par <code>parse_brossard_yearly.py</code>
+</footer>
+
+<script src="brossard_chronology_data.js"></script>
+<script>
+'use strict';
+
+// ════════════════════════════════════════════════════════════════════════
+// State + data
+// ════════════════════════════════════════════════════════════════════════
+
+const Y = window.YEARLY;
+const ALL_YEARS = Object.keys(Y.records_per_year).map(Number).sort((a,b)=>a-b);
+const FIRST_YEAR = ALL_YEARS[0];
+const LAST_YEAR  = ALL_YEARS[ALL_YEARS.length-1];
+
+const STROKE_FR = {lib:'libre', dos:'dos', bra:'brasse', pap:'papillon', qni:'QNI', rqn:'QNI (relais)'};
+const MONTH_FR  = ['', 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Juil', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc'];
+const MONTH_FULL = ['', 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+// Curated notes for years that have a story
+const YEAR_NOTES = {
+  2020: 'Saison écourtée par la COVID-19',
+  2021: 'Reprise progressive · saison limitée',
+  2012: 'Année très tranquille · 4 records seulement',
+  2013: 'Année calme · activité réduite',
+  2024: 'Année record du club · 118 marques battues',
+  1997: 'Première année de la chronologie',
+};
+
+let state = {
+  mode: 'annual',
+  year: LAST_YEAR,
+};
+
+// ════════════════════════════════════════════════════════════════════════
+// Header KPIs (overall, not year-specific)
+// ════════════════════════════════════════════════════════════════════════
+
+(function renderHeaderKpis(){
+  const total = Y.individual.length + Y.relays.length;
+  const totalInd = Y.individual.length;
+  const swimmers = new Set(Y.individual.map(r=>r.n)).size;
+  const peakYear = ALL_YEARS.reduce((a,b)=>Y.records_per_year[b] > Y.records_per_year[a] ? b : a);
+  const peakCount = Y.records_per_year[peakYear];
+  const span = `${FIRST_YEAR}–${LAST_YEAR}`;
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi"><div class="kpi-v teal">${total}</div><div class="kpi-l">Records brisés</div></div>
+    <div class="kpi"><div class="kpi-v">${swimmers}</div><div class="kpi-l">Nageurs·euses</div></div>
+    <div class="kpi"><div class="kpi-v gold">${peakCount}</div><div class="kpi-l">${peakYear} · pic</div></div>
+    <div class="kpi"><div class="kpi-v">${span}</div><div class="kpi-l">Période</div></div>
+  `;
+})();
+
+// ════════════════════════════════════════════════════════════════════════
+// Year selector strip
+// ════════════════════════════════════════════════════════════════════════
+
+function renderYearStrip(){
+  const strip = document.getElementById('years-strip');
+  const counts = ALL_YEARS.map(y => Y.records_per_year[y]);
+  const max = Math.max(...counts);
+  strip.innerHTML = ALL_YEARS.map(yr => {
+    const c = Y.records_per_year[yr];
+    const h = max > 0 ? Math.max(2, Math.round((c / max) * 64)) : 2;
+    const cls = (c === 0 ? 'zero ' : '') + (yr === state.year ? 'on' : '');
+    return `<div class="ybar ${cls}" data-y="${yr}">
+      <span class="ybar-c">${c}</span>
+      <div class="ybar-bar" style="height:${h}px"></div>
+      <span class="ybar-y">${String(yr).slice(-2)}</span>
+    </div>`;
+  }).join('');
+  document.getElementById('years-hint').textContent =
+    `${ALL_YEARS.length} années · ${counts.reduce((a,b)=>a+b,0)} records au total`;
+}
+
+document.getElementById('years-strip').addEventListener('click', e => {
+  const t = e.target.closest('.ybar');
+  if (!t) return;
+  state.year = +t.dataset.y;
+  renderYearStrip();
+  renderAnnual();
+});
+
+// ════════════════════════════════════════════════════════════════════════
+// Annual view
+// ════════════════════════════════════════════════════════════════════════
+
+function fmtSwim(r){
+  return `${r.d}${r.k} ${r.p}m`;
+}
+
+function pctClass(p){ return p >= 90 ? 'gold' : 'teal'; }
+
+function renderAnnual(){
+  const yr = state.year;
+  document.getElementById('yb-year').textContent = yr;
+  const note = YEAR_NOTES[yr] || '';
+  document.getElementById('yb-note').textContent = note;
+  document.getElementById('yb-tag').textContent =
+    yr === LAST_YEAR ? 'Année en cours' : `${yr - FIRST_YEAR + 1}e année de la chronologie`;
+
+  const yData = Y.by_year[String(yr)];
+  if (!yData || yData.total === 0){
+    document.getElementById('year-kpis').innerHTML = '';
+    document.getElementById('rb-body').innerHTML = '<div class="empty">Aucun record brisé cette année.</div>';
+    document.getElementById('rb-count').textContent = '0';
+    document.getElementById('ts-body').innerHTML = '<div class="empty">—</div>';
+    document.getElementById('nr-body').innerHTML = '<div class="empty">—</div>';
+    renderSnapshot(yr);
+    return;
+  }
+
+  // KPIs
+  const fCount = yData.by_gender.F || 0;
+  const mCount = yData.by_gender.M || 0;
+  const relCount = yData.total_relay || 0;
+  const topSw = yData.top_swimmers[0];
+  const peakNotable = yData.notable_records[0];
+  const meets = Object.keys(yData.by_meet).length;
+  document.getElementById('year-kpis').innerHTML = `
+    <div class="ykpi">
+      <div class="ykpi-l">Records brisés</div>
+      <div class="ykpi-v">${yData.total}</div>
+      <div class="ykpi-sub">${yData.total_individual} individuels · ${relCount} relais</div>
+    </div>
+    <div class="ykpi gold">
+      <div class="ykpi-l">Femmes / hommes</div>
+      <div class="ykpi-v">${fCount} <span style="color:var(--muted);font-size:18px">·</span> ${mCount}</div>
+      <div class="ykpi-sub">${pctOf(fCount, fCount+mCount)}% femmes</div>
+    </div>
+    <div class="ykpi purple">
+      <div class="ykpi-l">Vedette de l'année</div>
+      <div class="ykpi-v" style="font-size:22px">${topSw ? topSw.name : '—'}</div>
+      <div class="ykpi-sub">${topSw ? topSw.records_set + ' marques' : ''}</div>
+    </div>
+    <div class="ykpi green">
+      <div class="ykpi-l">Pointage maximal</div>
+      <div class="ykpi-v">${peakNotable ? peakNotable.pct + '%' : '—'}</div>
+      <div class="ykpi-sub">${peakNotable ? peakNotable.name : ''}</div>
+    </div>
+    <div class="ykpi">
+      <div class="ykpi-l">Compétitions</div>
+      <div class="ykpi-v">${meets}</div>
+      <div class="ykpi-sub">lieux distincts</div>
+    </div>
+  `;
+
+  renderRecordsBroken(yr);
+  renderTopSwimmers(yData);
+  renderNotables(yData);
+  renderSnapshot(yr);
+}
+
+function pctOf(part, whole){
+  if (!whole) return 0;
+  return Math.round(100 * part / whole);
+}
+
+function renderRecordsBroken(yr){
+  const ind = Y.individual.filter(r => r.y === yr);
+  const rel = Y.relays.filter(r => r.y === yr);
+  const all = ind.concat(rel.map(r => Object.assign({_relay: true}, r)));
+  // Sort by month, then meet, then time desc (slower first within a meet so chrono is intuitive)
+  all.sort((a, b) => (a.mo || 0) - (b.mo || 0) || (a.m || '').localeCompare(b.m || '') || a.s - b.s);
+
+  document.getElementById('rb-count').textContent = `${all.length} marques`;
+  if (!all.length){
+    document.getElementById('rb-body').innerHTML = '<div class="empty">—</div>';
+    return;
+  }
+
+  // Group by (meet, month)
+  const groups = [];
+  let cur = null;
+  for (const r of all){
+    const key = `${r.m}|${r.mo}`;
+    if (!cur || cur.key !== key){
+      cur = {key, meet: r.m || '?', month: r.mo || 0, items: []};
+      groups.push(cur);
+    }
+    cur.items.push(r);
+  }
+
+  let html = '';
+  for (const g of groups){
+    html += `<div class="meet-blk">
+      <div class="meet-hd">
+        <span class="meet-name">${g.meet}</span>
+        <span class="meet-meta">${MONTH_FULL[g.month] || '—'}</span>
+        <span class="meet-ct">${g.items.length}</span>
+      </div>`;
+    for (const r of g.items){
+      const pct = r.pct || 0;
+      const tmCls = pct >= 90 ? 'gold' : '';
+      if (r._relay){
+        const swimmers = (r.sw || []).join(' · ');
+        html += `<div class="swim-row relay">
+          <span class="swim-ev">${r.d}${r.k}</span>
+          <span class="swim-tm ${tmCls}">${r.t}</span>
+          <span class="swim-nm" title="${swimmers}">${r.c.toUpperCase()} · ${swimmers}</span>
+          <span class="swim-ag">${r.mn}+ ${r.p}m</span>
+        </div>`;
+      } else {
+        html += `<div class="swim-row">
+          <span class="swim-ev">${r.d}${r.k}</span>
+          <span class="swim-tm ${tmCls}">${r.t}</span>
+          <span class="swim-nm">${r.n}</span>
+          <span class="swim-ag">${r.a} ${r.p}m</span>
+        </div>`;
+      }
+    }
+    html += `</div>`;
+  }
+  document.getElementById('rb-body').innerHTML = html;
+}
+
+function renderTopSwimmers(yData){
+  const top = yData.top_swimmers || [];
+  if (!top.length){
+    document.getElementById('ts-body').innerHTML = '<div class="empty">—</div>';
+    return;
+  }
+  const max = Math.max(...top.map(s => s.records_set));
+  let html = '';
+  top.forEach((s, i) => {
+    const w = max > 0 ? Math.round(100 * s.records_set / max) : 0;
+    html += `<div class="tswim">
+      <span class="tswim-rk">${i + 1}</span>
+      <span class="tswim-nm">${s.name}</span>
+      <span class="tswim-bar"><span class="tswim-bar-fill" style="width:${w}%"></span></span>
+      <span class="tswim-c">${s.records_set}</span>
+    </div>`;
+  });
+  document.getElementById('ts-body').innerHTML = html;
+}
+
+function renderNotables(yData){
+  const top = yData.notable_records || [];
+  if (!top.length){
+    document.getElementById('nr-body').innerHTML = '<div class="empty">—</div>';
+    return;
+  }
+  let html = '';
+  for (const r of top){
+    html += `<div class="notable">
+      <div class="notable-tp">
+        <span class="notable-pct">${r.pct}%</span>
+        <span class="notable-nm">${r.name}</span>
+        <span class="notable-tm">${r.time}</span>
+      </div>
+      <div class="notable-mt">${r.event}${r.is_relay ? ' · relais' : ''} · ${r.meet} ${MONTH_FR[Number(monthNumFromAbbr(r.month))] || r.month || ''}</div>
+    </div>`;
+  }
+  document.getElementById('nr-body').innerHTML = html;
+}
+
+function monthNumFromAbbr(s){
+  if (!s) return 0;
+  const m = String(s).slice(0,3).toLowerCase();
+  const map = {jan:1,fev:2,feb:2,mar:3,avr:4,apr:4,mai:5,may:5,jun:6,jul:7,aou:8,aug:8,sep:9,oct:10,nov:11,dec:12};
+  return map[m] || 0;
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// Snapshot section (year-end leaderboards + oldest standing)
+// ════════════════════════════════════════════════════════════════════════
+
+function renderSnapshot(yr){
+  const snap = Y.snapshots.find(s => s.year === yr);
+  document.getElementById('snap-year').textContent = yr;
+  if (!snap){
+    document.getElementById('sw-body').innerHTML = '<div class="no-snap">Pas de bilan disponible pour cette année.</div>';
+    document.getElementById('sm-body').innerHTML = '<div class="no-snap">—</div>';
+    document.getElementById('so-body').innerHTML = '<div class="no-snap">—</div>';
+    return;
+  }
+  const renderLb = (rows) => rows.slice(0,10).map(r =>
+    `<div class="lb-row"><span class="lb-rk">${r.rank}</span><span class="lb-nm">${r.name}</span><span class="lb-c">${r.records_held}</span></div>`
+  ).join('') || '<div class="no-snap">—</div>';
+  document.getElementById('sw-body').innerHTML = renderLb(snap.leaderboard_women);
+  document.getElementById('sm-body').innerHTML = renderLb(snap.leaderboard_men);
+
+  // Oldest records
+  const old = snap.oldest_records || [];
+  if (!old.length){
+    document.getElementById('so-body').innerHTML = '<div class="no-snap">Aucune donnée pour cette année.</div>';
+    return;
+  }
+  const sorted = old.slice().sort((a, b) => a.year - b.year);
+  document.getElementById('so-body').innerHTML = sorted.map(r => {
+    if (r.kind === 'relay'){
+      const swimmers = (r.swimmers || []).join(' · ');
+      return `<div class="old-row">
+        <div class="old-tp">
+          <span class="old-ev">${r.distance}${r.stroke} ${r.pool}m</span>
+          <span class="old-age">${r.category.toUpperCase()} · ${r.min_age}+</span>
+          <span class="old-yr">${r.year}</span>
+        </div>
+        <div class="old-sub"><span class="old-tm">${r.time}</span>${swimmers}</div>
+      </div>`;
+    }
+    return `<div class="old-row">
+      <div class="old-tp">
+        <span class="old-ev">${r.distance}${r.stroke} ${r.pool}m</span>
+        <span class="old-age">${r.age_group}</span>
+        <span class="old-yr">${r.year}</span>
+      </div>
+      <div class="old-sub"><span class="old-tm">${r.time}</span>${r.name} · ${r.meet}</div>
+    </div>`;
+  }).join('');
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// Mode toggle
+// ════════════════════════════════════════════════════════════════════════
+
+document.querySelectorAll('.mode-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    state.mode = btn.dataset.mode;
+    document.querySelectorAll('.mode-tab').forEach(b => b.classList.toggle('on', b === btn));
+    document.getElementById('annual').classList.toggle('off', state.mode !== 'annual');
+    document.getElementById('longi').classList.toggle('on', state.mode === 'longi');
+    if (state.mode === 'longi'){ renderLongi(); }
+  });
+});
+
+// ════════════════════════════════════════════════════════════════════════
+// Longitudinal view
+// ════════════════════════════════════════════════════════════════════════
+
+let longiRendered = false;
+
+function renderLongi(){
+  if (longiRendered) return;
+  renderBigBar();
+  renderLineChart();
+  renderHeatmap();
+  longiRendered = true;
+}
+
+function renderBigBar(){
+  const svg = document.getElementById('big-bar');
+  const W = 920, H = 280, PAD_L = 38, PAD_R = 18, PAD_T = 16, PAD_B = 36;
+  const innerW = W - PAD_L - PAD_R;
+  const innerH = H - PAD_T - PAD_B;
+  const counts = ALL_YEARS.map(y => Y.records_per_year[y]);
+  const max = Math.max(...counts, 10);
+  const barW = innerW / ALL_YEARS.length;
+
+  // Y axis grid lines (every 25)
+  let grids = '';
+  for (let v = 25; v <= max; v += 25){
+    const yp = PAD_T + innerH - (v / max) * innerH;
+    grids += `<line class="grid" x1="${PAD_L}" y1="${yp}" x2="${W - PAD_R}" y2="${yp}"/>`;
+    grids += `<text class="lbl" x="${PAD_L - 6}" y="${yp + 3}" text-anchor="end">${v}</text>`;
+  }
+
+  // Bars
+  let bars = '';
+  ALL_YEARS.forEach((yr, i) => {
+    const c = Y.records_per_year[yr];
+    const h = (c / max) * innerH;
+    const x = PAD_L + i * barW + 1;
+    const y = PAD_T + innerH - h;
+    const w = Math.max(2, barW - 2);
+    bars += `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="var(--teal)" opacity="0.7" rx="1.5">
+      <title>${yr}: ${c} records</title>
+    </rect>`;
+    if (i % 3 === 0 || yr === LAST_YEAR){
+      bars += `<text x="${x + w/2}" y="${H - 18}" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="var(--muted)">${String(yr).slice(-2)}</text>`;
+    }
+    bars += `<text x="${x + w/2}" y="${y - 4}" text-anchor="middle" font-family="Bebas Neue" font-size="10" fill="var(--soft)" opacity="${c >= 50 ? 1 : 0}">${c}</text>`;
+  });
+
+  // Decade markers
+  const decades = [2000, 2010, 2020];
+  let decadeLines = '';
+  decades.forEach(d => {
+    const i = ALL_YEARS.indexOf(d);
+    if (i < 0) return;
+    const x = PAD_L + i * barW;
+    decadeLines += `<line x1="${x}" y1="${PAD_T}" x2="${x}" y2="${PAD_T + innerH}" stroke="rgba(255,255,255,.10)" stroke-dasharray="2,3"/>`;
+    decadeLines += `<text class="lbl" x="${x + 4}" y="${PAD_T + 12}">${d}</text>`;
+  });
+
+  svg.innerHTML = `
+    <line class="axis" x1="${PAD_L}" y1="${PAD_T + innerH}" x2="${W - PAD_R}" y2="${PAD_T + innerH}"/>
+    ${grids}
+    ${decadeLines}
+    ${bars}
+  `;
+}
+
+function renderLineChart(){
+  // Pick the top 5 women and top 5 men by their peak records-held across all snapshots
+  const peakByName = {};
+  for (const sn of Y.snapshots){
+    for (const r of sn.lw_full || sn.leaderboard_women){
+      const k = 'F|' + r.name;
+      if (!peakByName[k] || r.records_held > peakByName[k].peak){
+        peakByName[k] = {name: r.name, gender: 'F', peak: r.records_held};
+      }
+    }
+    for (const r of sn.lm_full || sn.leaderboard_men){
+      const k = 'M|' + r.name;
+      if (!peakByName[k] || r.records_held > peakByName[k].peak){
+        peakByName[k] = {name: r.name, gender: 'M', peak: r.records_held};
+      }
+    }
+  }
+  const swimmers = Object.values(peakByName).sort((a, b) => b.peak - a.peak);
+  const topF = swimmers.filter(s => s.gender === 'F').slice(0, 5);
+  const topM = swimmers.filter(s => s.gender === 'M').slice(0, 5);
+  const series = topF.concat(topM);
+
+  // Build per-series data points: { name, gender, points: [{year, count}] }
+  const data = series.map((s, idx) => {
+    const points = [];
+    for (const sn of Y.snapshots){
+      const lb = s.gender === 'F' ? (sn.lw_full || sn.leaderboard_women) : (sn.lm_full || sn.leaderboard_men);
+      const r = lb.find(x => x.name === s.name);
+      if (r) points.push({year: sn.year, c: r.records_held});
+    }
+    return {name: s.name, gender: s.gender, idx, points};
+  });
+
+  // Color palette: 5 cool colors for women, 5 warm for men
+  const palF = ['#00d4c8', '#5dd6ff', '#9b8cff', '#ff7eb6', '#34d399'];
+  const palM = ['#f5c518', '#ff7042', '#ff4455', '#a3e635', '#facc15'];
+
+  const SNAP_YEARS = Y.snapshots.map(s => s.year).sort((a,b)=>a-b);
+  const minY = SNAP_YEARS[0], maxY = SNAP_YEARS[SNAP_YEARS.length-1];
+  const maxCount = Math.max(...data.flatMap(d => d.points.map(p => p.c)), 10);
+
+  const W = 920, H = 380, PAD_L = 42, PAD_R = 14, PAD_T = 18, PAD_B = 36;
+  const innerW = W - PAD_L - PAD_R;
+  const innerH = H - PAD_T - PAD_B;
+
+  const xScale = yr => PAD_L + ((yr - minY) / (maxY - minY)) * innerW;
+  const yScale = c  => PAD_T + innerH - (c / maxCount) * innerH;
+
+  // Grid + axes
+  let grids = '';
+  for (let v = 25; v <= maxCount; v += 25){
+    const yp = yScale(v);
+    grids += `<line class="grid" x1="${PAD_L}" y1="${yp}" x2="${W - PAD_R}" y2="${yp}"/>`;
+    grids += `<text class="lbl" x="${PAD_L - 6}" y="${yp + 3}" text-anchor="end">${v}</text>`;
+  }
+  for (const yr of SNAP_YEARS){
+    if (yr % 5 !== 0 && yr !== minY && yr !== maxY) continue;
+    const xp = xScale(yr);
+    grids += `<text class="lbl" x="${xp}" y="${H - 18}" text-anchor="middle">${yr}</text>`;
+  }
+
+  // Lines
+  let lines = '';
+  let legend = '';
+  data.forEach((d, i) => {
+    if (!d.points.length) return;
+    const color = d.gender === 'F' ? palF[i % palF.length] : palM[(i - topF.length) % palM.length];
+    const pts = d.points.map(p => `${xScale(p.year)},${yScale(p.c)}`).join(' ');
+    lines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.92"/>`;
+    for (const p of d.points){
+      lines += `<circle cx="${xScale(p.year)}" cy="${yScale(p.c)}" r="2.5" fill="${color}"><title>${d.name} — ${p.year}: ${p.c}</title></circle>`;
+    }
+    // Last-point label
+    const last = d.points[d.points.length - 1];
+    lines += `<text x="${xScale(last.year) + 4}" y="${yScale(last.c) + 3}" font-size="10" fill="${color}" font-weight="600">${d.name.split(' ')[0]}</text>`;
+
+    legend += `<span class="legend-item" style="color:${color}"><span class="legend-sw" style="background:${color}"></span>${d.name}</span>`;
+  });
+
+  document.getElementById('line-legend').innerHTML = legend;
+  document.getElementById('line-chart').innerHTML = `
+    <line class="axis" x1="${PAD_L}" y1="${PAD_T + innerH}" x2="${W - PAD_R}" y2="${PAD_T + innerH}"/>
+    <line class="axis" x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + innerH}"/>
+    ${grids}
+    ${lines}
+  `;
+}
+
+function renderHeatmap(){
+  // Aggregate: for each (year, month), count records broken.
+  const counts = {};
+  for (const r of Y.individual.concat(Y.relays)){
+    if (!r.mo) continue;
+    const k = r.y + '|' + r.mo;
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  let max = 0;
+  for (const k in counts) if (counts[k] > max) max = counts[k];
+
+  const monthLabels = ['', 'J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
+  let html = `<div class="hm-mh"><span></span>` +
+    monthLabels.slice(1).map(m => `<span class="hm-mh-lbl">${m}</span>`).join('') +
+    `</div>`;
+
+  for (const yr of ALL_YEARS){
+    html += `<div class="hm-row"><span class="hm-yh">${yr}</span>`;
+    for (let m = 1; m <= 12; m++){
+      const c = counts[yr + '|' + m] || 0;
+      const op = max > 0 ? c / max : 0;
+      const bg = c === 0
+        ? 'rgba(255,255,255,.04)'
+        : `rgba(0,212,200,${0.18 + op * 0.78})`;
+      html += `<span class="hm-cell" style="background:${bg}" title="${yr} ${MONTH_FULL[m]}: ${c} records">${c || ''}</span>`;
+    }
+    html += `</div>`;
+  }
+  document.getElementById('heatmap').innerHTML = html;
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// Init
+// ════════════════════════════════════════════════════════════════════════
+
+renderYearStrip();
+renderAnnual();
+</script>
+
+</body>
+</html>

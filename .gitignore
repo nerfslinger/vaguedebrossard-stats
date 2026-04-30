@@ -1,0 +1,29 @@
+# ── Cached source data ─────────────────────────────────────────────
+# The parsers re-download these from statsman.ca on demand, so there's
+# no value in tracking them. Wipe with `rm -rf _cache/` if needed.
+_cache/
+
+# ── Manual backup files (replaced by git history) ──────────────────
+*.bak
+*.bak2
+*.orig
+*.tmp
+
+# ── OS / editor noise ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ── Python ─────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ── Node (only relevant if a build step is ever added) ─────────────
+node_modules/
