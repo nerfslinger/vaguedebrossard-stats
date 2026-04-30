@@ -54,7 +54,7 @@ A standalone Python 3 script (no third-party dependencies) that:
 
 ---
 
-### 2. Records dashboard — `brossard_dashboard.html`
+### 2. Records dashboard — `index.html`
 A fully self-contained HTML/CSS/JS file (no build step, no framework, no server required) implementing the primary user-facing interface. Design direction: **bold and sporty** — Bebas Neue display font, dark navy background, teal accent for times, gold for exceptional performances.
 
 **Features:**
@@ -126,7 +126,7 @@ Tasks:
 ---
 
 ### Workstream B — Records dashboard (primary UI)
-**Goal:** Complete and polish `brossard_dashboard.html` with real data.
+**Goal:** Complete and polish `index.html` with real data.
 
 Tasks:
 1. Replace the manually embedded JS data array with the full parsed dataset from Workstream A
@@ -136,7 +136,7 @@ Tasks:
 5. Mobile layout refinement
 6. Consider whether to add a "records broken this year" highlight section at the top
 
-**Output:** Final `brossard_dashboard.html` (self-contained, hostable on statsman.ca)
+**Output:** Final `index.html` (self-contained, hostable on statsman.ca)
 
 ---
 
@@ -156,7 +156,7 @@ Tasks:
 
 ## Suggested starting point for a new Cowork session
 
-> "We are building a modern club records site for Maîtres de Brossard, a Masters swimming club. The parser script `parse_brossard.py` and the primary dashboard `brossard_dashboard.html` are already built (see attached files). The dashboard currently uses a manually embedded subset of ~160 records. 
+> "We are building a modern club records site for Maîtres de Brossard, a Masters swimming club. The parser script `parse_brossard.py` and the primary dashboard `index.html` are already built (see attached files). The dashboard currently uses a manually embedded subset of ~160 records. 
 >
 > **First task:** Run the parser to produce the full JSON dataset, validate it, then update the dashboard's data array with the complete records. Then begin Workstream B task 2: add a swimmer profile mode so clicking any name shows all records that swimmer holds."
 
@@ -165,6 +165,6 @@ Tasks:
 ## Files to attach when starting Cowork
 
 - `parse_brossard.py` — the parser
-- `brossard_dashboard.html` — the current dashboard
+- `index.html` — the current dashboard
 
 Both are in the outputs from this conversation.
