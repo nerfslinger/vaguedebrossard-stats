@@ -169,9 +169,95 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .longi-ttl{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;letter-spacing:.04em}
 .longi-sub{font-size:11px;color:var(--muted);font-style:italic}
 .longi-bd{padding:18px}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;font-size:11px}
-.legend-item{display:flex;align-items:center;gap:5px}
-.legend-sw{width:14px;height:3px;border-radius:2px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;font-size:11px;align-items:center}
+.legend-item{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--edge);border-radius:14px;cursor:pointer;user-select:none;transition:all .14s;background:rgba(255,255,255,.02)}
+.legend-item:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05)}
+.legend-item.dim{opacity:.32}
+.legend-item.on{background:rgba(0,212,200,.10);border-color:rgba(0,212,200,.45)}
+.legend-item.extra{border-style:dashed}
+.legend-item .legend-x{color:var(--muted);margin-left:2px;font-size:13px;line-height:1;cursor:pointer}
+.legend-item .legend-x:hover{color:var(--red)}
+.legend-sw{width:14px;height:3px;border-radius:2px;flex-shrink:0}
+.legend-tools{display:flex;gap:8px;margin-left:auto;align-items:center;flex-wrap:wrap}
+.legend-search{position:relative;display:inline-flex;align-items:center}
+.legend-search input{background:var(--ink2);border:1px solid var(--edge);border-radius:14px;color:var(--text);font-family:inherit;font-size:11px;padding:5px 10px 5px 24px;width:170px;outline:none;transition:border-color .14s}
+.legend-search input:focus{border-color:var(--teal)}
+.legend-search::before{content:'⌕';position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;pointer-events:none}
+.legend-suggest{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--panel2);border:1px solid var(--edge);border-radius:8px;max-height:200px;overflow-y:auto;z-index:10;display:none;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.legend-suggest.on{display:block}
+.legend-sg-item{padding:6px 12px;font-size:11px;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--edge2)}
+.legend-sg-item:last-child{border-bottom:none}
+.legend-sg-item:hover,.legend-sg-item.kb{background:rgba(0,212,200,.10);color:var(--teal)}
+.legend-sg-meta{margin-left:auto;font-size:10px;color:var(--muted)}
+.legend-sg-empty{padding:8px 12px;font-size:11px;color:var(--muted);font-style:italic}
+.legend-btn{background:transparent;border:1px solid var(--edge);color:var(--soft);font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.06em;padding:5px 11px;border-radius:14px;cursor:pointer;text-transform:uppercase;transition:all .14s}
+.legend-btn:hover{color:#fff;border-color:rgba(255,255,255,.18)}
+.legend-btn:disabled{opacity:.4;cursor:default}
+
+/* ══ ERA RIBBON ══ */
+.era{display:flex;flex-direction:column;gap:0}
+.era-axis{display:grid;grid-template-columns:200px 1fr;gap:10px;padding:0 0 6px 0;align-items:end;font-size:10px}
+.era-axis-spacer{}
+.era-axis-yrs{position:relative;height:14px}
+.era-axis-yr{position:absolute;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--muted);letter-spacing:.04em}
+.era-row{display:grid;grid-template-columns:200px 1fr;gap:10px;align-items:center;padding:5px 0;border-bottom:1px solid var(--edge2);cursor:pointer;transition:background .12s}
+.era-row:hover{background:rgba(255,255,255,.025)}
+.era-row.active{background:rgba(0,212,200,.06)}
+.era-lbl{display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden}
+.era-gen{font-family:'Bebas Neue',sans-serif;font-size:13px;width:14px;text-align:center;flex-shrink:0}
+.era-gen.f{color:var(--teal)}
+.era-gen.m{color:var(--gold)}
+.era-gen.x{color:var(--muted)}
+.era-nm{font-size:12px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.era-tot{font-family:'Bebas Neue',sans-serif;font-size:12px;color:var(--muted);letter-spacing:.04em;flex-shrink:0}
+.era-bar{position:relative;height:22px}
+.era-bg{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--edge);transform:translateY(-50%)}
+.era-span{position:absolute;top:50%;height:1px;background:rgba(255,255,255,.10);transform:translateY(-50%)}
+.era-row:hover .era-span{background:rgba(255,255,255,.22)}
+.era-blk{position:absolute;bottom:50%;width:1.6%;border-radius:1px 1px 0 0;transform-origin:bottom}
+.era-blk.f{background:var(--teal)}
+.era-blk.m{background:var(--gold)}
+.era-blk.x{background:var(--purple)}
+.era-blk.peak{box-shadow:0 0 6px currentColor}
+.era-row:hover .era-blk{filter:brightness(1.2)}
+.era-tip{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--ink);border:1px solid var(--edge);padding:4px 8px;border-radius:4px;font-size:10px;color:#fff;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .1s;z-index:5}
+.era-blk:hover + .era-tip{opacity:1}
+.era-decade{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.06);pointer-events:none}
+
+/* Era detail side panel */
+.era-panel{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--panel);border-left:1px solid var(--edge);transform:translateX(100%);transition:transform .25s ease;z-index:50;overflow-y:auto;box-shadow:-8px 0 24px rgba(0,0,0,.5)}
+.era-panel.on{transform:translateX(0)}
+.era-panel-hd{padding:18px 22px 14px;border-bottom:1px solid var(--edge);background:var(--panel2);position:relative}
+.era-panel-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.era-panel-close:hover{background:rgba(255,255,255,.06);color:#fff}
+.era-panel-eyebrow{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.era-panel-name{font-family:'Bebas Neue',sans-serif;font-size:30px;color:#fff;letter-spacing:.02em;line-height:1}
+.era-panel-sub{font-size:11px;color:var(--soft);margin-top:6px;letter-spacing:.04em}
+.era-panel-bd{padding:18px 22px}
+.era-panel-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.era-pk{background:var(--panel2);border:1px solid var(--edge);border-radius:6px;padding:10px 12px}
+.era-pk-l{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.era-pk-v{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;line-height:1;letter-spacing:.02em}
+.era-pk-v.teal{color:var(--teal)}
+.era-pk-v.gold{color:var(--gold)}
+.era-pk-sub{font-size:10px;color:var(--soft);margin-top:3px}
+.era-section-ttl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.era-spark{height:60px;background:var(--ink2);border:1px solid var(--edge);border-radius:6px;padding:8px;display:block}
+.era-mix{display:flex;flex-direction:column;gap:5px}
+.era-mix-row{display:grid;grid-template-columns:80px 1fr 30px;gap:8px;align-items:center;font-size:11px}
+.era-mix-lbl{color:var(--soft);text-transform:capitalize}
+.era-mix-bar{height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.era-mix-fill{height:100%;background:var(--teal);border-radius:3px}
+.era-mix-fill.m{background:var(--gold)}
+.era-mix-c{font-family:'Bebas Neue',sans-serif;font-size:12px;color:var(--text);text-align:right}
+.era-event-list{display:flex;flex-direction:column}
+.era-event{padding:7px 0;border-bottom:1px solid var(--edge2);display:grid;grid-template-columns:46px 1fr auto;gap:10px;align-items:baseline;font-size:11px}
+.era-event:last-child{border-bottom:none}
+.era-event-yr{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--gold);letter-spacing:.02em}
+.era-event-ev{color:var(--text)}
+.era-event-tm{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--teal);letter-spacing:.02em}
+.era-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:49}
+.era-overlay.on{opacity:1;pointer-events:auto}
 
 /* SVG charts */
 svg.chart{width:100%;display:block;font-family:'DM Sans',sans-serif}
@@ -179,15 +265,6 @@ svg.chart{width:100%;display:block;font-family:'DM Sans',sans-serif}
 .chart .axis{stroke:var(--edge);stroke-width:1}
 .chart .grid{stroke:var(--edge2);stroke-width:1}
 .chart .lbl{fill:var(--muted);font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-
-/* Heatmap */
-.hm{display:grid;gap:2px;font-size:10px}
-.hm-row{display:grid;grid-template-columns:50px repeat(12, 1fr);gap:2px;align-items:center}
-.hm-yh{font-family:'Bebas Neue',sans-serif;font-size:11px;color:var(--muted);text-align:right;padding-right:6px}
-.hm-cell{aspect-ratio:1;background:rgba(255,255,255,.04);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0)}
-.hm-cell:hover{outline:1px solid var(--teal);color:#fff}
-.hm-mh{display:grid;grid-template-columns:50px repeat(12, 1fr);gap:2px;margin-bottom:4px}
-.hm-mh-lbl{font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--muted);text-align:center}
 
 /* footer */
 footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);border-top:1px solid var(--edge)}
@@ -313,12 +390,27 @@ footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);bor
 
   <div class="longi-block">
     <div class="longi-hd">
-      <div class="longi-ttl">Saison des records</div>
-      <div class="longi-sub">Carte de chaleur · mois × année</div>
+      <div class="longi-ttl">L'empreinte de chaque nageur·euse</div>
+      <div class="longi-sub">Une rangée par carrière notable · l'intensité = records brisés cette année · cliquez pour explorer</div>
     </div>
-    <div class="longi-bd"><div class="hm" id="heatmap"></div></div>
+    <div class="longi-bd">
+      <div class="era" id="era-ribbon"></div>
+    </div>
   </div>
+
 </section>
+
+<!-- Era detail side panel -->
+<div class="era-overlay" id="era-overlay"></div>
+<aside class="era-panel" id="era-panel" aria-hidden="true">
+  <div class="era-panel-hd">
+    <button class="era-panel-close" id="era-panel-close" aria-label="Fermer">×</button>
+    <div class="era-panel-eyebrow" id="era-panel-eyebrow"></div>
+    <div class="era-panel-name" id="era-panel-name"></div>
+    <div class="era-panel-sub" id="era-panel-sub"></div>
+  </div>
+  <div class="era-panel-bd" id="era-panel-bd"></div>
+</aside>
 
 <footer>
   Données : <a href="https://www.statsman.ca/index0.html" target="_blank">statsman.ca</a> · Mis à jour automatiquement par <code>parse_brossard_yearly.py</code>
@@ -654,11 +746,16 @@ document.querySelectorAll('.mode-tab').forEach(btn => {
 
 let longiRendered = false;
 
+// State for the interactive line chart
+state.lineSel = new Set();      // user-selected names (empty = show all)
+state.lineExtras = new Set();   // extra swimmers added via search beyond the default 10
+state._lineCache = null;        // cached per-snapshot held-counts lookup
+
 function renderLongi(){
   if (longiRendered) return;
   renderBigBar();
   renderLineChart();
-  renderHeatmap();
+  renderEraRibbon();
   longiRendered = true;
 }
 
@@ -715,42 +812,67 @@ function renderBigBar(){
   `;
 }
 
-function renderLineChart(){
-  // Pick the top 5 women and top 5 men by their peak records-held across all snapshots
-  const peakByName = {};
+// ── Build a per-snapshot lookup of records-held for any swimmer ────────
+function buildLineCache(){
+  if (state._lineCache) return state._lineCache;
+  // Map: name → {gender, peak, points:[{year,c}]}
+  const idx = {};
   for (const sn of Y.snapshots){
-    for (const r of sn.lw_full || sn.leaderboard_women){
-      const k = 'F|' + r.name;
-      if (!peakByName[k] || r.records_held > peakByName[k].peak){
-        peakByName[k] = {name: r.name, gender: 'F', peak: r.records_held};
-      }
+    for (const r of (sn.lw_full || sn.leaderboard_women || [])){
+      if (!idx[r.name]) idx[r.name] = {name: r.name, gender: 'F', peak: 0, points: []};
+      idx[r.name].points.push({year: sn.year, c: r.records_held});
+      if (r.records_held > idx[r.name].peak) idx[r.name].peak = r.records_held;
     }
-    for (const r of sn.lm_full || sn.leaderboard_men){
-      const k = 'M|' + r.name;
-      if (!peakByName[k] || r.records_held > peakByName[k].peak){
-        peakByName[k] = {name: r.name, gender: 'M', peak: r.records_held};
-      }
+    for (const r of (sn.lm_full || sn.leaderboard_men || [])){
+      if (!idx[r.name]) idx[r.name] = {name: r.name, gender: 'M', peak: 0, points: []};
+      idx[r.name].points.push({year: sn.year, c: r.records_held});
+      if (r.records_held > idx[r.name].peak) idx[r.name].peak = r.records_held;
     }
   }
-  const swimmers = Object.values(peakByName).sort((a, b) => b.peak - a.peak);
-  const topF = swimmers.filter(s => s.gender === 'F').slice(0, 5);
-  const topM = swimmers.filter(s => s.gender === 'M').slice(0, 5);
-  const series = topF.concat(topM);
+  for (const k in idx){
+    idx[k].points.sort((a,b)=>a.year-b.year);
+  }
+  state._lineCache = idx;
+  return idx;
+}
 
-  // Build per-series data points: { name, gender, points: [{year, count}] }
-  const data = series.map((s, idx) => {
-    const points = [];
-    for (const sn of Y.snapshots){
-      const lb = s.gender === 'F' ? (sn.lw_full || sn.leaderboard_women) : (sn.lm_full || sn.leaderboard_men);
-      const r = lb.find(x => x.name === s.name);
-      if (r) points.push({year: sn.year, c: r.records_held});
+// Stable color assignment so a line keeps its color across re-renders
+const LINE_PAL_F = ['#00d4c8', '#5dd6ff', '#9b8cff', '#ff7eb6', '#34d399', '#22d3ee', '#c084fc'];
+const LINE_PAL_M = ['#f5c518', '#ff7042', '#ff4455', '#a3e635', '#facc15', '#fb923c', '#fb7185'];
+const _lineColors = {};
+function colorFor(name, gender){
+  if (_lineColors[name]) return _lineColors[name];
+  const pal = gender === 'F' ? LINE_PAL_F : LINE_PAL_M;
+  // Hash-ish stable index based on name
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
+  const c = pal[h % pal.length];
+  _lineColors[name] = c;
+  return c;
+}
+
+function defaultLineSeries(){
+  const cache = buildLineCache();
+  const all = Object.values(cache);
+  const topF = all.filter(s => s.gender === 'F').sort((a,b)=>b.peak-a.peak).slice(0, 5);
+  const topM = all.filter(s => s.gender === 'M').sort((a,b)=>b.peak-a.peak).slice(0, 5);
+  return topF.concat(topM);
+}
+
+function renderLineChart(){
+  const cache = buildLineCache();
+  const def = defaultLineSeries();
+  // Combine defaults + extras (deduped, preserving order)
+  const seenNames = new Set();
+  const series = [];
+  for (const s of def){ if (!seenNames.has(s.name)){ seenNames.add(s.name); series.push(s); } }
+  for (const name of state.lineExtras){
+    if (!seenNames.has(name) && cache[name]){
+      seenNames.add(name);
+      series.push(cache[name]);
     }
-    return {name: s.name, gender: s.gender, idx, points};
-  });
-
-  // Color palette: 5 cool colors for women, 5 warm for men
-  const palF = ['#00d4c8', '#5dd6ff', '#9b8cff', '#ff7eb6', '#34d399'];
-  const palM = ['#f5c518', '#ff7042', '#ff4455', '#a3e635', '#facc15'];
+  }
+  const data = series.map(s => ({name: s.name, gender: s.gender, points: s.points, isExtra: state.lineExtras.has(s.name)}));
 
   const SNAP_YEARS = Y.snapshots.map(s => s.year).sort((a,b)=>a-b);
   const minY = SNAP_YEARS[0], maxY = SNAP_YEARS[SNAP_YEARS.length-1];
@@ -765,7 +887,8 @@ function renderLineChart(){
 
   // Grid + axes
   let grids = '';
-  for (let v = 25; v <= maxCount; v += 25){
+  const step = maxCount > 100 ? 50 : 25;
+  for (let v = step; v <= maxCount; v += step){
     const yp = yScale(v);
     grids += `<line class="grid" x1="${PAD_L}" y1="${yp}" x2="${W - PAD_R}" y2="${yp}"/>`;
     grids += `<text class="lbl" x="${PAD_L - 6}" y="${yp + 3}" text-anchor="end">${v}</text>`;
@@ -776,63 +899,444 @@ function renderLineChart(){
     grids += `<text class="lbl" x="${xp}" y="${H - 18}" text-anchor="middle">${yr}</text>`;
   }
 
-  // Lines
-  let lines = '';
-  let legend = '';
-  data.forEach((d, i) => {
-    if (!d.points.length) return;
-    const color = d.gender === 'F' ? palF[i % palF.length] : palM[(i - topF.length) % palM.length];
-    const pts = d.points.map(p => `${xScale(p.year)},${yScale(p.c)}`).join(' ');
-    lines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.92"/>`;
-    for (const p of d.points){
-      lines += `<circle cx="${xScale(p.year)}" cy="${yScale(p.c)}" r="2.5" fill="${color}"><title>${d.name} — ${p.year}: ${p.c}</title></circle>`;
-    }
-    // Last-point label
-    const last = d.points[d.points.length - 1];
-    lines += `<text x="${xScale(last.year) + 4}" y="${yScale(last.c) + 3}" font-size="10" fill="${color}" font-weight="600">${d.name.split(' ')[0]}</text>`;
+  const anySelected = state.lineSel.size > 0;
 
-    legend += `<span class="legend-item" style="color:${color}"><span class="legend-sw" style="background:${color}"></span>${d.name}</span>`;
+  // Lines (highlighted ones drawn on top)
+  let bg = '', fg = '';
+  let legend = '';
+  data.forEach(d => {
+    if (!d.points.length) return;
+    const color = colorFor(d.name, d.gender);
+    const isSel = state.lineSel.has(d.name);
+    const dimmed = anySelected && !isSel;
+    const opacity = dimmed ? 0.18 : (anySelected ? 1 : 0.92);
+    const sw = (isSel && anySelected) ? 3 : 2;
+    const pts = d.points.map(p => `${xScale(p.year)},${yScale(p.c)}`).join(' ');
+    const lineSvg = `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round" opacity="${opacity}"/>`;
+    let circles = '';
+    for (const p of d.points){
+      circles += `<circle cx="${xScale(p.year)}" cy="${yScale(p.c)}" r="${(isSel && anySelected) ? 3.4 : 2.5}" fill="${color}" opacity="${opacity}"><title>${d.name} — ${p.year}: ${p.c} records</title></circle>`;
+    }
+    const last = d.points[d.points.length - 1];
+    const labelOpacity = dimmed ? 0.25 : 1;
+    const labelSvg = `<text x="${xScale(last.year) + 4}" y="${yScale(last.c) + 3}" font-size="10" fill="${color}" font-weight="600" opacity="${labelOpacity}">${d.name.split(' ')[0]}</text>`;
+    if (dimmed){ bg += lineSvg + circles + labelSvg; }
+    else      { fg += lineSvg + circles + labelSvg; }
+
+    const cls = ['legend-item'];
+    if (anySelected){ cls.push(isSel ? 'on' : 'dim'); }
+    if (d.isExtra){ cls.push('extra'); }
+    const xBtn = d.isExtra ? `<span class="legend-x" data-rm="${escAttr(d.name)}" title="Retirer">×</span>` : '';
+    legend += `<span class="${cls.join(' ')}" data-name="${escAttr(d.name)}" style="color:${color}"><span class="legend-sw" style="background:${color}"></span>${d.name}${xBtn}</span>`;
   });
 
-  document.getElementById('line-legend').innerHTML = legend;
+  // Tools row: reset button (only when something is selected) + search
+  const allNames = Object.keys(cache).sort();
+  const tools = `
+    <div class="legend-tools">
+      ${anySelected ? `<button class="legend-btn" id="line-reset">Tout afficher</button>` : ''}
+      <div class="legend-search">
+        <input id="line-search" type="text" placeholder="Comparer un nageur…" autocomplete="off" data-all="${allNames.length}">
+        <div class="legend-suggest" id="line-suggest"></div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('line-legend').innerHTML = legend + tools;
   document.getElementById('line-chart').innerHTML = `
     <line class="axis" x1="${PAD_L}" y1="${PAD_T + innerH}" x2="${W - PAD_R}" y2="${PAD_T + innerH}"/>
     <line class="axis" x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + innerH}"/>
     ${grids}
-    ${lines}
+    ${bg}
+    ${fg}
   `;
+
+  attachLegendHandlers();
 }
 
-function renderHeatmap(){
-  // Aggregate: for each (year, month), count records broken.
-  const counts = {};
-  for (const r of Y.individual.concat(Y.relays)){
-    if (!r.mo) continue;
-    const k = r.y + '|' + r.mo;
-    counts[k] = (counts[k] || 0) + 1;
+function escAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+function attachLegendHandlers(){
+  const legendEl = document.getElementById('line-legend');
+  if (!legendEl) return;
+
+  // Toggle selection on chip click (but not when clicking the × inside an extra chip)
+  legendEl.querySelectorAll('.legend-item').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (e.target.classList.contains('legend-x')) return;
+      const name = el.dataset.name;
+      if (state.lineSel.has(name)) state.lineSel.delete(name);
+      else state.lineSel.add(name);
+      renderLineChart();
+    });
+  });
+
+  // × removes an extra swimmer entirely
+  legendEl.querySelectorAll('.legend-x').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const name = el.dataset.rm;
+      state.lineExtras.delete(name);
+      state.lineSel.delete(name);
+      renderLineChart();
+    });
+  });
+
+  const reset = document.getElementById('line-reset');
+  if (reset){
+    reset.addEventListener('click', () => {
+      state.lineSel.clear();
+      renderLineChart();
+    });
   }
-  let max = 0;
-  for (const k in counts) if (counts[k] > max) max = counts[k];
 
-  const monthLabels = ['', 'J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
-  let html = `<div class="hm-mh"><span></span>` +
-    monthLabels.slice(1).map(m => `<span class="hm-mh-lbl">${m}</span>`).join('') +
-    `</div>`;
+  const search = document.getElementById('line-search');
+  const sugg   = document.getElementById('line-suggest');
+  if (search){
+    let kbIdx = -1;
+    let lastMatches = [];
 
-  for (const yr of ALL_YEARS){
-    html += `<div class="hm-row"><span class="hm-yh">${yr}</span>`;
-    for (let m = 1; m <= 12; m++){
-      const c = counts[yr + '|' + m] || 0;
-      const op = max > 0 ? c / max : 0;
-      const bg = c === 0
-        ? 'rgba(255,255,255,.04)'
-        : `rgba(0,212,200,${0.18 + op * 0.78})`;
-      html += `<span class="hm-cell" style="background:${bg}" title="${yr} ${MONTH_FULL[m]}: ${c} records">${c || ''}</span>`;
+    const renderSuggest = () => {
+      const q = search.value.trim().toLowerCase();
+      if (!q){ sugg.classList.remove('on'); sugg.innerHTML = ''; return; }
+      const cache = state._lineCache;
+      const names = Object.keys(cache);
+      const matches = names
+        .map(n => ({n, info: cache[n]}))
+        .filter(({n}) => n.toLowerCase().includes(q))
+        .sort((a, b) => {
+          // Prioritize prefix matches, then by peak desc
+          const ap = a.n.toLowerCase().startsWith(q) ? 0 : 1;
+          const bp = b.n.toLowerCase().startsWith(q) ? 0 : 1;
+          if (ap !== bp) return ap - bp;
+          return b.info.peak - a.info.peak;
+        })
+        .slice(0, 8);
+      lastMatches = matches;
+      kbIdx = -1;
+      if (!matches.length){
+        sugg.innerHTML = `<div class="legend-sg-empty">Aucun nageur·euse trouvé</div>`;
+      } else {
+        sugg.innerHTML = matches.map((m, i) => {
+          const sym = m.info.gender === 'F' ? '♀' : '♂';
+          return `<div class="legend-sg-item" data-name="${escAttr(m.n)}" data-i="${i}">
+            <span style="color:${m.info.gender === 'F' ? 'var(--teal)' : 'var(--gold)'}">${sym}</span>
+            <span>${m.n}</span>
+            <span class="legend-sg-meta">pic ${m.info.peak}</span>
+          </div>`;
+        }).join('');
+        sugg.querySelectorAll('.legend-sg-item').forEach(item => {
+          item.addEventListener('click', () => addExtra(item.dataset.name));
+        });
+      }
+      sugg.classList.add('on');
+    };
+
+    const addExtra = (name) => {
+      state.lineExtras.add(name);
+      search.value = '';
+      sugg.classList.remove('on');
+      renderLineChart();
+    };
+
+    search.addEventListener('input', renderSuggest);
+    search.addEventListener('focus', renderSuggest);
+    search.addEventListener('blur', () => {
+      // Delay so click on suggestion still fires
+      setTimeout(() => sugg.classList.remove('on'), 180);
+    });
+    search.addEventListener('keydown', (e) => {
+      const items = sugg.querySelectorAll('.legend-sg-item');
+      if (e.key === 'ArrowDown' && items.length){
+        e.preventDefault();
+        kbIdx = (kbIdx + 1) % items.length;
+        items.forEach((it, i) => it.classList.toggle('kb', i === kbIdx));
+      } else if (e.key === 'ArrowUp' && items.length){
+        e.preventDefault();
+        kbIdx = (kbIdx - 1 + items.length) % items.length;
+        items.forEach((it, i) => it.classList.toggle('kb', i === kbIdx));
+      } else if (e.key === 'Enter'){
+        e.preventDefault();
+        const pick = kbIdx >= 0 ? lastMatches[kbIdx] : lastMatches[0];
+        if (pick) addExtra(pick.n);
+      } else if (e.key === 'Escape'){
+        search.value = '';
+        sugg.classList.remove('on');
+      }
+    });
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// Era ribbon — one row per notable swimmer, intensity = records broken/year
+// ════════════════════════════════════════════════════════════════════════
+
+function buildEraData(){
+  // Aggregate from records-broken (Y.individual). Relays excluded —
+  // they don't attribute to a single swimmer cleanly.
+  const bySwimmer = {};
+  for (const r of Y.individual){
+    if (!bySwimmer[r.n]){
+      bySwimmer[r.n] = {
+        name: r.n, gender: r.c, total: 0, byYear: {},
+        firstYear: r.y, lastYear: r.y,
+        records: []
+      };
     }
-    html += `</div>`;
+    const s = bySwimmer[r.n];
+    s.total++;
+    s.byYear[r.y] = (s.byYear[r.y] || 0) + 1;
+    if (r.y < s.firstYear) s.firstYear = r.y;
+    if (r.y > s.lastYear) s.lastYear = r.y;
+    if (!s.gender && r.c) s.gender = r.c;
+    s.records.push(r);
   }
-  document.getElementById('heatmap').innerHTML = html;
+
+  // Fallback: if gender missing, infer from snapshots
+  const cache = buildLineCache();
+  for (const k in bySwimmer){
+    const s = bySwimmer[k];
+    if (!s.gender || (s.gender !== 'F' && s.gender !== 'M')){
+      if (cache[k] && (cache[k].gender === 'F' || cache[k].gender === 'M')){
+        s.gender = cache[k].gender;
+      }
+    }
+  }
+
+  const notable = Object.values(bySwimmer)
+    .filter(s => {
+      const peak = Math.max(...Object.values(s.byYear));
+      return s.total >= 15 || peak >= 10;
+    })
+    .map(s => {
+      const peakEntry = Object.entries(s.byYear).reduce((a, b) => +b[1] > +a[1] ? b : a);
+      return {
+        ...s,
+        peak: +peakEntry[1],
+        peakYear: +peakEntry[0],
+        spanYears: s.lastYear - s.firstYear + 1,
+      };
+    })
+    .sort((a, b) => a.firstYear - b.firstYear || b.total - a.total);
+
+  return notable;
 }
+
+function renderEraRibbon(){
+  const data = buildEraData();
+  const wrap = document.getElementById('era-ribbon');
+  if (!wrap) return;
+
+  const minY = FIRST_YEAR;
+  const maxY = LAST_YEAR;
+  const span = maxY - minY;
+
+  // Year axis (shared)
+  const axisYears = [];
+  for (let y = Math.ceil(minY / 5) * 5; y <= maxY; y += 5){
+    axisYears.push(y);
+  }
+  const axisHtml = axisYears.map(y => {
+    const pct = ((y - minY) / span) * 100;
+    return `<span class="era-axis-yr" style="left:${pct}%">${y}</span>`;
+  }).join('');
+
+  let html = `
+    <div class="era-axis">
+      <div class="era-axis-spacer"></div>
+      <div class="era-axis-yrs">${axisHtml}</div>
+    </div>
+  `;
+
+  // Decade marker positions for each row's bar background
+  const decadeMarkers = [2000, 2010, 2020, 2030].filter(y => y >= minY && y <= maxY).map(y => {
+    const pct = ((y - minY) / span) * 100;
+    return `<div class="era-decade" style="left:${pct}%"></div>`;
+  }).join('');
+
+  data.forEach((s, i) => {
+    const genderCls = s.gender === 'F' ? 'f' : (s.gender === 'M' ? 'm' : 'x');
+    const genderSym = s.gender === 'F' ? '♀' : (s.gender === 'M' ? '♂' : '·');
+
+    // Span line
+    const startPct = ((s.firstYear - minY) / span) * 100;
+    const endPct   = ((s.lastYear  - minY) / span) * 100;
+    const widthPct = endPct - startPct;
+
+    // Per-year blocks. Height proportional to count vs row peak (sqrt-eased to make small years visible).
+    let blocks = '';
+    for (const yr in s.byYear){
+      const c = s.byYear[yr];
+      const xPct = ((+yr - minY) / span) * 100;
+      const ratio = Math.sqrt(c / s.peak);
+      const heightPct = 25 + ratio * 70; // 25%..95% of row height
+      const isPeak = c === s.peak && c >= 8;
+      blocks += `<div class="era-blk ${genderCls}${isPeak ? ' peak' : ''}" style="left:${xPct}%;height:${heightPct}%" data-tip="${yr} · ${c} record${c>1?'s':''}"></div>`;
+    }
+
+    html += `
+      <div class="era-row" data-name="${escAttr(s.name)}" tabindex="0" role="button" aria-label="Voir l'empreinte de ${escAttr(s.name)}">
+        <div class="era-lbl">
+          <span class="era-gen ${genderCls}">${genderSym}</span>
+          <span class="era-nm" title="${escAttr(s.name)}">${s.name}</span>
+          <span class="era-tot">${s.total}</span>
+        </div>
+        <div class="era-bar">
+          <div class="era-bg"></div>
+          ${decadeMarkers}
+          <div class="era-span" style="left:${startPct}%;width:${Math.max(0.4, widthPct)}%"></div>
+          ${blocks}
+        </div>
+      </div>
+    `;
+  });
+
+  wrap.innerHTML = html;
+
+  // Click handler → open detail panel
+  wrap.querySelectorAll('.era-row').forEach(el => {
+    const open = () => openEraPanel(el.dataset.name);
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); }
+    });
+  });
+
+  // Lightweight hover tooltip on blocks (using attr data-tip + title fallback)
+  wrap.querySelectorAll('.era-blk').forEach(el => {
+    el.setAttribute('title', el.dataset.tip);
+  });
+}
+
+// ── Era detail side panel ──────────────────────────────────────────────
+function openEraPanel(name){
+  const data = buildEraData();
+  const s = data.find(d => d.name === name);
+  if (!s) return;
+
+  document.querySelectorAll('.era-row').forEach(r => r.classList.toggle('active', r.dataset.name === name));
+
+  const genderLbl = s.gender === 'F' ? 'Maîtresse nageuse' : s.gender === 'M' ? 'Maître nageur' : 'Nageur·euse';
+  const eyebrow = `${genderLbl} · ${s.firstYear === s.lastYear ? 'Saison ' + s.firstYear : `${s.firstYear} → ${s.lastYear}`}`;
+
+  document.getElementById('era-panel-eyebrow').textContent = eyebrow;
+  document.getElementById('era-panel-name').textContent = s.name;
+  document.getElementById('era-panel-sub').textContent = `${s.total} records individuels brisés · sur ${s.spanYears} année${s.spanYears>1?'s':''}`;
+
+  // Strokes mix
+  const strokes = {};
+  for (const r of s.records){ strokes[r.k] = (strokes[r.k] || 0) + 1; }
+  const strokesArr = Object.entries(strokes).sort((a,b) => b[1]-a[1]);
+  const strokeMax = strokesArr[0] ? strokesArr[0][1] : 1;
+  const mixCls = s.gender === 'M' ? 'm' : '';
+  const mixHtml = strokesArr.map(([k, c]) => `
+    <div class="era-mix-row">
+      <span class="era-mix-lbl">${STROKE_FR[k] || k}</span>
+      <div class="era-mix-bar"><div class="era-mix-fill ${mixCls}" style="width:${(c/strokeMax)*100}%"></div></div>
+      <span class="era-mix-c">${c}</span>
+    </div>
+  `).join('');
+
+  // Top events (highest pct)
+  const topEvents = [...s.records]
+    .sort((a, b) => (b.pct || 0) - (a.pct || 0))
+    .slice(0, 5);
+  const eventsHtml = topEvents.map(r => `
+    <div class="era-event">
+      <span class="era-event-yr">${r.y}</span>
+      <span class="era-event-ev">${r.d}m ${STROKE_FR[r.k] || r.k} · ${r.a} · ${r.p}m</span>
+      <span class="era-event-tm">${r.t}${r.pct ? ` · ${r.pct}%` : ''}</span>
+    </div>
+  `).join('');
+
+  // Sparkline of records broken per year
+  const allYrs = [];
+  for (let y = s.firstYear; y <= s.lastYear; y++) allYrs.push(y);
+  const sparkW = 360, sparkH = 44, padX = 4, padY = 4;
+  const innerW = sparkW - padX*2, innerH = sparkH - padY*2;
+  const peak = s.peak;
+  const barW = allYrs.length ? innerW / allYrs.length : innerW;
+  const barColor = s.gender === 'F' ? 'var(--teal)' : s.gender === 'M' ? 'var(--gold)' : 'var(--purple)';
+  let sparkBars = '';
+  allYrs.forEach((y, i) => {
+    const c = s.byYear[y] || 0;
+    if (c === 0){
+      sparkBars += `<line x1="${padX + i*barW + barW/2}" y1="${padY + innerH}" x2="${padX + i*barW + barW/2}" y2="${padY + innerH - 1}" stroke="rgba(255,255,255,.12)" stroke-width="1"/>`;
+    } else {
+      const h = (c/peak) * innerH;
+      sparkBars += `<rect x="${padX + i*barW + 1}" y="${padY + innerH - h}" width="${Math.max(2, barW - 2)}" height="${h}" fill="${barColor}" rx="1"><title>${y}: ${c}</title></rect>`;
+    }
+  });
+  // Year labels for first / peak / last
+  const yLabel = (y, txt, color) => {
+    const i = allYrs.indexOf(y);
+    if (i < 0) return '';
+    return `<text x="${padX + i*barW + barW/2}" y="${sparkH - 1}" text-anchor="middle" font-size="8" fill="${color || 'var(--muted)'}" font-family="Bebas Neue">${txt}</text>`;
+  };
+
+  const sparkSvg = `
+    <svg class="era-spark" viewBox="0 0 ${sparkW} ${sparkH+10}" preserveAspectRatio="none">
+      <line x1="${padX}" y1="${padY + innerH}" x2="${sparkW - padX}" y2="${padY + innerH}" stroke="var(--edge)" stroke-width="0.5"/>
+      ${sparkBars}
+      ${yLabel(s.firstYear, s.firstYear)}
+      ${s.peakYear !== s.firstYear && s.peakYear !== s.lastYear ? yLabel(s.peakYear, s.peakYear, barColor) : ''}
+      ${s.lastYear !== s.firstYear ? yLabel(s.lastYear, s.lastYear) : ''}
+    </svg>
+  `;
+
+  // KPIs
+  const peakValCls = s.gender === 'F' ? 'teal' : s.gender === 'M' ? 'gold' : '';
+  const ageGroups = new Set(s.records.map(r => r.a));
+  const meets = new Set(s.records.map(r => r.m));
+  const kpisHtml = `
+    <div class="era-pk">
+      <div class="era-pk-l">Sommet</div>
+      <div class="era-pk-v ${peakValCls}">${s.peak}</div>
+      <div class="era-pk-sub">records en ${s.peakYear}</div>
+    </div>
+    <div class="era-pk">
+      <div class="era-pk-l">Carrière</div>
+      <div class="era-pk-v">${s.spanYears}<span style="font-size:14px;color:var(--muted)"> an${s.spanYears>1?'s':''}</span></div>
+      <div class="era-pk-sub">${s.firstYear} → ${s.lastYear}</div>
+    </div>
+    <div class="era-pk">
+      <div class="era-pk-l">Catégories</div>
+      <div class="era-pk-v">${ageGroups.size}</div>
+      <div class="era-pk-sub">groupes d'âge touchés</div>
+    </div>
+    <div class="era-pk">
+      <div class="era-pk-l">Compétitions</div>
+      <div class="era-pk-v">${meets.size}</div>
+      <div class="era-pk-sub">rencontres distinctes</div>
+    </div>
+  `;
+
+  document.getElementById('era-panel-bd').innerHTML = `
+    <div class="era-panel-kpis">${kpisHtml}</div>
+    <div class="era-section-ttl">Records par année</div>
+    ${sparkSvg}
+    <div class="era-section-ttl">Spécialités</div>
+    <div class="era-mix">${mixHtml}</div>
+    <div class="era-section-ttl">Performances marquantes</div>
+    <div class="era-event-list">${eventsHtml || '<div style="font-size:11px;color:var(--muted);font-style:italic">Aucune donnée FINA disponible</div>'}</div>
+  `;
+
+  document.getElementById('era-panel').classList.add('on');
+  document.getElementById('era-panel').setAttribute('aria-hidden', 'false');
+  document.getElementById('era-overlay').classList.add('on');
+}
+
+function closeEraPanel(){
+  document.getElementById('era-panel').classList.remove('on');
+  document.getElementById('era-panel').setAttribute('aria-hidden', 'true');
+  document.getElementById('era-overlay').classList.remove('on');
+  document.querySelectorAll('.era-row.active').forEach(r => r.classList.remove('active'));
+}
+document.getElementById('era-panel-close').addEventListener('click', closeEraPanel);
+document.getElementById('era-overlay').addEventListener('click', closeEraPanel);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && document.getElementById('era-panel').classList.contains('on')) closeEraPanel();
+});
 
 // ════════════════════════════════════════════════════════════════════════
 // Init
