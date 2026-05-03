@@ -54,6 +54,13 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .sbox{flex:1;background:rgba(255,255,255,.05);border:1px solid var(--edge);border-radius:var(--r);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;padding:7px 12px 7px 34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
 .sbox:focus{outline:none;border-color:var(--teal)}
 .sbox::placeholder{color:var(--muted)}
+/* Search row: keep the input compact and place the reset button alongside it */
+.cg-search .sbox{flex:0 1 280px;min-width:160px}
+.reset-btn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--edge);color:var(--soft);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--r);cursor:pointer;transition:all .14s;white-space:nowrap}
+.reset-btn:hover,.reset-btn:focus-visible{color:#fff;border-color:rgba(0,212,200,.45);background:rgba(0,212,200,.08);outline:none}
+.reset-btn .reset-ic{font-size:14px;line-height:1;display:inline-block;transition:transform .25s}
+.reset-btn:hover .reset-ic{transform:rotate(-90deg)}
+.reset-btn.dim{opacity:.45;pointer-events:none}
 
 /* ══ LAYOUT ══ */
 .body{position:relative;z-index:1;display:grid;grid-template-columns:220px 1fr;flex:1;overflow:hidden;height:calc(100vh - 160px)}
@@ -89,6 +96,9 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .c-nm{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .c-tm{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.02em;color:var(--teal);text-align:right}
 .c-tm.g{color:var(--gold)}
+.c-tm.clk{cursor:pointer;transition:filter .12s,text-shadow .12s}
+.c-tm.clk:hover,.c-tm.clk:focus-visible{filter:brightness(1.25);text-shadow:0 0 14px rgba(0,212,200,.45);outline:none}
+.c-tm.clk.g:hover,.c-tm.clk.g:focus-visible{text-shadow:0 0 14px rgba(245,197,24,.5)}
 .c-pct{text-align:center}
 .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:12px}
 .b-hi{background:rgba(0,212,200,.14);color:var(--teal)}
@@ -172,6 +182,37 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
   .pf-body{padding:12px 16px 16px}
   .pf-row,.pf-chain-row{grid-template-columns:68px 80px 1fr 56px}
 }
+
+/* ══ EVENT HISTORY MODAL ══ */
+.eh-overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(4px);z-index:99;display:none;align-items:center;justify-content:center;padding:20px}
+.eh-overlay.show{display:flex}
+.eh-modal{background:var(--ink2);border:1px solid var(--edge);border-radius:12px;max-width:520px;width:100%;max-height:80vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.eh-hd{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;border-bottom:1px solid var(--edge);background:linear-gradient(140deg,#0d1321 0%,#10182a 100%)}
+.eh-hd-l{flex:1;min-width:0}
+.eh-eyebrow{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.eh-title{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#fff;letter-spacing:.03em;line-height:1.05}
+.eh-meta{font-size:11px;color:var(--soft);margin-top:6px;letter-spacing:.04em}
+.eh-close{background:transparent;border:1px solid var(--edge);color:var(--soft);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:17px;line-height:1;flex-shrink:0;transition:all .14s}
+.eh-close:hover{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.04)}
+.eh-body{overflow-y:auto;padding:8px 14px 14px;flex:1}
+.eh-row{display:grid;grid-template-columns:54px 1fr 78px;align-items:center;gap:10px;padding:8px 8px;border-bottom:1px solid var(--edge2);font-size:13px;color:var(--soft);border-radius:6px;transition:background .12s}
+.eh-row:last-child{border-bottom:none}
+.eh-row .eh-yr{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.04em;color:var(--muted)}
+.eh-row .eh-nm{font-size:13px;color:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:color .12s}
+.eh-row .eh-nm:hover{color:var(--teal);text-decoration:underline;text-decoration-color:rgba(0,212,200,.4);text-underline-offset:3px}
+.eh-row .eh-tm{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.02em;color:#ff8b96;text-align:right;opacity:.85}
+.eh-row.cur{background:rgba(34,197,94,.06);color:var(--text)}
+.eh-row.cur .eh-yr{color:var(--green)}
+.eh-row.cur .eh-tm{color:var(--green);opacity:1}
+.eh-row.cur .eh-nm{font-weight:600}
+.eh-row.cur .eh-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:9px;background:rgba(34,197,94,.15);color:var(--green);margin-left:8px;vertical-align:middle}
+.eh-empty{padding:24px;text-align:center;color:var(--muted);font-size:12px;font-style:italic}
+@media(max-width:680px){
+  .eh-modal{max-height:100vh;border-radius:0;border:none;height:100%;max-width:none}
+  .eh-hd{padding:14px 16px}
+  .eh-title{font-size:21px}
+  .eh-row{grid-template-columns:46px 1fr 70px;font-size:12.5px}
+}
 </style>
 </head>
 <body>
@@ -217,9 +258,10 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
       <button class="pill on" data-f="age" data-v="">Tous</button>
     </div>
   </div>
-  <div class="cg">
+  <div class="cg cg-search">
     <span class="clbl">Chercher</span>
     <input class="sbox" id="srch" placeholder="Nageur·euse ou épreuve…">
+    <button class="reset-btn" type="button" id="reset-btn" onclick="resetFilters()" title="Réinitialiser tous les filtres" aria-label="Réinitialiser tous les filtres"><span class="reset-ic" aria-hidden="true">↺</span>Réinitialiser</button>
   </div>
 </div>
 
@@ -4783,6 +4825,34 @@ document.getElementById('srch').oninput=e=>{fSearch=e.target.value.toLowerCase()
 
 function setStroke(s){fStroke=s;render();}
 
+// Clear every filter dimension and rebuild the view.
+// Wired to the "Tout réinitialiser" button.
+function resetFilters(){
+  fCat=fPool=fAge=fSearch='';
+  fStroke=null;
+  // Reset the visual "on" state of each pill group to its "Tous" pill.
+  document.querySelectorAll('.pill[data-f="cat"]').forEach(p=>p.classList.toggle('on',p.dataset.v===''));
+  document.querySelectorAll('.pill[data-f="pool"]').forEach(p=>{
+    const all=p.dataset.v==='';
+    p.classList.toggle('on',all);
+    p.classList.toggle('gon',all);
+  });
+  document.querySelectorAll('.pill[data-f="age"]').forEach(p=>p.classList.toggle('on',p.dataset.v===''));
+  // Clear the search input (its render is driven by fSearch, which we already reset).
+  const srch=document.getElementById('srch');
+  if(srch)srch.value='';
+  // render() rebuilds the stroke sidebar with "Toutes les nages" highlighted.
+  render();
+}
+
+// Dim the reset button when no filter is active, full-strength otherwise.
+function syncResetBtn(){
+  const btn=document.getElementById('reset-btn');
+  if(!btn)return;
+  const dirty=fCat||fPool||fAge||fSearch||fStroke;
+  btn.classList.toggle('dim',!dirty);
+}
+
 function filtered(){
   return D.filter(r=>
     (!fCat||r.cat===fCat)&&
@@ -4816,6 +4886,7 @@ function dot(y){const a=NOW-y;return `<div class="dot ${a<=3?'new':a<=12?'mid':'
 function bc(p){return p>=90?'b-hi':p>=70?'b-md':'b-lo';}
 
 function render(){
+  syncResetBtn();
   const base=D.filter(r=>(!fCat||r.cat===fCat)&&(!fPool||r.p===parseInt(fPool))&&(!fAge||r.a===fAge)&&(!fSearch||r.n.toLowerCase().includes(fSearch)||SF[r.k].toLowerCase().includes(fSearch)||(r.d+'').includes(fSearch)));
   const rows=base.filter(r=>!fStroke||r.k===fStroke);
   buildSb(base);
@@ -4853,7 +4924,7 @@ function render(){
         <div class="c-ev">${r.d}m ${SF[r.k]}</div>
         <div class="c-pool">${r.p}m</div>
         <div class="c-nm clk" data-n="${r.n}" title="Voir tous les records de ${r.n}">${r.cat==='F'?'♀':'♂'} ${r.n}</div>
-        <div class="c-tm${r.pct>=100?' g':''}">${r.t}</div>
+        <div class="c-tm clk${r.pct>=100?' g':''}" data-cat="${r.cat}" data-k="${r.k}" data-d="${r.d}" data-p="${r.p}" data-a="${r.a}" tabindex="0" role="button" title="Voir l'historique de ce record" aria-label="Voir l'historique du record">${r.t}</div>
         <div class="c-pct"><span class="badge ${bc(r.pct)}">${r.pct}%</span></div>
         <div class="c-yr">${r.y}</div>
         <div class="c-dot">${dot(r.y)}</div>
@@ -4985,20 +5056,98 @@ function openProfile(name){
 function closeProfile(){document.getElementById('pf-overlay').classList.remove('show');}
 
 // Click delegation: any name with class .clk opens that swimmer's profile.
+// Click on a time cell (.c-tm.clk) opens the event-history overlay.
 document.getElementById('rows').addEventListener('click',e=>{
-  const t=e.target.closest('.c-nm.clk');
-  if(t&&t.dataset.n)openProfile(t.dataset.n);
+  const tm=e.target.closest('.c-tm.clk');
+  if(tm){
+    openEventHistory(tm.dataset.cat,tm.dataset.k,+tm.dataset.d,+tm.dataset.p,tm.dataset.a);
+    return;
+  }
+  const nm=e.target.closest('.c-nm.clk');
+  if(nm&&nm.dataset.n)openProfile(nm.dataset.n);
 });
-// Esc key + backdrop click dismiss.
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProfile();});
-document.getElementById('pf-overlay').addEventListener('click',e=>{
+// Keyboard activation on the time cell (Enter / Space)
+document.getElementById('rows').addEventListener('keydown',e=>{
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  const tm=e.target.closest('.c-tm.clk');
+  if(!tm)return;
+  e.preventDefault();
+  openEventHistory(tm.dataset.cat,tm.dataset.k,+tm.dataset.d,+tm.dataset.p,tm.dataset.a);
+});
+// Esc key + backdrop click dismiss for the swimmer profile.
+// Esc closes whichever modal is on top: profile first, then event history.
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  const pfShown=document.getElementById('pf-overlay').classList.contains('show');
+  if(pfShown){closeProfile();}
+  else{closeEventHistory();}
+});
+// Document-level delegation — pf-overlay markup is below the script, so a
+// direct getElementById('pf-overlay') would return null at this point.
+document.addEventListener('click',e=>{
   if(e.target.id==='pf-overlay')closeProfile();
 });
 
+// ══ EVENT HISTORY MODAL ══
+// Click a time cell → see every swim that ever held that record (this slot),
+// in chronological order, with the standing record highlighted at the bottom.
+function openEventHistory(cat,k,d,p,a){
+  const all=H.filter(r=>r.cat===cat&&r.k===k&&r.d===d&&r.p===p&&r.a===a)
+    // Sort: ascending year, then descending seconds within year (slowest first → fastest last → into next year)
+    .sort((x,y)=>x.y-y.y || y.s-x.s);
+  const overlay=document.getElementById('eh-overlay');
+  const eyebrow=document.getElementById('eh-eyebrow');
+  const title=document.getElementById('eh-title');
+  const meta=document.getElementById('eh-meta');
+  const body=document.getElementById('eh-body');
+  const catLbl=cat==='F'?'Femmes':'Hommes';
+  eyebrow.textContent=`${catLbl} · ${a} ans · bassin ${p}m`;
+  title.textContent=`${d}m ${SF[k]||k}`;
+  if(!all.length){
+    meta.textContent='';
+    body.innerHTML=`<div class="eh-empty">Aucun record trouvé pour cet événement.</div>`;
+    overlay.classList.add('show');
+    return;
+  }
+  const cur=all[all.length-1];
+  meta.textContent=`${all.length} ${all.length===1?'record consigné':'records consignés'} · ${all[0].y} → ${cur.y}`;
+  if(all.length===1){
+    body.innerHTML=`<div class="eh-empty">Premier record consacré dans cet événement — aucun prédécesseur.</div>
+      <div class="eh-row cur">
+        <div class="eh-yr">${cur.y}</div>
+        <div><span class="eh-nm" data-n="${cur.n}">${cur.cat==='F'?'♀':'♂'} ${cur.n}</span><span class="eh-tag">Actuel</span></div>
+        <div class="eh-tm">${cur.t}</div>
+      </div>`;
+  } else {
+    body.innerHTML=all.map((r,i)=>{
+      const isCur=i===all.length-1;
+      return `<div class="eh-row${isCur?' cur':''}">
+        <div class="eh-yr">${r.y}</div>
+        <div><span class="eh-nm" data-n="${r.n}" title="Voir tous les records de ${r.n}">${r.cat==='F'?'♀':'♂'} ${r.n}</span>${isCur?'<span class="eh-tag">Actuel</span>':''}</div>
+        <div class="eh-tm">${r.t}</div>
+      </div>`;
+    }).join('');
+  }
+  overlay.classList.add('show');
+}
+function closeEventHistory(){
+  const o=document.getElementById('eh-overlay');
+  if(o)o.classList.remove('show');
+}
+// Document-level delegation (works regardless of script/markup order):
+// • backdrop click closes the overlay
+// • clicking a swimmer name inside the list pivots to that swimmer's profile
+document.addEventListener('click',e=>{
+  if(e.target.id==='eh-overlay'){closeEventHistory();return;}
+  const nm=e.target.closest('.eh-nm');
+  if(nm&&nm.closest('#eh-body')&&nm.dataset.n)openProfile(nm.dataset.n);
+});
+
 // "Voir N de plus" — expand a collapsed chain of subsequent record-breakers.
-document.getElementById('pf-body').addEventListener('click',e=>{
+// Delegated at document level (pf-body markup is parsed after this script).
+document.addEventListener('click',e=>{
   const btn=e.target.closest('.pf-chain-more');
-  if(!btn)return;
+  if(!btn||!btn.closest('#pf-body'))return;
   const id=btn.dataset.target;
   const block=document.querySelector(`.pf-chain[data-chain="${id}"]`);
   if(!block)return;
@@ -5017,6 +5166,21 @@ document.getElementById('pf-body').addEventListener('click',e=>{
       <button class="pf-close" onclick="closeProfile()" aria-label="Fermer">×</button>
     </div>
     <div class="pf-body" id="pf-body"></div>
+  </div>
+</div>
+
+<!-- EVENT HISTORY MODAL -->
+<div class="eh-overlay" id="eh-overlay" role="dialog" aria-modal="true" aria-labelledby="eh-title">
+  <div class="eh-modal">
+    <div class="eh-hd">
+      <div class="eh-hd-l">
+        <div class="eh-eyebrow" id="eh-eyebrow">—</div>
+        <div class="eh-title" id="eh-title">—</div>
+        <div class="eh-meta" id="eh-meta"></div>
+      </div>
+      <button class="eh-close" onclick="closeEventHistory()" aria-label="Fermer">×</button>
+    </div>
+    <div class="eh-body" id="eh-body"></div>
   </div>
 </div>
 </body>
