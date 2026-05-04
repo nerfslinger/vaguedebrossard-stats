@@ -181,30 +181,24 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .info-pop em{display:block;margin-top:7px;padding-top:7px;border-top:1px dashed var(--edge2);font-size:10.5px;color:var(--muted);font-style:italic}
 .info-wrap:hover .info-pop,.info-btn:focus-visible~.info-pop,.info-btn[aria-expanded="true"]~.info-pop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto}
 .longi-bd{padding:18px}
-.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;font-size:11px;align-items:center}
-.legend-item{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--edge);border-radius:14px;cursor:pointer;user-select:none;transition:all .14s;background:rgba(255,255,255,.02)}
-.legend-item:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05)}
-.legend-item.dim{opacity:.32}
-.legend-item.on{background:rgba(0,212,200,.10);border-color:rgba(0,212,200,.45)}
-.legend-item.extra{border-style:dashed}
-.legend-item .legend-x{color:var(--muted);margin-left:2px;font-size:13px;line-height:1;cursor:pointer}
-.legend-item .legend-x:hover{color:var(--red)}
-.legend-sw{width:14px;height:3px;border-radius:2px;flex-shrink:0}
-.legend-tools{display:flex;gap:8px;margin-left:auto;align-items:center;flex-wrap:wrap}
-.legend-search{position:relative;display:inline-flex;align-items:center}
-.legend-search input{background:var(--ink2);border:1px solid var(--edge);border-radius:14px;color:var(--text);font-family:inherit;font-size:11px;padding:5px 10px 5px 24px;width:170px;outline:none;transition:border-color .14s}
-.legend-search input:focus{border-color:var(--teal)}
-.legend-search::before{content:'⌕';position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;pointer-events:none}
-.legend-suggest{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--panel2);border:1px solid var(--edge);border-radius:8px;max-height:200px;overflow-y:auto;z-index:10;display:none;box-shadow:0 6px 18px rgba(0,0,0,.4)}
-.legend-suggest.on{display:block}
-.legend-sg-item{padding:6px 12px;font-size:11px;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--edge2)}
-.legend-sg-item:last-child{border-bottom:none}
-.legend-sg-item:hover,.legend-sg-item.kb{background:rgba(0,212,200,.10);color:var(--teal)}
-.legend-sg-meta{margin-left:auto;font-size:10px;color:var(--muted)}
-.legend-sg-empty{padding:8px 12px;font-size:11px;color:var(--muted);font-style:italic}
-.legend-btn{background:transparent;border:1px solid var(--edge);color:var(--soft);font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.06em;padding:5px 11px;border-radius:14px;cursor:pointer;text-transform:uppercase;transition:all .14s}
-.legend-btn:hover{color:#fff;border-color:rgba(255,255,255,.18)}
-.legend-btn:disabled{opacity:.4;cursor:default}
+/* Trajectory chart — per-swimmer bubble panel by age band */
+.trj-legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin:0 0 14px;padding:9px 13px;background:var(--ink2);border:1px solid var(--edge);border-radius:8px;font-size:11px;color:var(--soft);letter-spacing:.02em}
+.trj-legend-lbl{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.trj-legend-sw{display:inline-flex;align-items:center;gap:6px}
+.trj-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.trj-col{background:var(--ink2);border:1px solid var(--edge);border-radius:8px;padding:12px 14px 8px}
+.trj-col-hd{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.06em;color:#fff;margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--edge);display:flex;align-items:baseline;gap:8px;font-weight:400}
+.trj-col-hd .ic{font-size:18px;line-height:1;color:var(--teal)}
+.trj-col-hd .meta{margin-left:auto;font-size:10px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.trj-panel{padding:8px 0;border-bottom:1px solid var(--edge2);display:flex;flex-direction:column}
+.trj-panel:last-child{border-bottom:none}
+.trj-pn-hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:3px;flex:0 0 auto}
+.trj-pn-name{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.04em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trj-pn-meta{font-size:10.5px;color:var(--soft);letter-spacing:.02em;flex-shrink:0}
+.trj-pn-meta b{color:var(--teal);font-weight:600}
+/* Vertically centre the chart in any extra panel height (column-stretch case) */
+.trj-panel svg{display:block;width:100%;height:auto;margin:auto 0}
+@media(max-width:880px){.trj-grid{grid-template-columns:1fr}}
 
 /* ══ ERA RIBBON ══ */
 .era{display:flex;flex-direction:column;gap:0}
@@ -393,12 +387,28 @@ footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);bor
 
   <div class="longi-block">
     <div class="longi-hd">
-      <div class="longi-ttl">Records détenus au fil des ans<span class="info-wrap"><button class="info-btn" type="button" aria-label="Critères de sélection" aria-expanded="false">i</button><span class="info-pop" role="tooltip"><strong>Critères de sélection</strong>Les cinq femmes et les cinq hommes qui ont détenu le plus grand nombre de records simultanément, mesuré sur les bilans du 31 décembre de chaque année.<em>Affiché : 10 carrières (5 ♀ + 5 ♂).</em></span></span></div>
-      <div class="longi-sub">Top 5 — femmes &amp; hommes · d'après les bilans du 31 décembre</div>
+      <div class="longi-ttl">Trajectoire par groupe d'âge<span class="info-wrap"><button class="info-btn" type="button" aria-label="Critères de sélection" aria-expanded="false">i</button><span class="info-pop" role="tooltip"><strong>Critères de sélection</strong>Les cinq femmes et les cinq hommes ayant brisé le plus de records dans leur carrière. Une bulle marque chaque année où un record a été consacré ; sa taille indique combien. Une bande pâle marque la fenêtre des records dans chaque groupe d'âge — les positions vides à l'intérieur correspondent aux années sans record.<em id="pop-traj-meta">10 carrières (5 ♀ + 5 ♂).</em></span></span></div>
+      <div class="longi-sub">10 carrières · top par total de records consacrés</div>
     </div>
     <div class="longi-bd">
-      <div class="legend" id="line-legend"></div>
-      <svg class="chart" id="line-chart" viewBox="0 0 920 380" preserveAspectRatio="none"></svg>
+      <div class="trj-legend">
+        <span class="trj-legend-lbl">Repères</span>
+        <span class="trj-legend-sw"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="3" fill="#00d4c8" opacity="0.92"/></svg>1–2 records</span>
+        <span class="trj-legend-sw"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="#00d4c8" opacity="0.92"/></svg>5 records</span>
+        <span class="trj-legend-sw"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.5" fill="#00d4c8" opacity="0.92"/></svg>10+ records</span>
+        <span class="trj-legend-sw"><svg width="34" height="14" viewBox="0 0 34 14"><rect x="0" y="3" width="34" height="8" fill="#5fd388" opacity="0.20" rx="2"/></svg>Fenêtre des records</span>
+        <span style="margin-left:auto;color:var(--muted);font-style:italic">couleur = groupe d'âge</span>
+      </div>
+      <div class="trj-grid">
+        <div class="trj-col">
+          <h3 class="trj-col-hd"><span class="ic">♀</span><span>Femmes</span><span class="meta">5 carrières</span></h3>
+          <div id="trj-women"></div>
+        </div>
+        <div class="trj-col">
+          <h3 class="trj-col-hd"><span class="ic">♂</span><span>Hommes</span><span class="meta">5 carrières</span></h3>
+          <div id="trj-men"></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -750,26 +760,32 @@ document.querySelectorAll('.mode-tab').forEach(btn => {
 
 let longiRendered = false;
 
-// State for the interactive line chart
-state.lineSel = new Set();      // user-selected names (empty = show all)
-state.lineExtras = new Set();   // extra swimmers added via search beyond the default 10
-state._lineCache = null;        // cached per-snapshot held-counts lookup
+// Cached per-snapshot held-counts lookup (used by buildLineCache for gender fallback in buildEraData)
+state._lineCache = null;
 
 function renderLongi(){
   if (longiRendered) return;
   renderEraRibbon();
-  renderLineChart();
+  renderTrajectory();
   updateInfoPopCounts();
   longiRendered = true;
 }
 
-// Populate dynamic count inside the "L'empreinte" info popover
+// Populate dynamic counts inside the info popovers
 function updateInfoPopCounts(){
   try {
     const data = buildEraData();
     const el = document.getElementById('pop-empreinte-count');
     if (el && data){
       el.textContent = `Affiché : ${data.length} carrière${data.length > 1 ? 's' : ''}.`;
+    }
+    const fCount = data.filter(s => s.gender === 'F').length;
+    const mCount = data.filter(s => s.gender === 'M').length;
+    const trj = document.getElementById('pop-traj-meta');
+    if (trj){
+      const f = Math.min(5, fCount);
+      const m = Math.min(5, mCount);
+      trj.textContent = `Affiché : ${f + m} carrière${f + m > 1 ? 's' : ''} (${f} ♀ + ${m} ♂).`;
     }
   } catch (_) { /* no-op if data not ready */ }
 }
@@ -821,246 +837,187 @@ function buildLineCache(){
   return idx;
 }
 
-// Stable color assignment so a line keeps its color across re-renders
-const LINE_PAL_F = ['#00d4c8', '#5dd6ff', '#9b8cff', '#ff7eb6', '#34d399', '#22d3ee', '#c084fc'];
-const LINE_PAL_M = ['#f5c518', '#ff7042', '#ff4455', '#a3e635', '#facc15', '#fb923c', '#fb7185'];
-const _lineColors = {};
-function colorFor(name, gender){
-  if (_lineColors[name]) return _lineColors[name];
-  const pal = gender === 'F' ? LINE_PAL_F : LINE_PAL_M;
-  // Hash-ish stable index based on name
-  let h = 0;
-  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
-  const c = pal[h % pal.length];
-  _lineColors[name] = c;
-  return c;
+// ── Trajectory chart: per-swimmer bubble panel by age band ───────────
+// Each panel shows one notable swimmer's record-setting career as a
+// staircase of bubbles — bubble size = records that year, lane = age
+// band, position = year. A faint band-coloured stripe brackets the
+// first→last record year in each band.
+const BAND_COLORS = {
+  '20-24': '#5fc8d3',
+  '25-29': '#5fb6d3',
+  '30-34': '#5fd3c4',
+  '35-39': '#5fd388',
+  '40-44': '#92d35f',
+  '45-49': '#d3c45f',
+  '50-54': '#d3a05f',
+  '55-59': '#d37e5f',
+  '60-64': '#d35f7e',
+  '65-69': '#b35fd3',
+  '70-74': '#7f5fd3',
+  '75-79': '#5f6dd3',
+  '80-84': '#3f5fd3',
+};
+const BAND_ORDER_ALL = ['20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64','65-69','70-74','75-79','80-84'];
+
+function renderTrajectory(){
+  const all = buildEraData();
+  const women = all.filter(s => s.gender === 'F').sort((a,b) => b.total - a.total).slice(0, 5);
+  const men   = all.filter(s => s.gender === 'M').sort((a,b) => b.total - a.total).slice(0, 5);
+  const wEl = document.getElementById('trj-women');
+  const mEl = document.getElementById('trj-men');
+  if (wEl) wEl.innerHTML = women.map(buildTrjPanel).join('');
+  if (mEl) mEl.innerHTML = men.map(buildTrjPanel).join('');
 }
 
-function defaultLineSeries(){
-  const cache = buildLineCache();
-  const all = Object.values(cache);
-  const topF = all.filter(s => s.gender === 'F').sort((a,b)=>b.peak-a.peak).slice(0, 5);
-  const topM = all.filter(s => s.gender === 'M').sort((a,b)=>b.peak-a.peak).slice(0, 5);
-  return topF.concat(topM);
-}
-
-function renderLineChart(){
-  const cache = buildLineCache();
-  const def = defaultLineSeries();
-  // Combine defaults + extras (deduped, preserving order)
-  const seenNames = new Set();
-  const series = [];
-  for (const s of def){ if (!seenNames.has(s.name)){ seenNames.add(s.name); series.push(s); } }
-  for (const name of state.lineExtras){
-    if (!seenNames.has(name) && cache[name]){
-      seenNames.add(name);
-      series.push(cache[name]);
-    }
+function buildTrjPanel(swimmer){
+  // Aggregate this swimmer's records into per-(band, year) cells
+  const cellMap = {};
+  const bandSet = new Set();
+  let yMin = Infinity, yMax = -Infinity;
+  for (const r of swimmer.records){
+    const key = r.a + '|' + r.y;
+    cellMap[key] = (cellMap[key] || 0) + 1;
+    bandSet.add(r.a);
+    if (r.y < yMin) yMin = r.y;
+    if (r.y > yMax) yMax = r.y;
   }
-  const data = series.map(s => ({name: s.name, gender: s.gender, points: s.points, isExtra: state.lineExtras.has(s.name)}));
+  const cells = Object.entries(cellMap).map(([key, count]) => {
+    const [band, year] = key.split('|');
+    return { band, year: +year, count };
+  });
+  // Bands ordered: youngest at bottom, oldest at top → career staircase climbs upward
+  const bandOrder = BAND_ORDER_ALL.filter(b => bandSet.has(b));
+  const bandsTopDown = [...bandOrder].reverse();
 
-  const SNAP_YEARS = Y.snapshots.map(s => s.year).sort((a,b)=>a-b);
-  const minY = SNAP_YEARS[0], maxY = SNAP_YEARS[SNAP_YEARS.length-1];
-  const maxCount = Math.max(...data.flatMap(d => d.points.map(p => p.c)), 10);
-
-  const W = 920, H = 380, PAD_L = 42, PAD_R = 14, PAD_T = 18, PAD_B = 36;
+  const W = 510, LANE_H = 24;
+  const PAD_L = 56, PAD_R = 12, PAD_T = 8, PAD_B = 18;
   const innerW = W - PAD_L - PAD_R;
-  const innerH = H - PAD_T - PAD_B;
-
-  const xScale = yr => PAD_L + ((yr - minY) / (maxY - minY)) * innerW;
-  const yScale = c  => PAD_T + innerH - (c / maxCount) * innerH;
-
-  // Grid + axes
-  let grids = '';
-  const step = maxCount > 100 ? 50 : 25;
-  for (let v = step; v <= maxCount; v += step){
-    const yp = yScale(v);
-    grids += `<line class="grid" x1="${PAD_L}" y1="${yp}" x2="${W - PAD_R}" y2="${yp}"/>`;
-    grids += `<text class="lbl" x="${PAD_L - 6}" y="${yp + 3}" text-anchor="end">${v}</text>`;
+  const H = PAD_T + bandsTopDown.length * LANE_H + PAD_B;
+  // Pad the x-axis to a minimum visual span so single-band, very-short careers
+  // don't stretch edge-to-edge. Bubbles cluster near the centre, looking
+  // proportional to multi-band panels.
+  const actualSpan = Math.max(1, yMax - yMin);
+  const MIN_VISUAL_SPAN = 8;
+  let displayMinY = yMin, displayMaxY = yMax;
+  if (actualSpan < MIN_VISUAL_SPAN){
+    const pad = (MIN_VISUAL_SPAN - actualSpan) / 2;
+    displayMinY = yMin - pad;
+    displayMaxY = yMax + pad;
   }
-  for (const yr of SNAP_YEARS){
-    if (yr % 5 !== 0 && yr !== minY && yr !== maxY) continue;
-    const xp = xScale(yr);
-    grids += `<text class="lbl" x="${xp}" y="${H - 18}" text-anchor="middle">${yr}</text>`;
-  }
+  const yearSpan = Math.max(1, displayMaxY - displayMinY);
+  const xScale = y => PAD_L + ((y - displayMinY) / yearSpan) * innerW;
+  const yLane  = band => PAD_T + bandsTopDown.indexOf(band) * LANE_H + LANE_H / 2;
+  const bubbleR = c => 2.5 + Math.sqrt(c) * 1.4;
+  const bandColor = b => BAND_COLORS[b] || '#888';
 
-  const anySelected = state.lineSel.size > 0;
+  let svg = '';
 
-  // Lines (highlighted ones drawn on top)
-  let bg = '', fg = '';
-  let legend = '';
-  data.forEach(d => {
-    if (!d.points.length) return;
-    const color = colorFor(d.name, d.gender);
-    const isSel = state.lineSel.has(d.name);
-    const dimmed = anySelected && !isSel;
-    const opacity = dimmed ? 0.18 : (anySelected ? 1 : 0.92);
-    const sw = (isSel && anySelected) ? 3 : 2;
-    const pts = d.points.map(p => `${xScale(p.year)},${yScale(p.c)}`).join(' ');
-    const lineSvg = `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round" opacity="${opacity}"/>`;
-    let circles = '';
-    for (const p of d.points){
-      circles += `<circle cx="${xScale(p.year)}" cy="${yScale(p.c)}" r="${(isSel && anySelected) ? 3.4 : 2.5}" fill="${color}" opacity="${opacity}"><title>${d.name} — ${p.year}: ${p.c} records</title></circle>`;
+  // Per-band record-window stripe + band label on the left
+  bandsTopDown.forEach((band, idx) => {
+    const yT = PAD_T + idx * LANE_H;
+    const bandCells = cells.filter(c => c.band === band);
+    if (bandCells.length){
+      const minBY = Math.min(...bandCells.map(c => c.year));
+      const maxBY = Math.max(...bandCells.map(c => c.year));
+      const stripeH = LANE_H - 8;
+      const stripeY = yT + (LANE_H - stripeH) / 2;
+      const x1raw = xScale(minBY);
+      const x2raw = xScale(maxBY);
+      const minStripeW = 10;
+      const naturalW = x2raw - x1raw;
+      const w = Math.max(minStripeW, naturalW);
+      const x1 = x1raw - (w - naturalW) / 2;
+      svg += `<rect x="${x1.toFixed(1)}" y="${stripeY.toFixed(1)}" width="${w.toFixed(1)}" height="${stripeH}" fill="${bandColor(band)}" opacity="0.18" rx="3"/>`;
     }
-    const last = d.points[d.points.length - 1];
-    const labelOpacity = dimmed ? 0.25 : 1;
-    const labelSvg = `<text x="${xScale(last.year) + 4}" y="${yScale(last.c) + 3}" font-size="10" fill="${color}" font-weight="600" opacity="${labelOpacity}">${d.name.split(' ')[0]}</text>`;
-    if (dimmed){ bg += lineSvg + circles + labelSvg; }
-    else      { fg += lineSvg + circles + labelSvg; }
-
-    const cls = ['legend-item'];
-    if (anySelected){ cls.push(isSel ? 'on' : 'dim'); }
-    if (d.isExtra){ cls.push('extra'); }
-    const xBtn = d.isExtra ? `<span class="legend-x" data-rm="${escAttr(d.name)}" title="Retirer">×</span>` : '';
-    legend += `<span class="${cls.join(' ')}" data-name="${escAttr(d.name)}" style="color:${color}"><span class="legend-sw" style="background:${color}"></span>${d.name}${xBtn}</span>`;
+    svg += `<text x="${PAD_L - 8}" y="${yT + LANE_H/2 + 4}" text-anchor="end" font-family="DM Sans" font-size="11" fill="#aab1bd" letter-spacing="0.02em">${band}</text>`;
   });
 
-  // Tools row: reset button (only when something is selected) + search
-  const allNames = Object.keys(cache).sort();
-  const tools = `
-    <div class="legend-tools">
-      ${anySelected ? `<button class="legend-btn" id="line-reset">Tout afficher</button>` : ''}
-      <div class="legend-search">
-        <input id="line-search" type="text" placeholder="Comparer un nageur…" autocomplete="off" data-all="${allNames.length}">
-        <div class="legend-suggest" id="line-suggest"></div>
+  // Year ticks: anchor on the swimmer's actual yMin/yMax (not the padded display range).
+  // Add internal markers only when the actual span warrants them.
+  let yearTicks;
+  if (actualSpan <= 4) yearTicks = [yMin, yMax];
+  else if (actualSpan <= 10) yearTicks = [yMin, Math.round((yMin + yMax)/2), yMax];
+  else yearTicks = [yMin, Math.round(yMin + actualSpan/3), Math.round(yMin + 2*actualSpan/3), yMax];
+  yearTicks = [...new Set(yearTicks)];
+  yearTicks.forEach(y => {
+    svg += `<line x1="${xScale(y)}" y1="${PAD_T}" x2="${xScale(y)}" y2="${PAD_T + bandsTopDown.length * LANE_H}" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>`;
+    svg += `<text x="${xScale(y)}" y="${H - 4}" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#6b7280">${y}</text>`;
+  });
+
+  // Connecting trail through all bubbles in chronological order (older band wins on tie)
+  const sortedCells = [...cells].sort((a,b) => a.year - b.year || bandsTopDown.indexOf(b.band) - bandsTopDown.indexOf(a.band));
+  if (sortedCells.length > 1){
+    let d = '';
+    sortedCells.forEach((p, i) => {
+      const x = xScale(p.year), yy = yLane(p.band);
+      d += (i === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + yy.toFixed(1) + ' ';
+    });
+    svg += `<path d="${d.trim()}" stroke="rgba(255,255,255,0.20)" stroke-width="1" fill="none" stroke-linejoin="round"/>`;
+  }
+
+  // Bubbles
+  sortedCells.forEach(p => {
+    const x = xScale(p.year), yy = yLane(p.band);
+    const r = bubbleR(p.count);
+    svg += `<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${r.toFixed(1)}" fill="${bandColor(p.band)}" opacity="0.92"><title>${p.year} · ${p.band} · ${p.count} record${p.count > 1 ? 's' : ''}</title></circle>`;
+    if (p.count >= 5){
+      svg += `<text x="${x.toFixed(1)}" y="${(yy + 3).toFixed(1)}" text-anchor="middle" font-family="DM Sans" font-size="9" font-weight="600" fill="#0a0e1a" pointer-events="none">${p.count}</text>`;
+    }
+  });
+
+  return `
+    <div class="trj-panel">
+      <div class="trj-pn-hd">
+        <span class="trj-pn-name">${swimmer.name}</span>
+        <span class="trj-pn-meta"><b>${swimmer.total}</b> records · ${yMin}–${yMax} · ${bandOrder.length} groupes d'âge</span>
       </div>
+      <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">
+        ${svg}
+      </svg>
     </div>
   `;
-
-  document.getElementById('line-legend').innerHTML = legend + tools;
-  document.getElementById('line-chart').innerHTML = `
-    <line class="axis" x1="${PAD_L}" y1="${PAD_T + innerH}" x2="${W - PAD_R}" y2="${PAD_T + innerH}"/>
-    <line class="axis" x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + innerH}"/>
-    ${grids}
-    ${bg}
-    ${fg}
-  `;
-
-  attachLegendHandlers();
 }
 
 function escAttr(s){ return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
-
-function attachLegendHandlers(){
-  const legendEl = document.getElementById('line-legend');
-  if (!legendEl) return;
-
-  // Toggle selection on chip click (but not when clicking the × inside an extra chip)
-  legendEl.querySelectorAll('.legend-item').forEach(el => {
-    el.addEventListener('click', (e) => {
-      if (e.target.classList.contains('legend-x')) return;
-      const name = el.dataset.name;
-      if (state.lineSel.has(name)) state.lineSel.delete(name);
-      else state.lineSel.add(name);
-      renderLineChart();
-    });
-  });
-
-  // × removes an extra swimmer entirely
-  legendEl.querySelectorAll('.legend-x').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const name = el.dataset.rm;
-      state.lineExtras.delete(name);
-      state.lineSel.delete(name);
-      renderLineChart();
-    });
-  });
-
-  const reset = document.getElementById('line-reset');
-  if (reset){
-    reset.addEventListener('click', () => {
-      state.lineSel.clear();
-      renderLineChart();
-    });
-  }
-
-  const search = document.getElementById('line-search');
-  const sugg   = document.getElementById('line-suggest');
-  if (search){
-    let kbIdx = -1;
-    let lastMatches = [];
-
-    const renderSuggest = () => {
-      const q = search.value.trim().toLowerCase();
-      if (!q){ sugg.classList.remove('on'); sugg.innerHTML = ''; return; }
-      const cache = state._lineCache;
-      const names = Object.keys(cache);
-      const matches = names
-        .map(n => ({n, info: cache[n]}))
-        .filter(({n}) => n.toLowerCase().includes(q))
-        .sort((a, b) => {
-          // Prioritize prefix matches, then by peak desc
-          const ap = a.n.toLowerCase().startsWith(q) ? 0 : 1;
-          const bp = b.n.toLowerCase().startsWith(q) ? 0 : 1;
-          if (ap !== bp) return ap - bp;
-          return b.info.peak - a.info.peak;
-        })
-        .slice(0, 8);
-      lastMatches = matches;
-      kbIdx = -1;
-      if (!matches.length){
-        sugg.innerHTML = `<div class="legend-sg-empty">Aucun nageur·euse trouvé</div>`;
-      } else {
-        sugg.innerHTML = matches.map((m, i) => {
-          const sym = m.info.gender === 'F' ? '♀' : '♂';
-          return `<div class="legend-sg-item" data-name="${escAttr(m.n)}" data-i="${i}">
-            <span style="color:${m.info.gender === 'F' ? 'var(--teal)' : 'var(--gold)'}">${sym}</span>
-            <span>${m.n}</span>
-            <span class="legend-sg-meta">pic ${m.info.peak}</span>
-          </div>`;
-        }).join('');
-        sugg.querySelectorAll('.legend-sg-item').forEach(item => {
-          item.addEventListener('click', () => addExtra(item.dataset.name));
-        });
-      }
-      sugg.classList.add('on');
-    };
-
-    const addExtra = (name) => {
-      state.lineExtras.add(name);
-      search.value = '';
-      sugg.classList.remove('on');
-      renderLineChart();
-    };
-
-    search.addEventListener('input', renderSuggest);
-    search.addEventListener('focus', renderSuggest);
-    search.addEventListener('blur', () => {
-      // Delay so click on suggestion still fires
-      setTimeout(() => sugg.classList.remove('on'), 180);
-    });
-    search.addEventListener('keydown', (e) => {
-      const items = sugg.querySelectorAll('.legend-sg-item');
-      if (e.key === 'ArrowDown' && items.length){
-        e.preventDefault();
-        kbIdx = (kbIdx + 1) % items.length;
-        items.forEach((it, i) => it.classList.toggle('kb', i === kbIdx));
-      } else if (e.key === 'ArrowUp' && items.length){
-        e.preventDefault();
-        kbIdx = (kbIdx - 1 + items.length) % items.length;
-        items.forEach((it, i) => it.classList.toggle('kb', i === kbIdx));
-      } else if (e.key === 'Enter'){
-        e.preventDefault();
-        const pick = kbIdx >= 0 ? lastMatches[kbIdx] : lastMatches[0];
-        if (pick) addExtra(pick.n);
-      } else if (e.key === 'Escape'){
-        search.value = '';
-        sugg.classList.remove('on');
-      }
-    });
-  }
-}
 
 // ════════════════════════════════════════════════════════════════════════
 // Era ribbon — one row per notable swimmer, intensity = records broken/year
 // ════════════════════════════════════════════════════════════════════════
 
+// Drop records whose age band is grossly inconsistent with the swimmer's
+// chronological progression (e.g., an 80-year-old appearing in the 20-24 band —
+// this happens occasionally in the source data on statsman.ca). We walk each
+// swimmer's records in order; any record more than one band (5 years) below
+// the highest band already seen is rejected.
+let _sanitizedIndividual = null;
+function getSanitizedIndividual(){
+  if (_sanitizedIndividual) return _sanitizedIndividual;
+  const bySwimmer = {};
+  for (const r of Y.individual){
+    (bySwimmer[r.n] = bySwimmer[r.n] || []).push(r);
+  }
+  const valid = new Set();
+  for (const name in bySwimmer){
+    const recs = bySwimmer[name].slice().sort((a, b) => a.y - b.y);
+    let maxBand = -Infinity;
+    for (const r of recs){
+      const ageStart = parseInt(String(r.a).split('-')[0], 10);
+      if (Number.isNaN(ageStart)) continue;
+      if (ageStart >= maxBand - 9){
+        valid.add(r);
+        if (ageStart > maxBand) maxBand = ageStart;
+      }
+    }
+  }
+  _sanitizedIndividual = Y.individual.filter(r => valid.has(r));
+  return _sanitizedIndividual;
+}
+
 function buildEraData(){
   // Aggregate from records-broken (Y.individual). Relays excluded —
   // they don't attribute to a single swimmer cleanly.
   const bySwimmer = {};
-  for (const r of Y.individual){
+  for (const r of getSanitizedIndividual()){
     if (!bySwimmer[r.n]){
       bySwimmer[r.n] = {
         name: r.n, gender: r.c, total: 0, byYear: {},

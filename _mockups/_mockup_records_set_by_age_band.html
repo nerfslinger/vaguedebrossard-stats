@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Maquette — Records consacrés au fil de la carrière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0e1a;
+    --ink2: #0d1321;
+    --panel: #10182a;
+    --edge: rgba(255,255,255,0.09);
+    --edge2: rgba(255,255,255,0.05);
+    --text: #e7eaf0;
+    --soft: #aab1bd;
+    --muted: #6b7280;
+    --teal: #00d4c8;
+    --gold: #f5c518;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 28px;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 0.04em; color: #fff; margin: 0 0 4px; font-weight: 400; }
+  .sub { color: var(--muted); font-size: 12px; margin: 0 0 14px; font-style: italic; letter-spacing: 0.02em; }
+  .note { color: var(--soft); font-size: 12px; margin: 0 0 18px; max-width: 780px; line-height: 1.55; }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 6px 16px;
+    margin: 0 0 22px; padding: 11px 14px;
+    background: var(--ink2); border: 1px solid var(--edge); border-radius: 8px;
+    font-size: 11px; color: var(--soft); letter-spacing: 0.02em;
+  }
+  .legend-lbl { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; margin-right: 4px; align-self: center; }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { background: var(--panel); border: 1px solid var(--edge); border-radius: 10px; padding: 14px 16px 8px; }
+  .col-hd { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.06em; color: #fff; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--edge); display: flex; align-items: baseline; gap: 8px; }
+  .col-hd .ic { font-size: 20px; line-height: 1; color: var(--teal); }
+  .col-hd .meta { margin-left: auto; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
+  .panel { padding: 9px 0 11px; border-bottom: 1px solid var(--edge2); }
+  .panel:last-child { border-bottom: none; }
+  .pn-hd { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .pn-name { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.04em; color: #fff; }
+  .pn-total { font-size: 11px; color: var(--soft); letter-spacing: 0.04em; }
+  .pn-total b { color: var(--teal); font-weight: 600; }
+  svg { display: block; width: 100%; }
+  @media (max-width: 880px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Records consacrés au fil de la carrière</h1>
+<p class="sub">Cumul des records brisés au fil des ans · les couleurs marquent le groupe d'âge où chaque record a été établi</p>
+<p class="note">Une rangée par carrière notable. La hauteur cumulée croît à chaque nouveau record. Quand la nageuse ou le nageur passe dans un nouveau groupe d'âge, une nouvelle couche de couleur apparaît au sommet de la pile — souvent avec un sursaut de productivité dans les premières années du nouveau groupe (compétition fraîche, pic relatif). <em>Données fictives à des fins de maquette.</em></p>
+
+<div class="legend" id="legend"><span class="legend-lbl">Groupe d'âge</span></div>
+
+<div class="grid">
+  <div class="col">
+    <h2 class="col-hd"><span class="ic">♀</span><span>Femmes</span><span class="meta">5 carrières · top sélection</span></h2>
+    <div id="women"></div>
+  </div>
+  <div class="col">
+    <h2 class="col-hd"><span class="ic">♂</span><span>Hommes</span><span class="meta">5 carrières · top sélection</span></h2>
+    <div id="men"></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ── Age-band palette: cool → warm progression
+const BANDS_ALL = ['25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64','65-69','70-74'];
+const COLORS = {
+  '25-29': '#5fb6d3',
+  '30-34': '#5fd3c4',
+  '35-39': '#5fd388',
+  '40-44': '#92d35f',
+  '45-49': '#d3c45f',
+  '50-54': '#d3a05f',
+  '55-59': '#d37e5f',
+  '60-64': '#d35f7e',
+  '65-69': '#b35fd3',
+  '70-74': '#7f5fd3',
+};
+
+// ── Fictitious careers — each entry: { band, s: startYear, e: endYear, t: total records }
+const SWIMMERS = [
+  { name: 'Gail Desjardins', gender: 'F', careers: [
+    { band: '30-34', s: 1996, e: 1998, t: 6 },
+    { band: '35-39', s: 1999, e: 2003, t: 24 },
+    { band: '40-44', s: 2004, e: 2008, t: 38 },
+    { band: '45-49', s: 2009, e: 2013, t: 32 },
+    { band: '50-54', s: 2014, e: 2018, t: 28 },
+    { band: '55-59', s: 2019, e: 2023, t: 18 },
+    { band: '60-64', s: 2024, e: 2026, t: 8 },
+  ]},
+  { name: 'Marie Beaulieu', gender: 'F', careers: [
+    { band: '45-49', s: 2008, e: 2012, t: 14 },
+    { band: '50-54', s: 2013, e: 2017, t: 28 },
+    { band: '55-59', s: 2018, e: 2022, t: 22 },
+    { band: '60-64', s: 2023, e: 2026, t: 11 },
+  ]},
+  { name: 'Sylvie Bernard', gender: 'F', careers: [
+    { band: '30-34', s: 1998, e: 2002, t: 18 },
+    { band: '35-39', s: 2003, e: 2007, t: 24 },
+    { band: '40-44', s: 2008, e: 2012, t: 22 },
+    { band: '45-49', s: 2013, e: 2014, t: 4 },
+  ]},
+  { name: 'Anne Côté', gender: 'F', careers: [
+    { band: '35-39', s: 2000, e: 2004, t: 8 },
+    { band: '40-44', s: 2005, e: 2009, t: 14 },
+    { band: '45-49', s: 2010, e: 2014, t: 16 },
+    { band: '50-54', s: 2015, e: 2019, t: 18 },
+    { band: '55-59', s: 2020, e: 2024, t: 12 },
+  ]},
+  { name: 'Lise Tremblay', gender: 'F', careers: [
+    { band: '40-44', s: 2005, e: 2009, t: 20 },
+    { band: '45-49', s: 2010, e: 2014, t: 22 },
+    { band: '50-54', s: 2015, e: 2018, t: 11 },
+  ]},
+  { name: 'Christian Berger', gender: 'M', careers: [
+    { band: '30-34', s: 1995, e: 1999, t: 18 },
+    { band: '35-39', s: 2000, e: 2004, t: 28 },
+    { band: '40-44', s: 2005, e: 2009, t: 35 },
+    { band: '45-49', s: 2010, e: 2014, t: 30 },
+    { band: '50-54', s: 2015, e: 2019, t: 25 },
+    { band: '55-59', s: 2020, e: 2024, t: 14 },
+  ]},
+  { name: 'Pierre Lavoie', gender: 'M', careers: [
+    { band: '40-44', s: 2010, e: 2014, t: 22 },
+    { band: '45-49', s: 2015, e: 2019, t: 30 },
+    { band: '50-54', s: 2020, e: 2024, t: 22 },
+  ]},
+  { name: 'Robert Gagné', gender: 'M', careers: [
+    { band: '25-29', s: 1998, e: 2001, t: 4 },
+    { band: '30-34', s: 2002, e: 2006, t: 12 },
+    { band: '35-39', s: 2007, e: 2011, t: 18 },
+    { band: '40-44', s: 2012, e: 2016, t: 22 },
+    { band: '45-49', s: 2017, e: 2021, t: 14 },
+    { band: '50-54', s: 2022, e: 2026, t: 8 },
+  ]},
+  { name: 'Michel Roy', gender: 'M', careers: [
+    { band: '50-54', s: 2010, e: 2014, t: 16 },
+    { band: '55-59', s: 2015, e: 2019, t: 26 },
+    { band: '60-64', s: 2020, e: 2024, t: 20 },
+    { band: '65-69', s: 2025, e: 2026, t: 6 },
+  ]},
+  { name: 'Jean Dubois', gender: 'M', careers: [
+    { band: '35-39', s: 2003, e: 2007, t: 12 },
+    { band: '40-44', s: 2008, e: 2012, t: 22 },
+    { band: '45-49', s: 2013, e: 2017, t: 18 },
+    { band: '50-54', s: 2018, e: 2020, t: 6 },
+  ]},
+];
+
+// ── Distribute total records across years with a "fresh-band burst" pattern.
+// Year 1 of band has the highest weight, declining each subsequent year.
+function distribute(career){
+  const years = career.e - career.s + 1;
+  const weights = [];
+  for (let i = 0; i < years; i++) weights.push(Math.max(0.25, 1.0 - 0.18 * i));
+  const wSum = weights.reduce((a,b) => a + b, 0);
+  const exact = weights.map(w => (w / wSum) * career.t);
+  const rounded = exact.map(v => Math.round(v));
+  let diff = career.t - rounded.reduce((a,b) => a + b, 0);
+  for (let i = 0; i < Math.abs(diff); i++){
+    const idx = i % years;
+    rounded[idx] = Math.max(0, rounded[idx] + Math.sign(diff));
+  }
+  return rounded.map((c, i) => ({ year: career.s + i, count: c }));
+}
+
+const X_MIN = 1995, X_MAX = 2026;
+
+function buildPanel(swimmer){
+  // Per-year per-band counts of new records broken
+  const series = {};
+  swimmer.careers.forEach(c => {
+    distribute(c).forEach(({year, count}) => {
+      if (!series[year]) series[year] = {};
+      series[year][c.band] = (series[year][c.band] || 0) + count;
+    });
+  });
+  // Bands in chronological order (per swimmer's career sequence)
+  const bandsInOrder = [];
+  swimmer.careers.forEach(c => { if (!bandsInOrder.includes(c.band)) bandsInOrder.push(c.band); });
+
+  // Walk every year; compute per-band cumulative count over time
+  const allYears = [];
+  for (let y = X_MIN; y <= X_MAX; y++) allYears.push(y);
+  const bandCum = {};
+  bandsInOrder.forEach(b => bandCum[b] = {});
+  bandsInOrder.forEach(b => {
+    let c = 0;
+    allYears.forEach(y => {
+      if (series[y] && series[y][b]) c += series[y][b];
+      bandCum[b][y] = c;
+    });
+  });
+
+  // Stacked layer top: layerTop[band][year] = sum of bandCum for all bands up to & including this one
+  const layerTop = {};
+  bandsInOrder.forEach((b, idx) => {
+    layerTop[b] = {};
+    allYears.forEach(y => {
+      let s = 0;
+      for (let j = 0; j <= idx; j++) s += bandCum[bandsInOrder[j]][y];
+      layerTop[b][y] = s;
+    });
+  });
+
+  const total = swimmer.careers.reduce((a, c) => a + c.t, 0);
+
+  // SVG dims — per-panel y-scale (each panel uses its full height)
+  const W = 320, H = 90, PAD_L = 12, PAD_R = 8, PAD_T = 6, PAD_B = 16;
+  const innerW = W - PAD_L - PAD_R;
+  const innerH = H - PAD_T - PAD_B;
+  const xScale = y => PAD_L + ((y - X_MIN) / (X_MAX - X_MIN)) * innerW;
+  const yScale = v => PAD_T + innerH - (v / total) * innerH;
+
+  // Stacked polygons — bottom-up
+  let layers = '';
+  bandsInOrder.forEach((band, idx) => {
+    const top = allYears.map(y => layerTop[band][y]);
+    const bottom = idx === 0 ? allYears.map(() => 0) : allYears.map(y => layerTop[bandsInOrder[idx-1]][y]);
+    let pts = '';
+    allYears.forEach((y, i) => { pts += xScale(y).toFixed(1) + ',' + yScale(bottom[i]).toFixed(1) + ' '; });
+    for (let i = allYears.length - 1; i >= 0; i--) {
+      pts += xScale(allYears[i]).toFixed(1) + ',' + yScale(top[i]).toFixed(1) + ' ';
+    }
+    layers += `<polygon points="${pts.trim()}" fill="${COLORS[band]}" opacity="0.92"></polygon>`;
+  });
+
+  // X-axis: ticks every 5 years, baseline
+  let axis = `<line x1="${PAD_L}" y1="${PAD_T+innerH}" x2="${PAD_L+innerW}" y2="${PAD_T+innerH}" stroke="rgba(255,255,255,0.10)" stroke-width="0.5"/>`;
+  for (let y = 1995; y <= 2025; y += 5) {
+    axis += `<text x="${xScale(y)}" y="${H - 3}" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#6b7280">'${String(y).slice(-2)}</text>`;
+  }
+
+  return `
+    <div class="panel">
+      <div class="pn-hd">
+        <span class="pn-name">${swimmer.name}</span>
+        <span class="pn-total"><b>${total}</b> records</span>
+      </div>
+      <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+        ${layers}
+        ${axis}
+      </svg>
+    </div>
+  `;
+}
+
+document.getElementById('women').innerHTML = SWIMMERS.filter(s => s.gender === 'F').map(buildPanel).join('');
+document.getElementById('men').innerHTML   = SWIMMERS.filter(s => s.gender === 'M').map(buildPanel).join('');
+
+// Build legend — only bands that appear
+const usedBands = new Set();
+SWIMMERS.forEach(s => s.careers.forEach(c => usedBands.add(c.band)));
+const legendHtml = BANDS_ALL.filter(b => usedBands.has(b)).map(b =>
+  `<span class="legend-item"><span class="legend-sw" style="background:${COLORS[b]}"></span>${b}</span>`
+).join('');
+document.getElementById('legend').insertAdjacentHTML('beforeend', legendHtml);
+</script>
+</body>
+</html>
