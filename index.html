@@ -63,7 +63,7 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .reset-btn.dim{opacity:.45;pointer-events:none}
 
 /* ══ LAYOUT ══ */
-.body{position:relative;z-index:1;display:grid;grid-template-columns:220px 1fr;flex:1;overflow:hidden;height:calc(100vh - 160px)}
+.body{position:relative;z-index:1;display:grid;grid-template-columns:220px 1fr;flex:1;overflow:hidden;height:calc(100vh - 204px)}
 
 /* ── Sidebar ── */
 .sb{border-right:1px solid var(--edge);background:var(--ink2);overflow-y:auto;padding:14px 0}
@@ -213,6 +213,12 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
   .eh-title{font-size:21px}
   .eh-row{grid-template-columns:46px 1fr 70px;font-size:12.5px}
 }
+
+/* ══ SITE FOOTER ══ */
+/* Standard credit footer — used on every page. Copy this block + the <footer> markup verbatim onto any new page. */
+.site-footer{padding:11px 24px 13px;border-top:1px solid var(--edge);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.02em;line-height:1.55;background:var(--ink2)}
+.site-footer a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--edge);transition:color .14s,border-color .14s}
+.site-footer a:hover,.site-footer a:focus-visible{color:var(--teal);border-bottom-color:var(--teal);outline:none}
 </style>
 </head>
 <body>
@@ -5183,5 +5189,10 @@ document.addEventListener('click',e=>{
     <div class="eh-body" id="eh-body"></div>
   </div>
 </div>
+
+<!-- SITE FOOTER (copy verbatim onto new pages) -->
+<footer class="site-footer">
+  Données : <a href="https://www.statsman.ca/index0.html" target="_blank" rel="noopener">statsman.ca</a>, maintenu par Christian Berger depuis 1980. Avec reconnaissance.
+</footer>
 </body>
 </html>

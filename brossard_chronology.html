@@ -272,8 +272,6 @@ svg.chart{width:100%;display:block;font-family:'DM Sans',sans-serif}
 .chart .grid{stroke:var(--edge2);stroke-width:1}
 .chart .lbl{fill:var(--muted);font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 
-/* footer */
-footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);border-top:1px solid var(--edge)}
 
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -289,6 +287,12 @@ footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);bor
   .swim-row{grid-template-columns:54px 64px 1fr 44px}
   .tswim-bar{flex-basis:60px}
 }
+
+/* ══ SITE FOOTER ══ */
+/* Standard credit footer — used on every page. Copy this block + the <footer> markup verbatim onto any new page. */
+.site-footer{padding:11px 24px 13px;border-top:1px solid var(--edge);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.02em;line-height:1.55;background:var(--ink2)}
+.site-footer a{color:var(--soft);text-decoration:none;border-bottom:1px dotted var(--edge);transition:color .14s,border-color .14s}
+.site-footer a:hover,.site-footer a:focus-visible{color:var(--teal);border-bottom-color:var(--teal);outline:none}
 </style>
 </head>
 <body>
@@ -425,10 +429,6 @@ footer{padding:20px 18px;text-align:center;font-size:11px;color:var(--muted);bor
   </div>
   <div class="era-panel-bd" id="era-panel-bd"></div>
 </aside>
-
-<footer>
-  Données : <a href="https://www.statsman.ca/index0.html" target="_blank">statsman.ca</a> · Mis à jour automatiquement par <code>parse_brossard_yearly.py</code>
-</footer>
 
 <script src="brossard_chronology_data.js"></script>
 <script>
@@ -1287,6 +1287,11 @@ document.addEventListener('keydown', (e) => {
 renderYearStrip();
 renderAnnual();
 </script>
+
+<!-- SITE FOOTER (copy verbatim onto new pages) -->
+<footer class="site-footer">
+  Données : <a href="https://www.statsman.ca/index0.html" target="_blank" rel="noopener">statsman.ca</a>, maintenu par Christian Berger depuis 1980. Avec reconnaissance.
+</footer>
 
 </body>
 </html>
