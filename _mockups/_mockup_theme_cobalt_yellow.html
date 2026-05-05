@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maquette — Thème Cobalt &amp; Jaune · La Vague de Brossard</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ════════════════════════════════════════════════
+   THEME — LIGHT (default)
+   Cream paper + navy ink + cobalt accent + yellow highlight
+   ════════════════════════════════════════════════ */
+:root,
+[data-theme="light"]{
+  --bg:        #F2EDE2;          /* cream paper */
+  --bg2:       #FFFFFF;           /* panels / cards */
+  --panel:     #F8F5EE;           /* tinted band */
+  --edge:      rgba(14,27,61,0.12);
+  --edge2:     rgba(14,27,61,0.06);
+
+  --navy:      #0E1B3D;           /* deep club navy */
+  --cobalt:    #0033A0;           /* primary accent — record times */
+  --cobalt-dim:rgba(0,51,160,0.10);
+  --yellow:    #F5C518;           /* secondary accent — exceptional records */
+  --yellow-dim:rgba(245,197,24,0.22);
+  --yellow-soft:#FFE59A;
+
+  --text:      #0E1B3D;
+  --soft:      #4A5470;
+  --muted:     #8590A8;
+  --green:     #1A8A4D;
+  --red:       #C43344;
+
+  --header-grad: linear-gradient(140deg,#0E1B3D 0%, #16285C 100%);
+  --header-text: #FFFFFF;
+  --header-eyebrow: #F5C518;
+  --r:8px;
+}
+
+/* ════════════════════════════════════════════════
+   THEME — DARK (cobalt + yellow on navy)
+   ════════════════════════════════════════════════ */
+[data-theme="dark"]{
+  --bg:        #07102B;
+  --bg2:       #0E1B3D;
+  --panel:     #142450;
+  --edge:      rgba(255,255,255,0.09);
+  --edge2:     rgba(255,255,255,0.04);
+
+  --navy:      #0E1B3D;
+  --cobalt:    #5B86FF;           /* lifted for contrast on dark bg */
+  --cobalt-dim:rgba(91,134,255,0.14);
+  --yellow:    #FFD24A;
+  --yellow-dim:rgba(255,210,74,0.14);
+  --yellow-soft:#7A6420;
+
+  --text:      #E6EBF7;
+  --soft:      #A8B2CC;
+  --muted:     #6E7997;
+  --green:     #34C26B;
+  --red:       #FF6677;
+
+  --header-grad: linear-gradient(140deg,#0A1330 0%, #142450 100%);
+  --header-text: #FFFFFF;
+  --header-eyebrow: #FFD24A;
+}
+
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  min-height:100vh;display:grid;grid-template-rows:auto auto auto 1fr;
+  overflow-x:hidden;
+  transition:background .25s ease,color .25s ease;
+}
+
+/* Subtle paper texture (light) / pinstripe (dark) */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:repeating-linear-gradient(108deg,transparent,transparent 70px,rgba(14,27,61,.025) 70px,rgba(14,27,61,.025) 71px);
+}
+[data-theme="dark"] body::before{
+  background:repeating-linear-gradient(108deg,transparent,transparent 70px,rgba(255,255,255,.015) 70px,rgba(255,255,255,.015) 71px);
+}
+
+/* ══ HEADER ══ */
+header{
+  position:relative;z-index:2;display:flex;align-items:stretch;
+  border-bottom:3px solid var(--yellow);
+  background:var(--header-grad);
+  color:var(--header-text);
+}
+.hd-bar{width:6px;background:var(--yellow);flex-shrink:0}
+.hd-brand{padding:18px 26px;border-right:1px solid rgba(255,255,255,0.08)}
+.eyebrow{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--header-eyebrow);margin-bottom:5px}
+.club{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4vw,44px);line-height:.92;color:#fff;letter-spacing:.01em}
+.club em{color:var(--yellow);font-style:normal}
+.hd-kpis{display:flex;margin-left:auto}
+.kpi{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 20px;border-left:1px solid rgba(255,255,255,0.08);min-width:80px;gap:3px}
+.kpi-v{font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff;line-height:1}
+.kpi-v.gold{color:var(--yellow)}
+.kpi-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-align:center}
+
+/* Theme toggle — top-right of header */
+.theme-toggle{display:flex;align-items:center;gap:0;border-left:1px solid rgba(255,255,255,0.08)}
+.theme-toggle button{
+  background:transparent;border:none;color:rgba(255,255,255,.55);
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:0 14px;height:100%;cursor:pointer;transition:color .15s,background .15s;
+  display:flex;align-items:center;gap:6px;
+}
+.theme-toggle button:hover{color:#fff;background:rgba(255,255,255,.04)}
+.theme-toggle button.on{color:var(--yellow);background:rgba(245,197,24,.08)}
+.theme-toggle button .ic{font-size:13px}
+
+/* ══ PAGE NAV ══ */
+.pgnav{position:relative;z-index:2;display:flex;align-items:stretch;border-bottom:1px solid var(--edge);background:var(--bg)}
+.pgnav-tab{display:flex;align-items:center;gap:8px;padding:0 22px;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.06em;color:var(--soft);background:transparent;border:none;border-right:1px solid var(--edge);border-bottom:2px solid transparent;cursor:pointer;transition:all .14s;text-decoration:none;height:42px;text-transform:uppercase}
+.pgnav-tab:hover{color:var(--text);background:var(--cobalt-dim)}
+.pgnav-tab.on{color:var(--cobalt);border-bottom-color:var(--cobalt);background:var(--cobalt-dim)}
+[data-theme="dark"] .pgnav-tab:hover{color:#fff}
+.pgnav-tab .pg-ic{font-size:11px;color:var(--muted)}
+.pgnav-tab.on .pg-ic{color:var(--cobalt)}
+.pgnav-spacer{flex:1;border-bottom:1px solid var(--edge)}
+
+/* ══ CONTROLS ══ */
+.controls{position:relative;z-index:2;display:flex;align-items:center;border-bottom:1px solid var(--edge);background:var(--panel);flex-wrap:wrap}
+.cg{display:flex;align-items:center;gap:8px;padding:10px 18px;border-right:1px solid var(--edge);flex-wrap:wrap}
+.cg:last-child{border-right:none;flex:1;min-width:200px}
+.clbl{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.pills{display:flex;gap:3px;flex-wrap:wrap}
+.pill{font-size:11px;font-weight:600;padding:4px 11px;border:1px solid var(--edge);border-radius:20px;background:transparent;color:var(--soft);cursor:pointer;transition:all .14s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.pill:hover{border-color:var(--cobalt);color:var(--cobalt)}
+.pill.on{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.pill.gon{background:var(--yellow);border-color:var(--yellow);color:#0E1B3D}
+.sbox{flex:1;background:var(--bg2);border:1px solid var(--edge);border-radius:var(--r);color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;padding:7px 12px 7px 34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238590A8' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
+.sbox:focus{outline:none;border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-dim)}
+.sbox::placeholder{color:var(--muted)}
+.cg-search .sbox{flex:0 1 280px;min-width:160px}
+.reset-btn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--edge);color:var(--soft);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--r);cursor:pointer;transition:all .14s;white-space:nowrap}
+.reset-btn:hover{color:var(--cobalt);border-color:var(--cobalt);background:var(--cobalt-dim)}
+
+/* ══ LAYOUT ══ */
+.body{position:relative;z-index:1;display:grid;grid-template-columns:220px 1fr;flex:1;overflow:hidden;height:calc(100vh - 250px)}
+
+/* Sidebar */
+.sb{border-right:1px solid var(--edge);background:var(--bg2);overflow-y:auto;padding:14px 0}
+[data-theme="dark"] .sb{background:var(--bg2)}
+.sb-hd{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:0 14px 7px}
+.sbi{display:flex;align-items:center;justify-content:space-between;padding:7px 14px;cursor:pointer;border-left:3px solid transparent;transition:all .13s}
+.sbi:hover{background:var(--cobalt-dim);color:var(--cobalt)}
+.sbi.on{background:var(--cobalt-dim);border-left-color:var(--cobalt);color:var(--cobalt)}
+.sbi.on .sbi-c{background:var(--cobalt);color:#fff}
+.sbi-n{font-size:13px;font-weight:500}
+.sbi-c{font-size:11px;color:var(--muted);background:var(--edge2);padding:1px 7px;border-radius:10px;font-weight:600}
+.sb-div{height:1px;background:var(--edge);margin:8px 14px}
+
+/* Pane */
+.pane{overflow-y:auto;background:var(--bg)}
+.thead{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:170px 46px 1fr 96px 52px 58px 32px;padding:7px 18px;border-bottom:1px solid var(--edge);background:var(--panel)}
+.th{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.th.r{text-align:right}.th.c{text-align:center}
+
+.ag{margin-bottom:1px}
+.ag-hd{display:flex;align-items:center;gap:10px;padding:9px 18px;background:var(--bg2);border-bottom:1px solid var(--edge);border-left:3px solid var(--cobalt);position:sticky;top:34px;z-index:4}
+.ag-lbl{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.05em;color:var(--text)}
+.ag-ct{font-size:11px;color:var(--muted)}
+.ag-best{margin-left:auto;font-size:11px;color:var(--soft)}
+.ag-best strong{color:var(--cobalt);font-weight:700}
+
+.row{display:grid;grid-template-columns:170px 46px 1fr 96px 52px 58px 32px;align-items:center;padding:0 18px;min-height:46px;border-bottom:1px solid var(--edge2);transition:background .1s;cursor:default;background:var(--bg2)}
+.row:hover{background:var(--cobalt-dim)}
+.row.star{background:var(--yellow-dim);border-left:3px solid var(--yellow);padding-left:15px}
+.row.star:hover{background:var(--yellow-dim);filter:brightness(0.97)}
+[data-theme="dark"] .row.star:hover{filter:brightness(1.1)}
+.c-ev{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.04em;color:var(--text)}
+.c-pool{font-size:10px;font-weight:700;letter-spacing:.05em;color:var(--muted);text-align:center}
+.c-nm{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-nm.clk{cursor:pointer}
+.c-nm.clk:hover{color:var(--cobalt);text-decoration:underline;text-decoration-color:rgba(0,51,160,.4);text-underline-offset:3px}
+.c-tm{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.02em;color:var(--cobalt);text-align:right;font-weight:400}
+.c-tm.g{color:#9C7A0F}
+[data-theme="dark"] .c-tm.g{color:var(--yellow)}
+.c-pct{text-align:center}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:12px}
+.b-hi{background:var(--cobalt-dim);color:var(--cobalt)}
+.b-md{background:var(--yellow-dim);color:#9C7A0F}
+[data-theme="dark"] .b-md{color:var(--yellow)}
+.b-lo{background:var(--edge2);color:var(--muted)}
+.c-yr{font-size:12px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
+.c-dot{display:flex;justify-content:center;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.new{background:var(--green);box-shadow:0 0 0 2px rgba(26,138,77,0.18)}
+.dot.mid{background:var(--yellow);box-shadow:0 0 0 2px rgba(245,197,24,0.20)}
+.dot.old{background:var(--red);box-shadow:0 0 0 2px rgba(196,51,68,0.18)}
+
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--edge);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--cobalt)}
+
+/* Footer (mockup banner) */
+.mockup-banner{
+  position:fixed;bottom:14px;right:14px;z-index:50;
+  background:var(--bg2);border:1px solid var(--edge);border-left:3px solid var(--yellow);
+  padding:10px 14px;border-radius:var(--r);
+  font-size:11px;color:var(--soft);
+  box-shadow:0 4px 20px rgba(14,27,61,0.10);
+  max-width:280px;line-height:1.5;
+}
+.mockup-banner b{color:var(--cobalt);font-weight:700}
+[data-theme="dark"] .mockup-banner{box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+
+@media(max-width:680px){
+  .body{grid-template-columns:1fr}
+  .sb{display:none}
+  .thead,.row{grid-template-columns:130px 38px 1fr 80px 44px}
+  .c-yr,.c-dot{display:none}
+  .hd-kpis .kpi{padding:10px 12px;min-width:60px}
+  .theme-toggle{display:none}
+}
+</style>
+</head>
+<body data-theme="light">
+
+<!-- HEADER -->
+<header>
+  <div class="hd-bar"></div>
+  <div class="hd-brand">
+    <div class="eyebrow">Maîtres Nageurs · Records du club</div>
+    <div class="club">La Vague de <em>Brossard</em></div>
+  </div>
+  <div class="hd-kpis">
+    <div class="kpi"><div class="kpi-v">3 247</div><div class="kpi-l">Records</div></div>
+    <div class="kpi"><div class="kpi-v">412</div><div class="kpi-l">Nageurs·euses</div></div>
+    <div class="kpi"><div class="kpi-v gold">107%</div><div class="kpi-l">Top score</div></div>
+    <div class="kpi"><div class="kpi-v">1980</div><div class="kpi-l">Plus ancien</div></div>
+  </div>
+  <div class="theme-toggle" role="group" aria-label="Thème">
+    <button id="btn-light" class="on" onclick="setTheme('light')" aria-pressed="true"><span class="ic">☀</span>Clair</button>
+    <button id="btn-dark" onclick="setTheme('dark')" aria-pressed="false"><span class="ic">☾</span>Sombre</button>
+  </div>
+</header>
+
+<!-- PAGE NAV -->
+<nav class="pgnav" aria-label="Navigation principale">
+  <a class="pgnav-tab on" href="#" aria-current="page"><span class="pg-ic">▎</span>Records</a>
+  <a class="pgnav-tab" href="#"><span class="pg-ic">↗</span>Chronologie</a>
+  <div class="pgnav-spacer"></div>
+</nav>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="cg">
+    <span class="clbl">Catégorie</span>
+    <div class="pills">
+      <button class="pill on">Tous</button>
+      <button class="pill">Femmes</button>
+      <button class="pill">Hommes</button>
+    </div>
+  </div>
+  <div class="cg">
+    <span class="clbl">Bassin</span>
+    <div class="pills">
+      <button class="pill gon">Tous</button>
+      <button class="pill">25 m</button>
+      <button class="pill">50 m</button>
+    </div>
+  </div>
+  <div class="cg">
+    <span class="clbl">Groupe d'âge</span>
+    <div class="pills">
+      <button class="pill on">Tous</button>
+      <button class="pill">20-24</button>
+      <button class="pill">25-29</button>
+      <button class="pill">30-34</button>
+      <button class="pill">35-39</button>
+      <button class="pill">40-44</button>
+      <button class="pill">45-49</button>
+    </div>
+  </div>
+  <div class="cg cg-search">
+    <span class="clbl">Chercher</span>
+    <input class="sbox" placeholder="Nageur·euse ou épreuve…">
+    <button class="reset-btn" type="button" title="Réinitialiser"><span aria-hidden="true">↺</span>Réinitialiser</button>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+  <!-- Sidebar -->
+  <nav class="sb">
+    <div class="sb-hd">Style</div>
+    <div class="sbi on"><span class="sbi-n">Tous styles</span><span class="sbi-c">3 247</span></div>
+    <div class="sb-div"></div>
+    <div class="sbi"><span class="sbi-n">Libre</span><span class="sbi-c">872</span></div>
+    <div class="sbi"><span class="sbi-n">Dos</span><span class="sbi-c">541</span></div>
+    <div class="sbi"><span class="sbi-n">Brasse</span><span class="sbi-c">523</span></div>
+    <div class="sbi"><span class="sbi-n">Papillon</span><span class="sbi-c">488</span></div>
+    <div class="sbi"><span class="sbi-n">QNI</span><span class="sbi-c">421</span></div>
+    <div class="sb-div"></div>
+    <div class="sb-hd">Relais</div>
+    <div class="sbi"><span class="sbi-n">4×50 libre</span><span class="sbi-c">82</span></div>
+    <div class="sbi"><span class="sbi-n">4×50 4 nages</span><span class="sbi-c">79</span></div>
+    <div class="sbi"><span class="sbi-n">4×100 libre</span><span class="sbi-c">68</span></div>
+  </nav>
+
+  <!-- Pane -->
+  <section class="pane">
+    <div class="thead">
+      <div class="th">Épreuve</div>
+      <div class="th c">Bassin</div>
+      <div class="th">Nageur·euse</div>
+      <div class="th r">Temps</div>
+      <div class="th c">Score</div>
+      <div class="th c">Année</div>
+      <div class="th c">Âge</div>
+    </div>
+
+    <!-- AGE GROUP 25-29 -->
+    <div class="ag">
+      <div class="ag-hd">
+        <span class="ag-lbl">25–29 ANS</span>
+        <span class="ag-ct">· 14 records</span>
+        <span class="ag-best">Meilleur score : <strong>107%</strong></span>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">50 PAP</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">27.88</div>
+        <div class="c-pct"><span class="badge b-md">107%</span></div>
+        <div class="c-yr">2004</div>
+        <div class="c-dot"><span class="dot mid" title="Record d'âge moyen"></span></div>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">100 QNI</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">1:04.77</div>
+        <div class="c-pct"><span class="badge b-md">104%</span></div>
+        <div class="c-yr">2004</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">50 LIB</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">26.13</div>
+        <div class="c-pct"><span class="badge b-md">103%</span></div>
+        <div class="c-yr">2004</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">100 LIB</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm">59.19</div>
+        <div class="c-pct"><span class="badge b-hi">99%</span></div>
+        <div class="c-yr">2004</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">100 DOS</div>
+        <div class="c-pool">50m</div>
+        <div class="c-nm clk">Manon Simard</div>
+        <div class="c-tm">1:08.98</div>
+        <div class="c-pct"><span class="badge b-hi">98%</span></div>
+        <div class="c-yr">1994</div>
+        <div class="c-dot"><span class="dot old" title="Record ancien"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">50 PAP</div>
+        <div class="c-pool">50m</div>
+        <div class="c-nm clk">Chantal Rouleau</div>
+        <div class="c-tm">30.32</div>
+        <div class="c-pct"><span class="badge b-hi">98%</span></div>
+        <div class="c-yr">1993</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">200 DOS</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Claudie Besner</div>
+        <div class="c-tm">2:35.81</div>
+        <div class="c-pct"><span class="badge b-hi">94%</span></div>
+        <div class="c-yr">1995</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">50 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Sandra Larouche</div>
+        <div class="c-tm">37.79</div>
+        <div class="c-pct"><span class="badge b-hi">95%</span></div>
+        <div class="c-yr">2005</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+    </div>
+
+    <!-- AGE GROUP 30-34 -->
+    <div class="ag">
+      <div class="ag-hd">
+        <span class="ag-lbl">30–34 ANS</span>
+        <span class="ag-ct">· 12 records</span>
+        <span class="ag-best">Meilleur score : <strong>107%</strong></span>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">50 PAP</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">27.98</div>
+        <div class="c-pct"><span class="badge b-md">107%</span></div>
+        <div class="c-yr">2005</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">50 DOS</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">29.44</div>
+        <div class="c-pct"><span class="badge b-md">105%</span></div>
+        <div class="c-yr">2005</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row star">
+        <div class="c-ev">100 QNI</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm g">1:04.44</div>
+        <div class="c-pct"><span class="badge b-md">105%</span></div>
+        <div class="c-yr">2005</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">200 QNI</div>
+        <div class="c-pool">50m</div>
+        <div class="c-nm clk">Nadine Rolland</div>
+        <div class="c-tm">2:29.69</div>
+        <div class="c-pct"><span class="badge b-md">100%</span></div>
+        <div class="c-yr">2005</div>
+        <div class="c-dot"><span class="dot mid"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">50 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Chantal Rouleau</div>
+        <div class="c-tm">36.57</div>
+        <div class="c-pct"><span class="badge b-hi">98%</span></div>
+        <div class="c-yr">1995</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">100 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Chantal Rouleau</div>
+        <div class="c-tm">1:23.70</div>
+        <div class="c-pct"><span class="badge b-hi">91%</span></div>
+        <div class="c-yr">1995</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+    </div>
+
+    <!-- AGE GROUP 40-44 -->
+    <div class="ag">
+      <div class="ag-hd">
+        <span class="ag-lbl">40–44 ANS</span>
+        <span class="ag-ct">· 9 records</span>
+        <span class="ag-best">Meilleur score : <strong>96%</strong></span>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">50 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Kyra Lalonde</div>
+        <div class="c-tm">38.42</div>
+        <div class="c-pct"><span class="badge b-hi">96%</span></div>
+        <div class="c-yr">2024</div>
+        <div class="c-dot"><span class="dot new" title="Record récent"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">100 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Kyra Lalonde</div>
+        <div class="c-tm">1:24.91</div>
+        <div class="c-pct"><span class="badge b-hi">94%</span></div>
+        <div class="c-yr">2025</div>
+        <div class="c-dot"><span class="dot new"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">200 BRA</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Myriam Grenier</div>
+        <div class="c-tm">3:04.18</div>
+        <div class="c-pct"><span class="badge b-hi">90%</span></div>
+        <div class="c-yr">2023</div>
+        <div class="c-dot"><span class="dot new"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">400 LIB</div>
+        <div class="c-pool">50m</div>
+        <div class="c-nm clk">Christine Mills</div>
+        <div class="c-tm">5:48.21</div>
+        <div class="c-pct"><span class="badge b-hi">82%</span></div>
+        <div class="c-yr">2002</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="c-ev">100 PAP</div>
+        <div class="c-pool">25m</div>
+        <div class="c-nm clk">Sophie Saint-Fuscien</div>
+        <div class="c-tm">1:11.78</div>
+        <div class="c-pct"><span class="badge b-hi">88%</span></div>
+        <div class="c-yr">2008</div>
+        <div class="c-dot"><span class="dot old"></span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Floating mockup banner -->
+<div class="mockup-banner">
+  <b>Maquette de thème</b><br>
+  Variante <b id="banner-which">claire</b> du thème Cobalt &amp; Jaune. Utilisez le sélecteur ☀/☾ dans l'en-tête pour basculer.
+</div>
+
+<script>
+function setTheme(t){
+  document.body.setAttribute('data-theme',t);
+  document.getElementById('btn-light').classList.toggle('on', t==='light');
+  document.getElementById('btn-dark').classList.toggle('on',  t==='dark');
+  document.getElementById('btn-light').setAttribute('aria-pressed', t==='light');
+  document.getElementById('btn-dark').setAttribute('aria-pressed',  t==='dark');
+  document.getElementById('banner-which').textContent = (t==='light') ? 'claire' : 'sombre';
+  try{ localStorage.setItem('vague-theme', t); }catch(_){}
+}
+// Restore last choice (within mockup) — defaults to light
+try{
+  const saved = localStorage.getItem('vague-theme');
+  if(saved === 'dark') setTheme('dark');
+}catch(_){}
+</script>
+</body>
+</html>
