@@ -192,6 +192,35 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .pf-mt{font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 .pf-pc{text-align:right}
 
+/* Bingo preview — compact "Carnet d'épreuves" (stamp book aperçu).
+   Mini 5×7 grid where each cell has up to two tiny ink dots (LCM | SCM)
+   plus a leading stroke-letter column. Matches the full carnet styling. */
+.pf-bingo{background:#0E1A3A;border:1px solid var(--edge);border-radius:8px;padding:16px 18px;margin:0 0 18px;color:#F2EDE2;box-shadow:inset 0 0 0 1px rgba(91,134,255,.22)}
+.pf-bingo.pending{background:rgba(255,210,74,.08);border-color:rgba(255,210,74,.35);color:var(--text);box-shadow:none}
+:root[data-theme="light"] .pf-bingo{background:#F8F3E6;color:#0E1A3A;box-shadow:0 0 0 1px #DCD2B8}
+:root[data-theme="light"] .pf-bingo.pending{background:rgba(197,138,26,.10);box-shadow:none}
+.pf-bingo-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.pf-bingo-ttl{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:inherit;text-transform:uppercase;line-height:1}
+.pf-bingo-sub{font-size:11px;color:rgba(242,237,226,.55);margin-top:4px}
+:root[data-theme="light"] .pf-bingo-sub{color:rgba(14,26,58,.55)}
+.pf-bingo-ttl strong{color:var(--teal);font-weight:400;margin-left:4px}
+.pf-bingo.pending .pf-bingo-ttl strong{color:var(--gold-text)}
+.pf-bingo-cta{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal);padding-bottom:1px;transition:opacity .14s;white-space:nowrap;align-self:center}
+.pf-bingo-cta:hover{opacity:.7}
+/* Mini stamp grid: 14px stroke-letter column + 7 distance cols × 22px */
+.pf-bingo-mini{display:grid;grid-template-columns:14px repeat(7,22px);gap:4px;align-items:center;margin:6px 0 4px}
+.pf-bingo-stk{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:.04em;color:rgba(242,237,226,.55);text-align:center;line-height:1}
+:root[data-theme="light"] .pf-bingo-stk{color:rgba(14,26,58,.55)}
+.pf-bingo-cell{width:22px;height:22px;display:flex;align-items:center;justify-content:center;gap:2px}
+.pf-bingo-dot{width:7px;height:7px;border-radius:50%;background:transparent;border:1px dashed rgba(242,237,226,.22)}
+:root[data-theme="light"] .pf-bingo-dot{border-color:rgba(14,26,58,.22)}
+.pf-bingo-dot.s{background:#F2EDE2;border:1px solid #F2EDE2}
+:root[data-theme="light"] .pf-bingo-dot.s{background:#0E1A3A;border-color:#0E1A3A}
+.pf-bingo-dot.r{background:#FFD24A;border:1px solid #FFD24A;box-shadow:0 0 0 2px rgba(255,210,74,.22)}
+:root[data-theme="light"] .pf-bingo-dot.r{background:#C58A1A;border-color:#C58A1A;box-shadow:0 0 0 2px rgba(197,138,26,.20)}
+.pf-bingo-note{font-size:11px;color:rgba(242,237,226,.55);margin-top:10px;padding-top:10px;border-top:1px solid rgba(242,237,226,.18);font-style:italic}
+:root[data-theme="light"] .pf-bingo-note{color:rgba(14,26,58,.55);border-top-color:rgba(14,26,58,.12)}
+
 /* Chain section: records that broke this swimmer's record after they last held it */
 .pf-chain{margin-top:6px;border-top:1px dashed var(--edge);padding-top:4px}
 .pf-chain-hd{display:flex;align-items:center;gap:8px;padding:6px 0 4px;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
@@ -5110,6 +5139,9 @@ function openProfile(name){
     <span><b>${yMin===yMax?yMin:yMin+'–'+yMax}</b><em>Période active</em></span>
     <span><b>${bestPct}%</b><em>Meilleur score</em></span>
   </div>`;
+  // Bingo preview placeholder — filled in async once BrossardData is loaded.
+  // The records section below renders immediately so the modal never feels empty.
+  html+=`<div id="pf-bingo-slot"></div>`;
   for(const k of slotKeys){
     const recs=slots[k];
     const head=recs[0];
@@ -5173,6 +5205,90 @@ function openProfile(name){
   body.innerHTML=html;
   body.scrollTop=0;
   overlay.classList.add('show');
+
+  // Async-inject the bingo preview once the data layer is ready.
+  // Records render immediately; this enriches the modal in-place.
+  if(typeof BrossardData!=='undefined'){
+    BrossardData.load().then(()=>{
+      const slot=document.getElementById('pf-bingo-slot');
+      if(!slot)return;  // modal closed in the meantime
+      const ath=BrossardData.getAthleteByName(name);
+      const status=ath?BrossardData.getAthleteStatus(ath.aid):'unknown';
+      const profileHref='swimmer.html?'+(ath?'aid='+ath.aid:'name='+encodeURIComponent(name));
+      if(!ath){
+        slot.innerHTML=`<div class="pf-bingo pending">
+          <div class="pf-bingo-hd">
+            <div class="pf-bingo-ttl">Carte des épreuves <strong>· à venir</strong></div>
+            <a class="pf-bingo-cta" href="${profileHref}">Voir le profil →</a>
+          </div>
+          <div class="pf-bingo-note">Le profil swimrankings de ${name} n'est pas encore associé. Les nages historiques apparaîtront ici une fois la prochaine récolte terminée.</div>
+        </div>`;
+        return;
+      }
+      if(status==='awaiting_pass2'){
+        slot.innerHTML=`<div class="pf-bingo pending">
+          <div class="pf-bingo-hd">
+            <div class="pf-bingo-ttl">Carte des épreuves <strong>· en récolte</strong></div>
+            <a class="pf-bingo-cta" href="${profileHref}">Voir le profil →</a>
+          </div>
+          <div class="pf-bingo-note">L'historique des nages de ${ath.first} ${ath.last} sera disponible après la prochaine récolte swimrankings (le quota quotidien a interrompu la dernière passe).</div>
+        </div>`;
+        return;
+      }
+      // Carnet d'épreuves aperçu — mini stamp grid. Each event-half is a
+      // small dot: filled ink = swum, gold w/ halo = recent, dashed ring =
+      // untried, hidden when the event doesn't exist. Leading column shows
+      // the stroke letter (L·D·B·P·Q).
+      const NOW=new Date().getFullYear();
+      const grid=BrossardData.getBingoCard(ath.aid);
+      const cellMap={};
+      for(const c of grid)cellMap[c.stroke+'|'+c.distance+'|'+c.course]=c;
+      const swam=grid.filter(c=>c.swam).length;
+      const total=grid.length;
+      const recent=grid.filter(c=>c.swam&&c.lastSwim&&c.lastSwim.date&&(NOW-Number(c.lastSwim.date.slice(0,4))<=1)).length;
+      const STROKE_ROW=[['FREE','L'],['BACK','D'],['BREAST','B'],['FLY','P'],['MEDLEY','Q']];
+      const DIST=[25,50,100,200,400,800,1500];
+      const dotState=cell=>{
+        if(!cell)return 'hidden';
+        if(!cell.swam)return 'ring';
+        if(cell.lastSwim&&cell.lastSwim.date&&(NOW-Number(cell.lastSwim.date.slice(0,4))<=1))return 'recent';
+        return 'lit';
+      };
+      const dotMarkup=state=>{
+        if(state==='hidden')return '<span class="pf-bingo-dot" style="visibility:hidden"></span>';
+        if(state==='lit')return '<span class="pf-bingo-dot s"></span>';
+        if(state==='recent')return '<span class="pf-bingo-dot r"></span>';
+        return '<span class="pf-bingo-dot"></span>';
+      };
+      let miniHtml='';
+      for(const [stk,letter] of STROKE_ROW){
+        miniHtml+=`<span class="pf-bingo-stk">${letter}</span>`;
+        for(const d of DIST){
+          const lcm=cellMap[stk+'|'+d+'|LCM'];
+          const scm=cellMap[stk+'|'+d+'|SCM'];
+          if(!lcm&&!scm){miniHtml+='<span class="pf-bingo-cell" style="visibility:hidden"></span>';continue;}
+          // For the mini view we collapse L+S into one dot per cell when both
+          // exist (most legible at 22px). State = best of the two.
+          const states=[dotState(lcm),dotState(scm)].filter(s=>s!=='hidden');
+          let best='ring';
+          if(states.includes('recent'))best='recent';
+          else if(states.includes('lit'))best='lit';
+          miniHtml+=`<span class="pf-bingo-cell" title="${d}m ${stk}">${dotMarkup(best)}</span>`;
+        }
+      }
+      slot.innerHTML=`<div class="pf-bingo">
+        <div class="pf-bingo-hd">
+          <div>
+            <div class="pf-bingo-ttl">Carnet d'épreuves</div>
+            <div class="pf-bingo-sub">${swam} / ${total} épreuves tamponnées${recent?' · '+recent+' récente'+(recent>1?'s':''):''}</div>
+          </div>
+          <a class="pf-bingo-cta" href="${profileHref}">Ouvrir le carnet →</a>
+        </div>
+        <div class="pf-bingo-mini">${miniHtml}</div>
+        <div class="pf-bingo-note">${total-swam===0?'Toutes les épreuves tamponnées !':(total-swam)+' épreuve'+(total-swam>1?'s':'')+' encore à essayer.'}</div>
+      </div>`;
+    }).catch(e=>{console.warn('BrossardData load failed:',e);});
+  }
 }
 
 function closeProfile(){document.getElementById('pf-overlay').classList.remove('show');}
@@ -5310,5 +5426,17 @@ document.addEventListener('click',e=>{
 <footer class="site-footer">
   Données : <a href="https://www.statsman.ca/index0.html" target="_blank" rel="noopener">statsman.ca</a>, maintenu par Christian Berger depuis 1980. Avec reconnaissance.
 </footer>
+
+<!-- Shared data layer (inline payload + query API). Loaded last so it doesn't
+     block initial dashboard render; openProfile() awaits BrossardData.load(). -->
+<script src="brossard_inline_data.js"></script>
+<script src="brossard_data.js"></script>
+<script>
+  // Pre-warm the data layer on idle so the profile modal opens without a wait.
+  if (typeof BrossardData !== 'undefined') {
+    if ('requestIdleCallback' in window) requestIdleCallback(() => BrossardData.load());
+    else setTimeout(() => BrossardData.load(), 800);
+  }
+</script>
 </body>
 </html>

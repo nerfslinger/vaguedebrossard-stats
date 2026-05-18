@@ -1,0 +1,88 @@
+{
+  "harvestSessionId": "2026-05-15-resume",
+  "completedAt": "2026-05-15T03:45:00Z",
+  "scope": "Pre-Feb-2025 historical backfill — one-time bulk harvest from swimrankings.net per-event history pages",
+  "supersededFile": "Previous meta (parse_swimrankings.py live-window probe, Oct 2025) overwritten on user approval 2026-05-15. parse_swimrankings.py is now superseded by this harvest + the upcoming swimming.ca Lenex ingest pipeline.",
+
+  "summary": {
+    "totalFetches": 1032,
+    "rosterSize": 88,
+    "successfullyParsedAthletes": 67,
+    "athletesWithSwimsHarvested": 36,
+    "totalSwims": 4387,
+    "swimDateRange": ["2002-02-21", "2026-04-26"],
+    "swimsByCourse": { "LCM": 895, "SCM": 3492 }
+  },
+
+  "passes": {
+    "pass0a": {
+      "purpose": "Crawl post-2020 Brossard-attended meet pages to discover roster",
+      "status": "complete",
+      "fetches": 62,
+      "result": "170 unique Brossard meets discovered (45 post-2020), 61 new athleteIds beyond seed-17"
+    },
+    "pass0b": {
+      "purpose": "Cross-reference statsman record-setter names against swimrankings athleteFind",
+      "status": "complete — bounded (top 50 by record count)",
+      "fetches": 48,
+      "result": "11 high-confidence matches; 10 new athleteIds net of Pass 0a overlap. 35 candidates had no swimrankings profile (esp. pre-2005 historical record-setters). Note: Gail Desjardins (statsman #1 all-time) had no athleteFind hit but Pass 0a captured her via her recent meet attendance as aid 4204245."
+    },
+    "pass1": {
+      "purpose": "Fetch each athlete's BEST page to parse bio + event list",
+      "status": "complete",
+      "fetches": 88,
+      "result": "67/88 BEST pages parsed. 21 NO_ACCESS — restricted profile pages (includes all 10 Pass 0b additions: Lippinghof, Mongeon, Vroom, Massicotte, Svartman, Rouleau, Stringer, Belham, Pelland, Grondin; plus 11 Pass 0a one-shot meet appearances)"
+    },
+    "pass2": {
+      "purpose": "Fetch per-event history page for each (athleteId, unique styleId) tuple",
+      "status": "partial — daily quota hit",
+      "fetchesAttempted": 895,
+      "fetchesSucceeded": 477,
+      "fetchesFailed": 418,
+      "failureMode": "Swimrankings daily page-view quota kicked in mid-harvest. The first ~15 athletes in roster order completed fully; subsequent athletes returned NO_ACCESS for most styleIds",
+      "athletesFullyHarvested": 15,
+      "athletesPartial": 21,
+      "athletesFullyMissing": 31,
+      "swimsExtracted": 4387
+    }
+  },
+
+  "outputFiles": {
+    "brossard_swimrankings_athletes.json": "67 athletes with bio + event style list. Schema: aid/last/first/yob/club/styleIds[]",
+    "brossard_swimrankings_swims.json":    "4387 swims, flat record format. Schema: athleteId/lastName/firstName/styleId/distance/stroke/stroke_fr/course/isLap/time/timeSec/timeSuffix/finaPoints/date/dateRaw/city/source",
+    "_pass0a_snapshot.json": "Intermediate state — seed-17 MEET pages + post-2020 meet IDs + 61 newly-discovered athleteIds",
+    "_pass0b_snapshot.json": "Intermediate state — top-50 statsman record-setters cross-referenced via athleteFind"
+  },
+
+  "topAthletesBySwimCount": [
+    {"name": "BERGER Christian (aid 4204240)", "swims": 583, "note": "All-time men's records leader, 307 statsman records"},
+    {"name": "LALONDE Kyra (aid 5481573)", "swims": 384, "note": "Active junior swimmer (b. 2003)"},
+    {"name": "PETRESCU Matei (aid 4459349)", "swims": 342, "note": "Active Brossard competitor"},
+    {"name": "VINCENT Frederic (aid 4856471)", "swims": 333, "note": "Active junior swimmer (b. 2004)"},
+    {"name": "DESJARDINS Gail (aid 4204245)", "swims": 332, "note": "ALL-TIME women's records leader, 325+ statsman records. Discovered via Pass 0a (intra-club meet roster), not Pass 0b name search"},
+    {"name": "LETHIECQ Monique (aid 5069922)", "swims": 253},
+    {"name": "AVILES Carlos (aid 4209372)", "swims": 204, "note": "Project owner; statsman record-setter with 68 records"},
+    {"name": "CAISSY-LEBLANC Laurence (aid 4573000)", "swims": 196},
+    {"name": "MOREL Denise (aid 4204246)", "swims": 192}
+  ],
+
+  "noAccessAids": [4566941,5549776,5824632,5085502,4204274,5110874,4979150,4204278,4697988,4119909,5256624,5256645,4204235,4204236,4204256,4461764,4035473,4538750,4980564,5816951,4566948],
+
+  "athletesAwaitingPass2": [4209351,5371514,5557346,5381979,4204246,5215270,4856471,5771869,5328235,4204239,4572080,5119549,4119879,5662931,5146261,4983348,4699556,5003789,4617880,5784791,4012683,4056005,4119867,4955426,4783268,5368124,5561179,4119888,4698385,4995286,5068464,5381804,4627603,5675794,5682075,5327403,5573996,5798276],
+
+  "resumeInstructions": {
+    "blockedBy": "Swimrankings daily page-view quota. Resets ~24 hours after first restricted fetch (~2026-05-15T03:30 UTC, so resume window opens ~2026-05-16T04:00 UTC)",
+    "stepsOnResume": [
+      "1. Re-inject scraper module (lost on page navigation between sessions)",
+      "2. Load brossard_swimrankings_athletes.json to get the 67 known athletes + their styleId lists",
+      "3. For athletes in athletesAwaitingPass2 (38 athletes), fire per-event fetches with CONSERVATIVE throttling (pauseEvery=15, pauseMs=30s) to spread load across quota window",
+      "4. Optionally retry the 21 noAccessAids — they may have specific profile restrictions, not quota-based",
+      "5. Merge new swims into brossard_swimrankings_swims.json (dedupe key: athleteId|date|distance|stroke|course|time)"
+    ]
+  },
+
+  "knownIssues": [
+    "FINA points column in some BEST table parses comes out with wrong value (column-shift bug in parseAthleteBestPage) — affects only the PB metadata cached in athletes.json, not the per-swim data in swims.json which is parsed independently and verified",
+    "Pass 2 missed 31 athletes entirely due to daily quota — most notable misses include CHOLETTE Vincent (active), CREVIER Jean-Francois (active), MASUTTI Leanna (active junior), SAMSON Philippe (active)"
+  ]
+}

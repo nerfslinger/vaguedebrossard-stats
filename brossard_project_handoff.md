@@ -168,3 +168,80 @@ Tasks:
 - `index.html` — the current dashboard
 
 Both are in the outputs from this conversation.
+
+---
+
+## Swimrankings harvest layer (added 2026-05-15)
+
+The project now has a second data source layered on top of statsman records: a one-time historical backfill from swimrankings.net covering 24 years (2002-2026) of swim-level data for active and historical Brossard members.
+
+### Output files
+- `brossard_swimrankings_athletes.json` — 67 athletes with bio + per-style event list
+- `brossard_swimrankings_swims.json` — 4,387 flat swim records (~1.4 MB)
+- `brossard_swimrankings_meta.json` — harvest run metadata, including the 38-athlete resume list
+
+### Status as of 2026-05-15
+Pass 0 (roster discovery), Pass 1 (BEST page parse), and Pass 2 (per-event swim harvest) are all started; Pass 2 is 53% complete. The remaining 38 athletes hit swimrankings' daily page-view quota mid-run and need a resume in a future session (~24h after the cap was triggered). 21 athleteIds are gated by per-profile NO_ACCESS restrictions and may need a different access method (e.g. logged-in Manager account).
+
+Notable catches in the existing data: Christian Berger (583 swims), Kyra Lalonde (384), Matei Petrescu (342), **Gail Desjardins (332 swims — the all-time #1 women's records leader, captured via Pass 0a intra-club meet roster despite no swimrankings name search match)**, Carlos Aviles (204 — project owner, statsman record-setter).
+
+### How the new data integrates
+The unified swim schema is designed so that swimrankings rows and swimming.ca Lenex rows live in the same flat list (`source: "swimrankings"` vs `"lenex"`), enabling:
+- Swimmer-profile pages showing full career PB progression, not just records
+- Year-in-review storytelling (most active swimmers, swim counts, debuts)
+- Per-event time progression charts with record-setting points highlighted
+
+Going forward, new swims (post-Feb-2025) come from swimming.ca Lenex downloads via the ingest pipeline (`parse_meet_results.py` → `data/swims.jsonl`); swimrankings is purely a historical backfill source and the `parse_swimrankings.py` live-window script is superseded.
+
+### Resuming Pass 2 (next session)
+1. Re-inject the scraper module (`window.brossardScraper` is wiped between sessions).
+2. Read `brossard_swimrankings_athletes.json` for the 38 `athletesAwaitingPass2` aids + their styleIds.
+3. **Also harvest the 5 Lenex-only athletes** listed under "Two-source dataset merge" below — they're known active members with swimrankings profiles we just haven't fetched yet.
+4. Fire per-event fetches at conservative throttle (pauseEvery=15, pauseMs=30s).
+5. Append new swims to `brossard_swimrankings_swims.json` (dedupe key: `athleteId|date|distance|stroke|course|time`).
+6. **Always re-run `python3 build_inline_data.py`** afterward so the front-end picks up the new data.
+
+---
+
+## Two-source dataset merge (added 2026-05-16)
+
+The site's front-end now reads from a *merged* dataset produced by `build_inline_data.py`. Two source pipelines feed into one inline payload that `brossard_data.js` queries.
+
+### The pipelines
+
+| Source | Files | Role | ID space |
+|---|---|---|---|
+| **swimrankings.net** | `brossard_swimrankings_athletes.json` (67 bios), `brossard_swimrankings_swims.json` (4,387 swims) | Historical backfill 2002 → mid-2026 | 4M–6M (e.g. `4204240` = Berger) |
+| **swimming.ca Lenex** | `data/swimmers_index.json` (33 bios), `data/swims.jsonl` (361 swims), `data/swimmers/*.json` (per-swimmer detail), `data/meets_index.json` | Primary ongoing source from Oct 2025 forward (richer: meet name, place, points, splits) | 127M–140M (no collision with swimrankings) |
+
+The two ID spaces are disjoint by orders of magnitude, so they can coexist in the same `athleteId` column without collision.
+
+### `build_inline_data.py` — merge logic
+
+The build script:
+
+1. Loads all five inputs (records + both source datasets).
+2. **Filters swimrankings rows to Masters-only.** swimrankings publishes every result an athlete ever swam, including junior/age-group races from before they entered Masters category. The Masters category is marked by a "M" suffix on the time string, parsed into the `timeSuffix` field. Build script drops any swimrankings row where `timeSuffix !== "M"`. Lenex rows skip this filter — every Lenex meet is a Masters meet by definition. (Filter added 2026-05-16 after Kyra Lalonde's profile showed 360+ junior races from 2013–2021 alongside her 20 actual Masters swims.)
+3. Joins Lenex swimmers → swimrankings athletes by **canonical-tokens(first+last) + birth-year** match. Canonical form sorts the normalized tokens, which handles the awkward cases ("LE SIEGE" / "Le Siege", "JAIMES Blas Eduardo" / "Blas Eduardo Jaimes", "Anne-Marie" / "anne marie").
+4. For Lenex swimmers with a swimrankings match (28 of 33), all their Lenex swims are tagged with the swimrankings `athleteId`. Lenex-side fields like `meetName`, `place`, and `lenexSwimmerId` ride along on each row.
+5. For Lenex swimmers with **no** swimrankings match (5 of 33 — see list below), the script synthesizes a stand-in athlete entry using the Lenex `swimmer_id` directly as the `athleteId`. The synth entry carries `source: "lenex"` so the data layer can distinguish if needed.
+6. Dedupes overlapping swims on `(athleteId, date, distance, stroke, course)`. **Lenex wins on overlap** since it carries the richer fields.
+7. Writes the combined payload to `brossard_inline_data.js` for the front-end.
+
+Final tallies after merge: **72 athletes** (67 swimrankings + 5 synthesized), **3,182 swims** (2,821 swimrankings Masters-only + 361 Lenex). The Masters filter drops 1,293 junior rows; the Lenex merge replaces 273 swimrankings rows with their richer Lenex equivalents.
+
+### Synthesized athletes — known gap to close
+
+These five are confirmed-active Brossard members in the Lenex feed who do have swimrankings profiles; we just haven't harvested them yet. Next swimrankings pass should resolve them, after which they'll auto-merge with their Lenex data via the canonical-tokens join (no manual re-mapping needed; the build script is idempotent).
+
+| Name | YOB | Lenex ID | Notes |
+|---|---|---|---|
+| Jennifer Coronel | 1977 | 127061734 | |
+| Marie-Pier Daigle | 2006 | 129106326 | Junior; check for hyphen variants in swimrankings spelling |
+| Ki-Hyang Lee | 1973 | 129157159 | |
+| Patrick Janukavicius | 1986 | 140240990 | High Lenex ID — newest registration |
+| Marie-Hélène Leduc | 1987 | 129053121 | |
+
+### Workflow rule
+
+**Any time swim data changes — new swimrankings harvest, new Lenex meet drop, manual edit — re-run `python3 build_inline_data.py` to regenerate `brossard_inline_data.js`.** The three HTML pages (`index.html`, `swimmer.html`, `brossard_chronology.html`) all load that single inline file and pick up new data on next page load. The build is idempotent and fast (~1 second).

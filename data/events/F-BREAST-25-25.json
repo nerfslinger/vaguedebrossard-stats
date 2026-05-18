@@ -1,0 +1,40 @@
+{
+  "event_key": "F-BREAST-25-25",
+  "label_fr": "F 25 bra (25m)",
+  "swim_count": 1,
+  "swims": [
+    {
+      "swim_id": "20260425-127062827-25-BREAST-25",
+      "swimmer_id": "127062827",
+      "swimmer_slug": "julie-dufour",
+      "swimmer_name": "Julie Dufour",
+      "firstname": "Julie",
+      "lastname": "Dufour",
+      "gender": "F",
+      "dob": "1979-05-01",
+      "age_at_meet": 46,
+      "age_group": "45-49",
+      "stroke": "BREAST",
+      "stroke_fr": "bra",
+      "distance": 25,
+      "pool": 25,
+      "relay": false,
+      "event_key": "F-BREAST-25-25",
+      "bucket_key": "F-45-49-BREAST-25-25",
+      "time_sec": 21.57,
+      "splits_sec": [],
+      "status": "OK",
+      "place": null,
+      "points": 5,
+      "entrytime_sec": 24.0,
+      "meet_id": "2026-04-24-championnat-quebecois-des-maitres",
+      "meet_name": "Championnat québécois des Maitres 2026",
+      "meet_date": "2026-04-25",
+      "meet_city": "Montréal",
+      "meet_course": "SCM",
+      "meet_source": "lenex",
+      "set_record": false,
+      "record_key": null
+    }
+  ]
+}

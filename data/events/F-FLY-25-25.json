@@ -1,0 +1,40 @@
+{
+  "event_key": "F-FLY-25-25",
+  "label_fr": "F 25 pap (25m)",
+  "swim_count": 1,
+  "swims": [
+    {
+      "swim_id": "20260426-131015709-25-FLY-25",
+      "swimmer_id": "131015709",
+      "swimmer_slug": "marie-gaudreault",
+      "swimmer_name": "Marie Gaudreault",
+      "firstname": "Marie",
+      "lastname": "Gaudreault",
+      "gender": "F",
+      "dob": "1956-11-26",
+      "age_at_meet": 69,
+      "age_group": "65-69",
+      "stroke": "FLY",
+      "stroke_fr": "pap",
+      "distance": 25,
+      "pool": 25,
+      "relay": false,
+      "event_key": "F-FLY-25-25",
+      "bucket_key": "F-65-69-FLY-25-25",
+      "time_sec": 18.71,
+      "splits_sec": [],
+      "status": "OK",
+      "place": null,
+      "points": 8,
+      "entrytime_sec": 21.0,
+      "meet_id": "2026-04-24-championnat-quebecois-des-maitres",
+      "meet_name": "Championnat québécois des Maitres 2026",
+      "meet_date": "2026-04-26",
+      "meet_city": "Montréal",
+      "meet_course": "SCM",
+      "meet_source": "lenex",
+      "set_record": false,
+      "record_key": null
+    }
+  ]
+}

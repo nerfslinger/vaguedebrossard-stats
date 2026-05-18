@@ -27,3 +27,22 @@ venv/
 
 # ── Node (only relevant if a build step is ever added) ─────────────
 node_modules/
+
+# ── Swimrankings harvest — intermediate / scratch artifacts ────────
+# Pass-0 roster discovery snapshots (intra-club meet rosters, pre-merge).
+_pass0a_snapshot.json
+_pass0b_snapshot.json
+# Pilot subset that preceded the full Pass-2 harvest. Superseded by the
+# brossard_swimrankings_athletes.json / brossard_swimrankings_swims.json pair.
+brossard_swimrankings_pilot_athletes.json
+brossard_swimrankings_pilot_swims.json
+# Raw scrape blob — kept locally for debugging, not part of the pipeline.
+brossard_swimrankings.json
+
+# ── Design handoffs (heavy zips + extracted prototype mockups) ─────
+_design_handoff/
+_design_handoff_v2/
+Swim Bingo Card.zip
+Swim Bingo Card-handoff.zip
+# Internal mockups / explorations (kept local; not part of the site).
+_mockups/

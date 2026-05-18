@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profil maître nageur — La Vague de Brossard</title>
+<script>
+(function(){try{var s=localStorage.getItem('vague-theme');var t=s||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#07102B;--ink2:#0E1B3D;--panel:#142450;
+  --edge:rgba(255,255,255,0.09);--edge2:rgba(255,255,255,0.04);
+  --teal:#5B86FF;--teal-dim:rgba(91,134,255,0.14);
+  --gold:#FFD24A;--gold-dim:rgba(255,210,74,0.14);
+  --red:#ff4455;--green:#22c55e;
+  --muted:#6E7997;--soft:#A8B2CC;--text:#E6EBF7;
+  --header-grad:linear-gradient(140deg,#0A1330 0%,#142450 100%);
+  --paper-stripe:rgba(255,255,255,.012);
+  --gold-text:var(--gold);
+  --row-hover:rgba(255,255,255,.03);
+  --row-star:rgba(255,210,74,.07);
+  --bingo-empty:rgba(255,255,255,.04);
+  --bingo-empty-text:var(--muted);
+  --bingo-filled:rgba(91,134,255,.10);
+  --bingo-filled-border:rgba(91,134,255,.3);
+  --bingo-recent:rgba(255,210,74,.10);
+  --bingo-recent-border:rgba(255,210,74,.35);
+  --r:8px;
+}
+:root[data-theme="light"]{
+  --ink:#F2EDE2;--ink2:#FFFFFF;--panel:#F8F5EE;
+  --edge:rgba(14,27,61,0.12);--edge2:rgba(14,27,61,0.06);
+  --teal:#0033A0;--teal-dim:rgba(0,51,160,0.10);
+  --gold:#F5C518;--gold-dim:rgba(245,197,24,0.22);
+  --red:#C43344;--green:#1A8A4D;
+  --muted:#8590A8;--soft:#4A5470;--text:#0E1B3D;
+  --header-grad:linear-gradient(140deg,#FFFFFF 0%,#F8F5EE 100%);
+  --paper-stripe:rgba(14,27,61,.022);
+  --gold-text:#9C7A0F;
+  --row-hover:rgba(14,27,61,.035);
+  --row-star:rgba(245,197,24,.16);
+  --bingo-empty:rgba(14,27,61,.045);
+  --bingo-empty-text:var(--muted);
+  --bingo-filled:rgba(0,51,160,.10);
+  --bingo-filled-border:rgba(0,51,160,.35);
+  --bingo-recent:rgba(245,197,24,.18);
+  --bingo-recent-border:rgba(245,197,24,.5);
+}
+body{background:var(--ink);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;min-height:100vh;transition:background .25s,color .25s}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(108deg,transparent,transparent 70px,var(--paper-stripe) 70px,var(--paper-stripe) 71px);pointer-events:none;z-index:0}
+
+/* HEADER */
+header{position:relative;z-index:2;display:flex;align-items:stretch;border-bottom:1px solid var(--edge);background:var(--header-grad)}
+.hd-bar{width:5px;background:var(--gold);flex-shrink:0}
+.hd-brand{padding:18px 26px;border-right:1px solid var(--edge);flex:1}
+.eyebrow{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.eyebrow a{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--gold-dim)}
+.eyebrow a:hover{border-bottom-style:solid}
+.club{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4vw,44px);line-height:.92;color:var(--text);letter-spacing:.01em}
+.club em{color:var(--gold);font-style:normal}
+.theme-toggle{display:flex;align-items:center;padding:0 16px;border-right:1px solid var(--edge);gap:4px}
+.theme-toggle button{background:transparent;border:1px solid var(--edge);color:var(--soft);padding:5px 10px;font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer;border-radius:4px}
+.theme-toggle button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:24px 22px 80px}
+
+/* HERO */
+.hero{display:flex;gap:30px;align-items:flex-start;border-bottom:1px solid var(--edge);padding-bottom:26px;margin-bottom:30px;flex-wrap:wrap}
+.hero-left{flex:1;min-width:280px}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);line-height:.95;color:var(--text);letter-spacing:.01em;margin-bottom:8px}
+.hero-sub{font-size:13px;color:var(--soft);font-weight:500;letter-spacing:.04em}
+.hero-sub span+span:before{content:'·';margin:0 8px;color:var(--muted)}
+.hero-stats{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.kpi-card{background:var(--ink2);border:1px solid var(--edge);border-radius:var(--r);padding:14px 18px;min-width:104px;text-align:center}
+.kpi-card .v{font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1;color:var(--text);letter-spacing:.01em}
+.kpi-card .v.g{color:var(--gold)}
+.kpi-card .v.t{color:var(--teal)}
+.kpi-card .l{font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* SECTIONS */
+.sect{margin:34px 0 18px}
+.sect-hd{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--edge);padding-bottom:9px;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.sect-ttl{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;color:var(--text);text-transform:uppercase}
+.sect-hint{font-size:11px;color:var(--muted);letter-spacing:.04em;font-style:italic}
+
+/* CARNET D'ÉPREUVES (stamp book) — see _design_handoff_v2/direction-stamps.jsx
+   A warm-paper carnet de bord. Each swum event is a hand-pressed ink stamp;
+   untried events are blank slots whispering "stamp here." Recent stamps are
+   gold ink + breathing halo. */
+:root{
+  --carnet-bg-top:#0F1B47;     /* radial gradient top (dark theme) */
+  --carnet-bg:#07102B;         /* backdrop base */
+  --carnet-paper:#0E1A3A;      /* the page itself */
+  --carnet-paper-edge:rgba(91,134,255,0.22);
+  --carnet-ink:#F2EDE2;        /* cream ink on dark page */
+  --carnet-ink-soft:rgba(242,237,226,0.55);
+  --carnet-ink-faint:rgba(242,237,226,0.22);
+  --carnet-gold:#FFD24A;       /* recent stamp ink (dark theme) */
+  --carnet-gold-soft:rgba(255,210,74,0.22);
+  --carnet-gold-soft2:rgba(255,210,74,0.32);
+  --carnet-shadow:0 18px 40px rgba(0,0,0,0.55);
+}
+:root[data-theme="light"]{
+  --carnet-bg-top:#EDE5D2;
+  --carnet-bg:#EDE5D2;
+  --carnet-paper:#F8F3E6;
+  --carnet-paper-edge:#DCD2B8;
+  --carnet-ink:#0E1A3A;
+  --carnet-ink-soft:rgba(14,26,58,0.55);
+  --carnet-ink-faint:rgba(14,26,58,0.18);
+  --carnet-gold:#C58A1A;       /* deeper than #FFD24A for ink-on-paper legibility */
+  --carnet-gold-soft:rgba(197,138,26,0.18);
+  --carnet-gold-soft2:rgba(197,138,26,0.28);
+  --carnet-shadow:0 8px 20px rgba(15,18,30,0.08);
+}
+
+.bingo-wrap{overflow-x:auto;padding:2px;margin:-2px;position:relative}
+
+/* Outer carnet panel — backdrop */
+.carnet{background:radial-gradient(ellipse at top,var(--carnet-bg-top) 0%,var(--carnet-bg) 65%,var(--carnet-bg) 100%);border-radius:8px;padding:22px 22px 22px;position:relative;overflow:hidden;min-width:800px;color:var(--carnet-ink)}
+:root[data-theme="light"] .carnet{background:var(--carnet-bg)}
+
+/* Header strip — title + tally */
+.carnet-hd{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px;margin-bottom:14px;gap:18px}
+.carnet-ttl{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.06em;line-height:1;color:var(--carnet-ink)}
+.carnet-sub{font-size:11px;color:var(--carnet-ink-soft);margin-top:4px}
+.carnet-tally{text-align:right}
+.carnet-tally-v{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.04em;line-height:1;color:var(--carnet-ink)}
+.carnet-tally-v em{color:var(--carnet-ink-soft);font-style:normal}
+.carnet-tally-l{font-size:10.5px;color:var(--carnet-ink-soft);margin-top:4px;letter-spacing:.04em}
+
+/* The page itself — paper rectangle with rounded corners + corner reg marks */
+.carnet-page{position:relative;background:var(--carnet-paper);color:var(--carnet-ink);border-radius:3px;padding:18px 20px 22px;box-shadow:var(--carnet-shadow),inset 0 0 0 1px var(--carnet-paper-edge)}
+:root[data-theme="light"] .carnet-page{box-shadow:var(--carnet-shadow),0 0 0 1px var(--carnet-paper-edge)}
+/* Corner registration marks — four small L brackets in the page corners */
+.carnet-page::before,.carnet-page::after,.carnet-page>.reg-tr,.carnet-page>.reg-bl{content:'';position:absolute;width:10px;height:10px;pointer-events:none}
+.carnet-page::before{top:8px;left:8px;border-top:1px solid var(--carnet-ink-faint);border-left:1px solid var(--carnet-ink-faint)}
+.carnet-page::after{bottom:8px;right:8px;border-bottom:1px solid var(--carnet-ink-faint);border-right:1px solid var(--carnet-ink-faint)}
+.carnet-page>.reg-tr{top:8px;right:8px;border-top:1px solid var(--carnet-ink-faint);border-right:1px solid var(--carnet-ink-faint)}
+.carnet-page>.reg-bl{bottom:8px;left:8px;border-bottom:1px solid var(--carnet-ink-faint);border-left:1px solid var(--carnet-ink-faint)}
+
+/* Column headers (distances) */
+.carnet-cols{display:grid;grid-template-columns:76px repeat(7,96px);margin-bottom:4px;padding-left:0}
+.carnet-corner{}
+.carnet-col{text-align:center;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.08em;color:var(--carnet-ink-soft)}
+.carnet-col em{font-style:normal;font-size:10px;margin-left:2px}
+
+/* Each stroke row */
+.carnet-row{display:grid;grid-template-columns:76px repeat(7,96px);align-items:center;min-height:80px;border-top:1px solid var(--carnet-ink-faint)}
+.carnet-row:first-of-type{border-top:none}
+.carnet-row-lbl{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.12em;text-transform:uppercase;color:var(--carnet-ink);padding-right:8px}
+.carnet-cell{width:96px;height:80px;display:flex;align-items:center;justify-content:space-around;padding:0 4px;position:relative;border-left:1px solid var(--carnet-ink-faint)}
+.carnet-cell.empty{} /* event not in the Masters program — blank paper */
+.carnet-cell.split::after{content:'';position:absolute;top:14px;bottom:14px;left:50%;width:1px;background:var(--carnet-ink-faint)}
+
+/* One stamp = one event-half */
+.stamp{width:34px;height:34px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .18s ease;border-radius:50%}
+.stamp:hover{transform:scale(1.08) rotate(0deg) !important}
+.stamp.disabled{cursor:default;pointer-events:none;opacity:0}
+/* Outer + inner ring on swam stamps */
+.stamp-ring-outer{position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--carnet-ink);opacity:.92}
+.stamp-ring-inner{position:absolute;inset:3px;border-radius:50%;border:.75px solid var(--carnet-ink);opacity:.55}
+.stamp-time{position:relative;z-index:1;color:var(--carnet-ink);font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:.04em;line-height:1;text-align:center}
+.stamp-time.long{font-size:9.5px}
+.stamp-label{position:absolute;top:-7px;right:-3px;font-family:'Bebas Neue',sans-serif;font-size:7.5px;letter-spacing:.08em;color:var(--carnet-ink-soft);z-index:2}
+/* Recent stamps: gold ink + breathing halo */
+.stamp.recent .stamp-ring-outer{border-color:var(--carnet-gold);box-shadow:0 0 0 4px var(--carnet-gold-soft),inset 0 0 0 2px var(--carnet-paper)}
+.stamp.recent .stamp-ring-inner{border-color:var(--carnet-gold)}
+.stamp.recent .stamp-time{color:var(--carnet-gold)}
+/* Untried stamps: dotted ring with a tiny center dot */
+.stamp.untried .stamp-ring-outer{border:1.25px dashed var(--carnet-ink-faint);opacity:1}
+.stamp.untried .stamp-ring-inner{display:none}
+.stamp.untried .stamp-time{font-size:9px;color:var(--carnet-ink-faint);letter-spacing:.06em}
+
+/* Breathing halo on recent — respects reduced motion */
+@media(prefers-reduced-motion:no-preference){
+  .stamp.recent .stamp-ring-outer{animation:goldHalo 3s ease-in-out infinite}
+}
+@keyframes goldHalo{0%,100%{box-shadow:0 0 0 4px var(--carnet-gold-soft),inset 0 0 0 2px var(--carnet-paper)}50%{box-shadow:0 0 0 5px var(--carnet-gold-soft2),inset 0 0 0 2px var(--carnet-paper)}}
+
+/* Bottom rim — quote + course-letter legend */
+.carnet-rim{margin-top:14px;padding-top:10px;border-top:1px solid var(--carnet-ink-faint);display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:var(--carnet-ink-soft)}
+.carnet-rim .quote{font-style:italic}
+.carnet-rim .legend{letter-spacing:.06em}
+.carnet-rim .legend b{font-weight:600;color:var(--carnet-ink)}
+
+/* DRAWER (event history) */
+.drawer{background:var(--ink2);border:1px solid var(--edge);border-radius:var(--r);padding:20px;margin-top:20px;display:none}
+.drawer.show{display:block;animation:slideIn .22s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.drawer-hd{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--edge);padding-bottom:12px;margin-bottom:14px}
+.drawer-ttl{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.04em;color:var(--text)}
+.drawer-meta{font-size:11px;color:var(--soft);text-transform:uppercase;letter-spacing:.08em}
+.drawer-close{background:transparent;border:1px solid var(--edge);color:var(--soft);font-family:'DM Sans',sans-serif;font-size:12px;padding:5px 12px;cursor:pointer;border-radius:6px}
+.drawer-close:hover{color:var(--text);border-color:var(--teal)}
+
+.dr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:flex-start}
+@media(max-width:780px){.dr-grid{grid-template-columns:1fr}}
+.dr-chart-box{min-height:200px;border:1px solid var(--edge);border-radius:var(--r);padding:14px;background:rgba(255,255,255,.01)}
+.dr-list{max-height:340px;overflow-y:auto}
+.dr-row{display:grid;grid-template-columns:80px 90px 1fr 50px;gap:10px;padding:8px 4px;border-bottom:1px solid var(--edge2);font-size:12px;align-items:center}
+.dr-row:last-child{border-bottom:none}
+.dr-row.pb{background:var(--bingo-filled);padding:8px 8px;border-radius:5px;border:1px solid var(--bingo-filled-border)}
+.dr-tm{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.dr-row.pb .dr-tm{color:var(--gold)}
+.dr-dt{font-size:11px;color:var(--soft);font-variant-numeric:tabular-nums}
+.dr-ct{font-size:11px;color:var(--muted)}
+.dr-fp{font-size:10px;color:var(--soft);font-weight:600;text-align:right}
+
+/* RECORDS */
+.records-empty{text-align:center;padding:30px 20px;color:var(--muted);font-style:italic;background:var(--ink2);border:1px solid var(--edge);border-radius:var(--r)}
+.rec-slot{background:var(--ink2);border:1px solid var(--edge);border-radius:var(--r);margin-bottom:14px;overflow:hidden}
+.rec-slot-hd{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--edge);background:rgba(255,255,255,.015);flex-wrap:wrap}
+.rec-ev{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.05em;color:var(--text)}
+.rec-meta{font-size:11px;color:var(--soft);font-weight:500}
+.rec-tag{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:11px}
+.rec-tag.cur{background:var(--green);color:#0a2}
+.rec-tag.sup{background:rgba(255,255,255,.06);color:var(--muted)}
+.rec-row{display:grid;grid-template-columns:90px 90px 1fr 70px;gap:10px;padding:9px 14px;font-size:12px;align-items:center;border-bottom:1px solid var(--edge2)}
+.rec-row:last-child{border-bottom:none}
+.rec-row.standing{background:var(--row-star)}
+.rec-tm{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.rec-yr{font-size:11px;color:var(--soft);font-variant-numeric:tabular-nums}
+.rec-mt{font-size:11px;color:var(--muted)}
+.rec-pc{text-align:right}
+.badge{font-size:10px;font-weight:700;padding:2px 6px;border-radius:11px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.badge.good{background:var(--gold-dim);color:var(--gold-text)}
+.badge.ok{background:var(--teal-dim);color:var(--teal)}
+.badge.low{background:rgba(255,255,255,.06);color:var(--muted)}
+
+/* ERROR / EMPTY STATES */
+.loading,.notfound{text-align:center;padding:80px 20px;color:var(--soft)}
+.loading .l-spin{display:inline-block;width:30px;height:30px;border:3px solid var(--edge);border-top-color:var(--teal);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.notfound h2{font-family:'Bebas Neue',sans-serif;font-size:36px;margin-bottom:10px}
+.notfound a{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-dim)}
+.data-pending{background:var(--gold-dim);border:1px solid var(--bingo-recent-border);border-radius:var(--r);padding:14px 18px;color:var(--gold-text);font-size:12px;margin-bottom:18px}
+.data-pending strong{color:var(--text);font-weight:600;letter-spacing:.02em}
+
+footer{margin-top:60px;padding:20px;text-align:center;color:var(--muted);font-size:11px;border-top:1px solid var(--edge);background:var(--ink2)}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-bar"></div>
+  <div class="hd-brand">
+    <div class="eyebrow"><a href="index.html">← Records</a> · Profil maître nageur</div>
+    <div class="club" id="hd-name">La Vague de <em>Brossard</em></div>
+  </div>
+  <div class="theme-toggle" role="group" aria-label="Thème">
+    <button data-theme-set="dark" onclick="setTheme('dark')" aria-pressed="true">Sombre</button>
+    <button data-theme-set="light" onclick="setTheme('light')" aria-pressed="false">Clair</button>
+  </div>
+</header>
+
+<main>
+  <div id="content">
+    <div class="loading"><div class="l-spin"></div><div>Chargement des données…</div></div>
+  </div>
+</main>
+
+<footer>
+  Données : statsman.ca (records) · swimrankings.net (historique de nages).
+  Conçu pour les Maîtres Nageurs de La Vague de Brossard.
+</footer>
+
+<script src="brossard_inline_data.js"></script>
+<script src="brossard_data.js"></script>
+<script>
+function setTheme(t){document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('.theme-toggle button').forEach(b=>{const on=b.getAttribute('data-theme-set')===t;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});try{localStorage.setItem('vague-theme',t);}catch(e){}}
+(function(){const t=document.documentElement.getAttribute('data-theme')||'dark';document.querySelectorAll('.theme-toggle button').forEach(b=>{const on=b.getAttribute('data-theme-set')===t;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});})();
+
+// Stroke order for bingo rows (matches index.html)
+const STROKE_ORDER = ['FREE','BACK','BREAST','FLY','MEDLEY'];
+const STROKE_LBL = { FREE:'Libre', BACK:'Dos', BREAST:'Brasse', FLY:'Papillon', MEDLEY:'4 nages' };
+const DISTANCES = [25, 50, 100, 200, 400, 800, 1500];
+const NOW = new Date().getFullYear();
+const MO_FR = ['','janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+const SF_STATSMAN = { lib:'Libre', dos:'Dos', bra:'Brasse', pap:'Papillon', qni:'QNI' };
+const AGE_ORDER = ['20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64','65-69','70-74','75-79','80-84'];
+
+function bc (pct){ return pct>=95?'good':(pct>=85?'ok':'low'); }
+function fmtDate (iso) {
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso || '';
+  const [y, m, d] = iso.split('-');
+  return d + ' ' + MO_FR[Number(m)] + ' ' + y;
+}
+function formatTimeShort(t){ return (t || '').replace(/M$/,''); }
+// statsman.ca stores month as a 3-letter French abbreviation ("Avr", "Mai"…).
+// Convert to a 1-12 index so we can look it up in MO_FR. Returns 0 when unknown.
+function monthNumFromAbbr (s) {
+  if (!s) return 0;
+  if (typeof s === 'number') return s;
+  const m = String(s).slice(0, 3).toLowerCase();
+  const map = { jan:1, fev:2, feb:2, mar:3, avr:4, apr:4, mai:5, may:5, jun:6, jul:7, aou:8, aug:8, sep:9, oct:10, nov:11, dec:12 };
+  return map[m] || 0;
+}
+
+function getQueryParam(name){
+  const params = new URLSearchParams(location.search);
+  return params.get(name);
+}
+
+async function main() {
+  await BrossardData.load();
+  const aidParam = getQueryParam('aid');
+  const nameParam = getQueryParam('name');
+  let athlete = null;
+  if (aidParam) athlete = BrossardData.getAthleteById(Number(aidParam));
+  if (!athlete && nameParam) athlete = BrossardData.getAthleteByName(nameParam);
+
+  // For names we don't have an athlete profile for but DO have records, fall back to records-only mode
+  let records = [];
+  if (athlete) records = BrossardData.getRecordsByName(athlete.first + ' ' + athlete.last);
+  // statsman names rarely use the ALL-CAPS last-name format, so also try looking up records by the swimrankings-formatted name
+  if (athlete && records.length === 0) records = BrossardData.getRecordsByName(athlete.last + ', ' + athlete.first);
+  if (records.length === 0 && nameParam) records = BrossardData.getRecordsByName(nameParam);
+
+  // We may have records-only (no athlete profile)
+  const displayName = athlete ? (athlete.first + ' ' + athlete.last) : (nameParam || '');
+
+  if (!athlete && records.length === 0) {
+    renderNotFound(displayName);
+    return;
+  }
+
+  renderProfile({ athlete, records, displayName });
+}
+
+function renderProfile ({ athlete, records, displayName }) {
+  const root = document.getElementById('content');
+  // Gender still derived (used for accord in "Active depuis ..." etc.) but the
+  // ♀/♂ pictogram itself is intentionally omitted from the profile hero
+  // (per user direction 2026-05). The dashboard modal keeps its glyph.
+  const gender = records.length ? records[0].category : null;
+
+  document.title = displayName + ' — Profil maître nageur';
+  document.getElementById('hd-name').innerHTML = 'Profil — <em>' + displayName + '</em>';
+
+  // KPIs
+  const swims = athlete ? BrossardData.getSwimsByAthleteId(athlete.aid) : [];
+  const swimDates = swims.map(s => s.date).filter(d => /^\d{4}-/.test(d));
+  const yMin = swimDates.length ? swimDates[0].slice(0,4) : (records.length ? Math.min(...records.map(r=>r.year)) : null);
+  const yMax = swimDates.length ? swimDates[swimDates.length-1].slice(0,4) : (records.length ? Math.max(...records.map(r=>r.year)) : null);
+  const distinctEvents = new Set(swims.filter(s => !s.isLap).map(s => s.distance+'|'+s.stroke+'|'+s.course)).size;
+  const totalKm = (swims.reduce((s, sw) => s + (sw.distance || 0), 0) / 1000).toFixed(1);
+
+  // Records held now (still standing)
+  let standing = 0;
+  if (records.length) {
+    // Compute current holders by slot
+    const all = [];
+    for (const r of records) all.push(r);
+    // Slot key
+    const slotsAll = {};
+    // We need to know who currently holds each slot — across ALL records, not just this swimmer
+    // BrossardData has records by normalized name; we need the full records array.
+    // To keep things simple in v1, just count records THIS person held as "standing" if no later record exists with the same slot key (within this name's records only). This is conservative.
+    standing = records.filter(r => {
+      const sameSlot = records.filter(o => o.category === r.category && o.stroke === r.stroke && o.distance === r.distance && o.pool === r.pool && o.age_group === r.age_group);
+      const latest = sameSlot.reduce((best, o) => (o.year > best.year || (o.year === best.year && o.time_sec < best.time_sec)) ? o : best, sameSlot[0]);
+      return latest === r;
+    }).length;
+  }
+
+  let html = '';
+  html += `<section class="hero">
+    <div class="hero-left">
+      <div class="hero-name">${displayName}</div>
+      <div class="hero-sub">
+        ${athlete && athlete.yob ? '<span>Né' + (gender==='F'?'e':'') + ' en ' + athlete.yob + '</span>' : ''}
+        ${athlete && athlete.club ? '<span>' + athlete.club + '</span>' : ''}
+        ${yMin && yMax ? '<span>Active' + (gender==='F'?' depuis':' depuis') + ' ' + yMin + (yMin!==yMax?' — '+yMax:'') + '</span>' : ''}
+      </div>
+    </div>
+    <div class="hero-stats">
+      ${records.length ? `<div class="kpi-card"><div class="v g">${standing}</div><div class="l">Records en vigueur</div></div>` : ''}
+      ${records.length ? `<div class="kpi-card"><div class="v">${records.length}</div><div class="l">Records historiques</div></div>` : ''}
+      ${swims.length ? `<div class="kpi-card"><div class="v t">${swims.length}</div><div class="l">Nages enregistrées</div></div>` : ''}
+      ${distinctEvents ? `<div class="kpi-card"><div class="v">${distinctEvents}</div><div class="l">Épreuves différentes</div></div>` : ''}
+      ${totalKm > 0 ? `<div class="kpi-card"><div class="v">${totalKm}</div><div class="l">Kilomètres en course</div></div>` : ''}
+    </div>
+  </section>`;
+
+  // Bingo card (only if athlete has harvested swims). Three states:
+  // - unknown:        no swimrankings profile linked at all
+  // - awaiting_pass2: profile known, swim harvest pending (quota-blocked)
+  // - active:         full data — render the bingo grid
+  if (athlete) {
+    const status = BrossardData.getAthleteStatus(athlete.aid);
+    if (status === 'active') {
+      html += renderBingoSection(athlete);
+    } else {
+      html += `<section class="sect">
+        <div class="sect-hd"><div class="sect-ttl">Carte des épreuves</div></div>
+        <div class="data-pending">
+          <strong>Données en récolte.</strong> ${athlete.first} ${athlete.last} est dans le roster swimrankings,
+          mais le quota quotidien a interrompu l'extraction des nages détaillées.
+          La carte des épreuves apparaîtra ici après la prochaine récolte.
+        </div>
+      </section>`;
+    }
+  } else {
+    html += `<section class="sect">
+      <div class="sect-hd"><div class="sect-ttl">Carte des épreuves</div></div>
+      <div class="data-pending">
+        <strong>Plus de données à venir.</strong> Le profil swimrankings de ce maître nageur n'est pas encore associé.
+        Seuls les records sont disponibles ci-dessous.
+      </div>
+    </section>`;
+  }
+
+  // Records section
+  html += renderRecordsSection(records, displayName);
+
+  root.innerHTML = html;
+  attachBingoHandlers(athlete);
+}
+
+// ────────────────────────────────────────────────────────────────────────
+// CARNET D'ÉPREUVES — Stamp Book bingo card (per Claude Design handoff v2).
+// Each event is a hand-pressed ink stamp; gold ink + halo for swims in the
+// last 12 months; dotted blank slot for events still to try.
+function renderBingoSection (athlete) {
+  const grid = BrossardData.getBingoCard(athlete.aid);
+  const cellMap = {};
+  for (const c of grid) cellMap[c.stroke + '|' + c.distance + '|' + c.course] = c;
+
+  const swam = grid.filter(c => c.swam).length;
+  const total = grid.length;
+  const recentCount = grid.filter(c => {
+    if (!c.swam || !c.lastSwim || !c.lastSwim.date) return false;
+    return (NOW - Number(c.lastSwim.date.slice(0,4)) <= 1);
+  }).length;
+  const sub = athlete.first + ' ' + athlete.last + ' · La Vague de Brossard';
+
+  let html = `<section class="sect">
+    <div class="sect-hd">
+      <div class="sect-ttl">Carnet d'épreuves</div>
+      <div class="sect-hint">Chaque épreuve nagée est un tampon · cliquez sur un tampon pour voir son historique</div>
+    </div>
+    <div class="bingo-wrap"><div class="carnet">
+      <div class="carnet-hd">
+        <div>
+          <div class="carnet-ttl">CARNET D'ÉPREUVES</div>
+          <div class="carnet-sub">${sub}</div>
+        </div>
+        <div class="carnet-tally">
+          <div class="carnet-tally-v">${swam}<em> / ${total}</em></div>
+          <div class="carnet-tally-l">épreuves tamponnées${recentCount ? ' · ' + recentCount + ' récente' + (recentCount > 1 ? 's' : '') : ''}</div>
+        </div>
+      </div>
+      <div class="carnet-page">
+        <span class="reg-tr"></span><span class="reg-bl"></span>
+        <div class="carnet-cols">
+          <div class="carnet-corner"></div>`;
+  for (const d of DISTANCES) html += `<div class="carnet-col">${d}<em>m</em></div>`;
+  html += `</div>`;
+
+  for (const stroke of STROKE_ORDER) {
+    html += `<div class="carnet-row"><div class="carnet-row-lbl">${STROKE_LBL[stroke]}</div>`;
+    for (const d of DISTANCES) {
+      const lcm = cellMap[stroke + '|' + d + '|LCM'];
+      const scm = cellMap[stroke + '|' + d + '|SCM'];
+      if (!lcm && !scm) {
+        html += `<div class="carnet-cell empty"></div>`;
+        continue;
+      }
+      const cellCls = (lcm && scm) ? 'carnet-cell split' : 'carnet-cell';
+      html += `<div class="${cellCls}">${renderStamp(lcm, 'L', stroke, d)}${renderStamp(scm, 'S', stroke, d)}</div>`;
+    }
+    html += `</div>`;
+  }
+
+  html += `<div class="carnet-rim">
+        <span class="quote">« Rapporte ton carnet tamponné. Une épreuve à la fois. »</span>
+        <span class="legend"><b>L</b> · long course (50m) &nbsp; <b>S</b> · short course (25m)</span>
+      </div>
+    </div></div></div>
+    <div id="event-drawer" class="drawer"></div>
+  </section>`;
+  return html;
+}
+
+// One stamp within a cell. `cell` may be undefined when that course doesn't
+// apply (e.g. 100 IM in LCM); we render a disabled placeholder so the L|S
+// layout stays aligned. Stamp tilt is pseudo-random but stable per event so
+// the card feels hand-pressed across renders.
+function renderStamp (cell, courseLetter, stroke, distance) {
+  if (!cell) {
+    return `<div class="stamp disabled"></div>`;
+  }
+  // Stable tilt: -3deg to +3deg, derived from stroke + distance + course
+  const tilt = ((stroke.charCodeAt(0) + distance + (courseLetter === 'L' ? 0 : 7)) % 7) - 3;
+  const data = `data-distance="${cell.distance}" data-stroke="${cell.stroke}" data-course="${cell.course}"`;
+  if (!cell.swam) {
+    return `<div class="stamp untried" ${data} style="transform:rotate(${tilt}deg)" title="${distance}m ${STROKE_LBL[stroke]} ${courseLetter === 'L' ? '50m' : '25m'} — à tamponner">
+      <span class="stamp-ring-outer"></span>
+      <span class="stamp-time">·</span>
+      <span class="stamp-label">${courseLetter}</span>
+    </div>`;
+  }
+  const recent = cell.lastSwim && cell.lastSwim.date && (NOW - Number(cell.lastSwim.date.slice(0,4)) <= 1);
+  const cls = 'stamp swam' + (recent ? ' recent' : '');
+  const timeStr = formatTimeShort(cell.pb.time);
+  const timeCls = timeStr.length > 5 ? 'stamp-time long' : 'stamp-time';
+  return `<div class="${cls}" ${data} style="transform:rotate(${tilt}deg)" title="${distance}m ${STROKE_LBL[stroke]} ${courseLetter === 'L' ? '50m' : '25m'} — PB ${timeStr}">
+    <span class="stamp-ring-outer"></span>
+    <span class="stamp-ring-inner"></span>
+    <span class="${timeCls}">${timeStr}</span>
+    <span class="stamp-label">${courseLetter}</span>
+  </div>`;
+}
+
+function attachBingoHandlers (athlete) {
+  if (!athlete) return;
+  document.querySelectorAll('.stamp:not(.disabled)').forEach(el => {
+    el.addEventListener('click', () => openEventDrawer(athlete, el.dataset.stroke, Number(el.dataset.distance), el.dataset.course));
+  });
+}
+
+function openEventDrawer (athlete, stroke, distance, course) {
+  const drawer = document.getElementById('event-drawer');
+  const history = BrossardData.getEventHistory(athlete.aid, distance, stroke, course);
+  const courseLabel = course === 'LCM' ? 'Grand bassin (50 m)' : 'Petit bassin (25 m)';
+  const eventLabel = distance + 'm ' + STROKE_LBL[stroke];
+  let html = `<div class="drawer-hd">
+    <div>
+      <div class="drawer-ttl">${eventLabel}</div>
+      <div class="drawer-meta">${courseLabel} · ${history.length} nage${history.length>1?'s':''}</div>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">Fermer ✕</button>
+  </div>`;
+
+  if (!history.length) {
+    html += `<div class="data-pending" style="text-align:center"><strong>Pas encore nagée !</strong> Une belle épreuve à essayer cette saison.</div>`;
+  } else {
+    // PB
+    const pb = history.reduce((best, s) => (best == null || s.timeSec < best.timeSec) ? s : best, null);
+    html += `<div class="dr-grid">
+      <div class="dr-chart-box" id="dr-chart"></div>
+      <div class="dr-list">`;
+    // sort newest first for the list
+    const listed = [...history].sort((a,b) => (b.date||'').localeCompare(a.date||''));
+    for (const sw of listed) {
+      const isPB = sw === pb;
+      html += `<div class="dr-row${isPB?' pb':''}">
+        <div class="dr-tm">${formatTimeShort(sw.time)}${isPB?' ★':''}</div>
+        <div class="dr-dt">${fmtDate(sw.date)}</div>
+        <div class="dr-ct">${(sw.city||'').replace(/ /g, ' ')}</div>
+        <div class="dr-fp">${sw.finaPoints || ''}</div>
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+  drawer.innerHTML = html;
+  drawer.classList.add('show');
+  // Render chart (simple inline SVG line chart)
+  if (history.length >= 2) renderEventChart(history);
+  drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeDrawer () { document.getElementById('event-drawer').classList.remove('show'); }
+
+function renderEventChart (history) {
+  const box = document.getElementById('dr-chart');
+  if (!box) return;
+  const sorted = [...history].sort((a, b) => (a.date||'').localeCompare(b.date||''));
+  const pts = sorted.filter(s => s.timeSec != null && /^\d{4}-/.test(s.date));
+  if (pts.length < 2) { box.innerHTML = '<div style="text-align:center;color:var(--muted);padding:60px 20px">Pas assez de nages pour tracer une courbe.</div>'; return; }
+  const W = 360, H = 200, P = { l: 36, r: 14, t: 14, b: 26 };
+  const xs = pts.map(s => new Date(s.date).getTime());
+  const ys = pts.map(s => s.timeSec);
+  const xMin = Math.min(...xs), xMax = Math.max(...xs);
+  const yMin = Math.min(...ys), yMax = Math.max(...ys);
+  const yRange = yMax - yMin || 1;
+  const xRange = xMax - xMin || 1;
+  const sx = x => P.l + (W - P.l - P.r) * (x - xMin) / xRange;
+  const sy = y => P.t + (H - P.t - P.b) * (y - yMin) / yRange;
+  const pathD = pts.map((p, i) => (i === 0 ? 'M' : 'L') + sx(xs[i]) + ',' + sy(ys[i])).join(' ');
+  const pb = pts.reduce((best, p, i) => (best == null || p.timeSec < pts[best].timeSec) ? i : best, 0);
+  const css = getComputedStyle(document.documentElement);
+  const stroke = css.getPropertyValue('--teal') || '#5B86FF';
+  const goldC = css.getPropertyValue('--gold') || '#FFD24A';
+  const muted = css.getPropertyValue('--muted') || '#6E7997';
+
+  // Tick labels: first and last year
+  const firstYear = new Date(xMin).getFullYear();
+  const lastYear = new Date(xMax).getFullYear();
+  const fmtTime = sec => {
+    if (sec >= 60) {
+      const m = Math.floor(sec / 60), s = (sec - m*60).toFixed(2);
+      return m + ':' + (s.padStart(5, '0'));
+    }
+    return sec.toFixed(2);
+  };
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:100%;max-height:220px">
+    <line x1="${P.l}" y1="${H-P.b}" x2="${W-P.r}" y2="${H-P.b}" stroke="${muted}" stroke-opacity=".3"/>
+    <line x1="${P.l}" y1="${P.t}" x2="${P.l}" y2="${H-P.b}" stroke="${muted}" stroke-opacity=".3"/>
+    <path d="${pathD}" fill="none" stroke="${stroke.trim()}" stroke-width="1.6" stroke-linejoin="round"/>
+    ${pts.map((p, i) => `<circle cx="${sx(xs[i])}" cy="${sy(ys[i])}" r="${i===pb?4:2.5}" fill="${i===pb?goldC.trim():stroke.trim()}" stroke="${i===pb?goldC.trim():'transparent'}" stroke-width="1.5"/>`).join('')}
+    <text x="${P.l}" y="${H-P.b+16}" font-size="10" fill="${muted}">${firstYear}</text>
+    <text x="${W-P.r}" y="${H-P.b+16}" font-size="10" fill="${muted}" text-anchor="end">${lastYear}</text>
+    <text x="${P.l-6}" y="${sy(yMin)+4}" font-size="10" fill="${muted}" text-anchor="end">${fmtTime(yMin)}</text>
+    <text x="${P.l-6}" y="${sy(yMax)+4}" font-size="10" fill="${muted}" text-anchor="end">${fmtTime(yMax)}</text>
+    <text x="${sx(xs[pb])}" y="${sy(ys[pb])-8}" font-size="10" fill="${goldC.trim()}" text-anchor="middle" font-weight="600">PB</text>
+  </svg>`;
+}
+
+function renderRecordsSection (records, displayName) {
+  if (!records.length) {
+    return `<section class="sect">
+      <div class="sect-hd"><div class="sect-ttl">Records du club</div></div>
+      <div class="records-empty">Aucun record du club au nom de ${displayName}.</div>
+    </section>`;
+  }
+  // Group by slot (cat|stroke|distance|pool|age_group), sort chronologically within slot
+  const slots = {};
+  for (const r of records) {
+    const k = r.category + '|' + r.stroke + '|' + r.distance + '|' + r.pool + '|' + r.age_group;
+    (slots[k] = slots[k] || []).push(r);
+  }
+  for (const k in slots) {
+    slots[k].sort((a, b) => a.year - b.year || (a.month||0) - (b.month||0));
+  }
+  // Sort slots by age_group, stroke, distance, pool
+  const SO = ['lib','dos','bra','pap','qni'];
+  const slotKeys = Object.keys(slots).sort((aK, bK) => {
+    const a = slots[aK][0], b = slots[bK][0];
+    return AGE_ORDER.indexOf(a.age_group) - AGE_ORDER.indexOf(b.age_group)
+        || SO.indexOf(a.stroke) - SO.indexOf(b.stroke)
+        || a.distance - b.distance
+        || a.pool - b.pool;
+  });
+  let html = `<section class="sect">
+    <div class="sect-hd">
+      <div class="sect-ttl">Records du club</div>
+      <div class="sect-hint">${records.length} record${records.length>1?'s':''} historique${records.length>1?'s':''} (en vigueur ou battu depuis)</div>
+    </div>`;
+  for (const k of slotKeys) {
+    const recs = slots[k];
+    const head = recs[0];
+    html += `<div class="rec-slot">
+      <div class="rec-slot-hd">
+        <span class="rec-ev">${head.distance}m ${SF_STATSMAN[head.stroke]||head.stroke}</span>
+        <span class="rec-meta">${head.category} · ${head.age_group} · ${head.pool}m</span>
+      </div>`;
+    for (const r of recs) {
+      html += `<div class="rec-row">
+        <div class="rec-tm">${r.time}</div>
+        <div class="rec-yr">${monthNumFromAbbr(r.month) ? MO_FR[monthNumFromAbbr(r.month)] + ' ' : ''}${r.year}</div>
+        <div class="rec-mt">${r.meet||''}</div>
+        <div class="rec-pc"><span class="badge ${bc(r.pct)}">${r.pct}%</span></div>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+  html += `</section>`;
+  return html;
+}
+
+function renderNotFound (name) {
+  document.getElementById('content').innerHTML = `<div class="notfound">
+    <h2>Maître nageur introuvable</h2>
+    <p>Aucun profil ni record au nom de <strong>${name || '(inconnu)'}</strong>.</p>
+    <p style="margin-top:14px"><a href="index.html">← Retour aux records</a></p>
+  </div>`;
+}
+
+main().catch(e => {
+  console.error(e);
+  document.getElementById('content').innerHTML = `<div class="notfound"><h2>Erreur de chargement</h2><p>${e.message}</p></div>`;
+});
+</script>
+</body>
+</html>

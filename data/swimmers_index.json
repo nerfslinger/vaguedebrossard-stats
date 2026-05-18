@@ -1,0 +1,497 @@
+{
+  "140222814": {
+    "id": "140222814",
+    "name": "Nathalie Berger",
+    "slug": "nathalie-berger",
+    "gender": "F",
+    "dob": "1971-12-08",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 16,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "128910863": {
+    "id": "128910863",
+    "name": "Christian Berger",
+    "slug": "christian-berger",
+    "gender": "M",
+    "dob": "1944-05-11",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 26,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129114069": {
+    "id": "129114069",
+    "name": "Leanna Masutti",
+    "slug": "leanna-masutti",
+    "gender": "F",
+    "dob": "2005-07-29",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-03-21",
+    "swim_count": 11,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "128896107": {
+    "id": "128896107",
+    "name": "Carlos Aviles",
+    "slug": "carlos-aviles",
+    "gender": "M",
+    "dob": "1975-09-14",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 16,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "128910890": {
+    "id": "128910890",
+    "name": "Michele Lemay",
+    "slug": "michele-lemay",
+    "gender": "F",
+    "dob": "1955-07-03",
+    "first_seen": "2025-10-18",
+    "last_seen": "2025-12-13",
+    "swim_count": 6,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2025
+    ]
+  },
+  "127059489": {
+    "id": "127059489",
+    "name": "Robert Beaudoin",
+    "slug": "robert-beaudoin",
+    "gender": "M",
+    "dob": "1971-02-28",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-24",
+    "swim_count": 10,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "127061734": {
+    "id": "127061734",
+    "name": "Jennifer Coronel",
+    "slug": "jennifer-coronel",
+    "gender": "F",
+    "dob": "1977-09-03",
+    "first_seen": "2025-10-18",
+    "last_seen": "2025-10-18",
+    "swim_count": 3,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2025
+    ]
+  },
+  "128878612": {
+    "id": "128878612",
+    "name": "Sebastien Morel",
+    "slug": "sebastien-morel",
+    "gender": "M",
+    "dob": "1975-11-24",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 16,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "128938642": {
+    "id": "128938642",
+    "name": "Benoit Raymond",
+    "slug": "benoit-raymond",
+    "gender": "M",
+    "dob": "1982-06-11",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 24,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129242105": {
+    "id": "129242105",
+    "name": "Blas Eduardo Jaimes",
+    "slug": "blas-eduardo-jaimes",
+    "gender": "M",
+    "dob": "1969-08-14",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 11,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129101778": {
+    "id": "129101778",
+    "name": "Monique Lethiecq",
+    "slug": "monique-lethiecq",
+    "gender": "F",
+    "dob": "1955-10-23",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 22,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129094117": {
+    "id": "129094117",
+    "name": "Kevin Buckley",
+    "slug": "kevin-buckley",
+    "gender": "M",
+    "dob": "1982-12-12",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 16,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "128900809": {
+    "id": "128900809",
+    "name": "Gail Desjardins",
+    "slug": "gail-desjardins",
+    "gender": "F",
+    "dob": "1950-09-13",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 19,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "131015709": {
+    "id": "131015709",
+    "name": "Marie Gaudreault",
+    "slug": "marie-gaudreault",
+    "gender": "F",
+    "dob": "1956-11-26",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 22,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129120077": {
+    "id": "129120077",
+    "name": "Steve Charles Cowan",
+    "slug": "steve-charles-cowan",
+    "gender": "M",
+    "dob": "1972-01-20",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-26",
+    "swim_count": 15,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129106326": {
+    "id": "129106326",
+    "name": "Marie-Pier Daigle",
+    "slug": "marie-pier-daigle",
+    "gender": "F",
+    "dob": "2006-06-17",
+    "first_seen": "2025-10-18",
+    "last_seen": "2025-11-22",
+    "swim_count": 6,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2025
+    ]
+  },
+  "128910891": {
+    "id": "128910891",
+    "name": "Monique Rinfret",
+    "slug": "monique-rinfret",
+    "gender": "F",
+    "dob": "1950-03-02",
+    "first_seen": "2025-10-18",
+    "last_seen": "2026-04-25",
+    "swim_count": 7,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129212100": {
+    "id": "129212100",
+    "name": "Kyra Lalonde",
+    "slug": "kyra-lalonde",
+    "gender": "F",
+    "dob": "2003-03-11",
+    "first_seen": "2025-12-13",
+    "last_seen": "2026-04-26",
+    "swim_count": 7,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129103861": {
+    "id": "129103861",
+    "name": "Matei Petrescu",
+    "slug": "matei-petrescu",
+    "gender": "M",
+    "dob": "1988-07-09",
+    "first_seen": "2025-12-13",
+    "last_seen": "2026-04-26",
+    "swim_count": 9,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "129226413": {
+    "id": "129226413",
+    "name": "Claude Fortin",
+    "slug": "claude-fortin",
+    "gender": "M",
+    "dob": "1986-02-23",
+    "first_seen": "2025-12-13",
+    "last_seen": "2026-02-21",
+    "swim_count": 12,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2026
+    ]
+  },
+  "127034807": {
+    "id": "127034807",
+    "name": "Isabelle Desroches",
+    "slug": "isabelle-desroches",
+    "gender": "F",
+    "dob": "1978-04-24",
+    "first_seen": "2025-12-13",
+    "last_seen": "2025-12-13",
+    "swim_count": 3,
+    "records_held": 0,
+    "year_range": [
+      2025,
+      2025
+    ]
+  },
+  "128889336": {
+    "id": "128889336",
+    "name": "Natasha Cassivi",
+    "slug": "natasha-cassivi",
+    "gender": "F",
+    "dob": "1970-03-22",
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-04-26",
+    "swim_count": 19,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129245432": {
+    "id": "129245432",
+    "name": "Marie-Christine Audet",
+    "slug": "marie-christine-audet",
+    "gender": "F",
+    "dob": "1984-06-09",
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-04-26",
+    "swim_count": 10,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "127062827": {
+    "id": "127062827",
+    "name": "Julie Dufour",
+    "slug": "julie-dufour",
+    "gender": "F",
+    "dob": "1979-05-01",
+    "first_seen": "2026-01-17",
+    "last_seen": "2026-04-25",
+    "swim_count": 14,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "127062091": {
+    "id": "127062091",
+    "name": "Claire Daoust",
+    "slug": "claire-daoust",
+    "gender": "F",
+    "dob": "1968-08-18",
+    "first_seen": "2026-02-08",
+    "last_seen": "2026-04-24",
+    "swim_count": 8,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129185037": {
+    "id": "129185037",
+    "name": "Suzanne Tremblay",
+    "slug": "suzanne-tremblay",
+    "gender": "F",
+    "dob": "1966-01-28",
+    "first_seen": "2026-02-21",
+    "last_seen": "2026-03-21",
+    "swim_count": 5,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129212099": {
+    "id": "129212099",
+    "name": "Benoit Delpech",
+    "slug": "benoit-delpech",
+    "gender": "M",
+    "dob": "1966-11-16",
+    "first_seen": "2026-04-25",
+    "last_seen": "2026-04-25",
+    "swim_count": 3,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129157159": {
+    "id": "129157159",
+    "name": "Ki-Hyang Lee",
+    "slug": "ki-hyang-lee",
+    "gender": "F",
+    "dob": "1973-11-11",
+    "first_seen": "2026-04-25",
+    "last_seen": "2026-04-26",
+    "swim_count": 4,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "128943718": {
+    "id": "128943718",
+    "name": "Jerome Le Siege",
+    "slug": "jerome-le-siege",
+    "gender": "M",
+    "dob": "1983-10-07",
+    "first_seen": "2026-04-24",
+    "last_seen": "2026-04-26",
+    "swim_count": 6,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "131006195": {
+    "id": "131006195",
+    "name": "Jean-Francois Crevier",
+    "slug": "jean-francois-crevier",
+    "gender": "M",
+    "dob": "1991-05-07",
+    "first_seen": "2026-04-25",
+    "last_seen": "2026-04-25",
+    "swim_count": 4,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "140240990": {
+    "id": "140240990",
+    "name": "Patrick Janukavicius",
+    "slug": "patrick-janukavicius",
+    "gender": "M",
+    "dob": "1986-03-02",
+    "first_seen": "2026-04-25",
+    "last_seen": "2026-04-25",
+    "swim_count": 2,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129217491": {
+    "id": "129217491",
+    "name": "Claude Gaviria-Velez",
+    "slug": "claude-gaviria-velez",
+    "gender": "F",
+    "dob": "1965-11-08",
+    "first_seen": "2026-04-25",
+    "last_seen": "2026-04-26",
+    "swim_count": 5,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  },
+  "129053121": {
+    "id": "129053121",
+    "name": "Marie-Helene Leduc",
+    "slug": "marie-helene-leduc",
+    "gender": "F",
+    "dob": "1987-08-31",
+    "first_seen": "2026-04-24",
+    "last_seen": "2026-04-25",
+    "swim_count": 4,
+    "records_held": 0,
+    "year_range": [
+      2026,
+      2026
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "2025-10-18-coupe-des-maitres-manche-1": {
+    "meet_id": "2025-10-18-coupe-des-maitres-manche-1",
+    "name": "Coupe des maitres manche 1",
+    "date": "2025-10-18",
+    "city": "St-Eustache",
+    "course": "SCM",
+    "swim_count": 50,
+    "source": "lenex"
+  },
+  "2025-11-01-invitation-des-maitres-amqui": {
+    "meet_id": "2025-11-01-invitation-des-maitres-amqui",
+    "name": "Invitation maîtres",
+    "date": "2025-11-01",
+    "city": "Amqui",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "lenex"
+  },
+  "2025-11-01-invitation-des-maitres-defi-sher-halloween": {
+    "meet_id": "2025-11-01-invitation-des-maitres-defi-sher-halloween",
+    "name": "Maître Defi Sher Halloween",
+    "date": "2025-11-01",
+    "city": "Sherbrooke",
+    "course": "SCM",
+    "swim_count": 12,
+    "source": "lenex"
+  },
+  "2025-11-22-coupe-des-maitres-manche-2": {
+    "meet_id": "2025-11-22-coupe-des-maitres-manche-2",
+    "name": "Coupe des maitres manche 2",
+    "date": "2025-11-22",
+    "city": "Québec",
+    "course": "SCM",
+    "swim_count": 12,
+    "source": "sd3"
+  },
+  "2025-12-06-coupe-des-maitres-manche-3-est": {
+    "meet_id": "2025-12-06-coupe-des-maitres-manche-3-est",
+    "name": "Coupe des maitres manche #3 Est",
+    "date": "2025-12-06",
+    "city": "Rivière-du-Loup",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "lenex"
+  },
+  "2025-12-13-coupe-des-maitres-manche-3-ouest": {
+    "meet_id": "2025-12-13-coupe-des-maitres-manche-3-ouest",
+    "name": "Coupe des maitres manche #3 Ouest",
+    "date": "2025-12-13",
+    "city": "Montréal-Nord",
+    "course": "SCM",
+    "swim_count": 36,
+    "source": "lenex"
+  },
+  "2025-12-20-interclub-de-noel-2025-maitres": {
+    "meet_id": "2025-12-20-interclub-de-noel-2025-maitres",
+    "name": "Invitation régionale - Intercl",
+    "date": "",
+    "city": "Gaspé",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "sd3"
+  },
+  "2026-01-17-coupe-des-maitres-manche-4": {
+    "meet_id": "2026-01-17-coupe-des-maitres-manche-4",
+    "name": "Coupe des maitres manche #4",
+    "date": "2026-01-17",
+    "city": "Saint-Hyacinthe",
+    "course": "SCM",
+    "swim_count": 33,
+    "source": "lenex"
+  },
+  "2026-02-08-the-fantastic-four-masters": {
+    "meet_id": "2026-02-08-the-fantastic-four-masters",
+    "name": "MPC Fantastic Four - Les Quatre Fantastiques",
+    "date": "2026-02-08",
+    "city": "Pointe-Claire",
+    "course": "SCM",
+    "swim_count": 37,
+    "source": "lenex"
+  },
+  "2026-02-21-coupe-des-maitres-manche-5-30e-coupe-de-montreal": {
+    "meet_id": "2026-02-21-coupe-des-maitres-manche-5-30e-coupe-de-montreal",
+    "name": "Coupe des maîtres #5 - 30e Coupe de Montréal",
+    "date": "2026-02-21",
+    "city": "Montréal",
+    "course": "SCM",
+    "swim_count": 36,
+    "source": "lenex"
+  },
+  "2026-03-20-intra-club-maitres-cpc-20-03-2026": {
+    "meet_id": "2026-03-20-intra-club-maitres-cpc-20-03-2026",
+    "name": "Intra-Club  Maitres CPC 20-03-",
+    "date": "",
+    "city": "Port-Cartier",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "sd3"
+  },
+  "2026-03-21-coupe-des-maitres-manche-6": {
+    "meet_id": "2026-03-21-coupe-des-maitres-manche-6",
+    "name": "Coupe des maitres manche 6",
+    "date": "2026-03-21",
+    "city": "Dollard-des-Ormea",
+    "course": "SCM",
+    "swim_count": 16,
+    "source": "sd3"
+  },
+  "2026-03-28-invitation-regionale-fermee-maitres": {
+    "meet_id": "2026-03-28-invitation-regionale-fermee-maitres",
+    "name": "Invitation régionale maitres R",
+    "date": "",
+    "city": "Drummondville",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "sd3"
+  },
+  "2026-04-02-intra-maitres-printemps-2026": {
+    "meet_id": "2026-04-02-intra-maitres-printemps-2026",
+    "name": "Intra printemps_Maîtres",
+    "date": "",
+    "city": "St-Eustache",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "sd3"
+  },
+  "2026-04-11-maitres-intra-club-ddo": {
+    "meet_id": "2026-04-11-maitres-intra-club-ddo",
+    "name": "DDO Intra Avril",
+    "date": "",
+    "city": "Dollard-des-Ormea",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "sd3"
+  },
+  "2026-04-12-invitation-des-maitres-premiere-edition": {
+    "meet_id": "2026-04-12-invitation-des-maitres-premiere-edition",
+    "name": "Invitation Maîtres 2026",
+    "date": "2026-04-12",
+    "city": "Québec",
+    "course": "LCM",
+    "swim_count": 0,
+    "source": "lenex"
+  },
+  "2026-04-24-championnat-quebecois-des-maitres": {
+    "meet_id": "2026-04-24-championnat-quebecois-des-maitres",
+    "name": "Championnat québécois des Maitres 2026",
+    "date": "2026-04-24",
+    "city": "Montréal",
+    "course": "SCM",
+    "swim_count": 129,
+    "source": "lenex"
+  },
+  "2026-04-26-intra-club-4-maitres": {
+    "meet_id": "2026-04-26-intra-club-4-maitres",
+    "name": "Intra 4_26 avril 2026 Maitres",
+    "date": "2026-04-26",
+    "city": "St-Hubert",
+    "course": "SCM",
+    "swim_count": 0,
+    "source": "lenex"
+  }
+}
