@@ -120,7 +120,10 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .ykpi-v{font-family:'Bebas Neue',sans-serif;font-size:30px;color:#fff;line-height:1;letter-spacing:.02em}
 .ykpi-sub{font-size:11px;color:var(--soft)}
 
-.year-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;margin-bottom:18px}
+/* Top row uses auto-fit so it stays balanced when "Vedettes de l'année" is hidden
+   for older years (pre-2002, no swimrankings activity data) — the remaining panel
+   expands to fill the row instead of leaving an empty column. */
+.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin-bottom:18px}
 @media(max-width:980px){.year-grid{grid-template-columns:1fr}}
 
 .panel{background:var(--panel);border:1px solid var(--edge);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
@@ -152,6 +155,36 @@ header{position:relative;z-index:2;display:flex;align-items:stretch;border-botto
 .tswim-bar{flex:0 0 110px;height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}
 .tswim-bar-fill{height:100%;background:var(--teal);border-radius:3px}
 .tswim-c{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--teal);min-width:24px;text-align:right;letter-spacing:.02em}
+
+/* "Vedettes de l'année" — participation/team-spirit panel based on swimrankings.
+   Tight: lives in a 1fr year-grid column alongside two other panels. */
+.actrow{display:grid;grid-template-columns:18px 1fr repeat(3,auto);align-items:center;gap:8px;padding:7px 12px;border-bottom:1px solid var(--edge2)}
+.actrow:last-child{border-bottom:none}
+.actrow:hover{background:var(--row-hover)}
+.actrow-rk{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--muted);letter-spacing:.02em}
+.actrow-nm{font-size:12px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.actrow-nm a{color:inherit;text-decoration:none;border-bottom:1px dotted transparent;transition:border-color .14s,color .14s}
+.actrow-nm a:hover{color:var(--teal);border-bottom-color:rgba(91,134,255,.5)}
+.actrow-met,.actrow-ev,.actrow-km{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.04em;min-width:36px;text-align:right;line-height:1.05}
+.actrow-met{color:var(--gold)}
+.actrow-ev{color:var(--teal)}
+.actrow-km{color:var(--text)}
+.actrow-met em,.actrow-ev em,.actrow-km em{font-style:normal;font-size:8.5px;font-weight:600;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;display:block;line-height:1.1;margin-top:-1px;font-family:'DM Sans',sans-serif}
+.act-empty{padding:18px 14px;color:var(--muted);font-style:italic;font-size:11.5px;text-align:center}
+
+/* Secondary row (record-setters demoted from top row) */
+/* Row 2 matches row 1's width distribution (same auto-fit / equal-column rule)
+   so the two rows line up visually. */
+.year-grid-secondary{margin-top:14px}
+
+@media(max-width:980px){
+  /* year-grid stacks to single column on mobile; keep actrow tight */
+  .actrow{padding:6px 10px;gap:6px}
+}
+@media(max-width:680px){
+  .actrow{grid-template-columns:16px 1fr auto auto auto}
+  .actrow-met,.actrow-ev,.actrow-km{font-size:13px;min-width:32px}
+}
 
 /* Notable records */
 .notable{padding:9px 14px;border-bottom:1px solid var(--edge2)}
@@ -428,18 +461,33 @@ svg.chart{width:100%;display:block;font-family:'DM Sans',sans-serif}
     <div class="year-note" id="yb-note"></div>
   </div>
   <div class="year-kpis" id="year-kpis"></div>
+  <!-- Top row: 2 panels — "Vedettes de l'année" (most active swimmers, swimrankings-driven,
+       hidden for pre-2002 years) alongside "Performances remarquables" (top FINA % swims). -->
   <div class="year-grid">
+    <div class="panel" id="active-panel" style="display:none">
+      <div class="panel-hd">
+        <span class="panel-ico">▎</span>
+        <span class="panel-ttl">Vedettes de l'année</span>
+        <span class="panel-ct">Top 10</span>
+      </div>
+      <div class="panel-bd" id="active-body"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Performances remarquables</span><span class="panel-ct">FINA %</span></div>
+      <div class="panel-bd" id="nr-body"></div>
+    </div>
+  </div>
+
+  <!-- Second row: 2 panels — full chronological list of records broken paired with
+       the top-10 record-setters leaderboard for the year. -->
+  <div class="year-grid year-grid-secondary">
     <div class="panel">
       <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Records brisés</span><span class="panel-ct" id="rb-count"></span></div>
       <div class="panel-bd" id="rb-body"></div>
     </div>
     <div class="panel">
-      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Vedettes de l'année</span><span class="panel-ct">Top 10</span></div>
+      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Records battus durant l'année</span><span class="panel-ct">Top 10</span></div>
       <div class="panel-bd" id="ts-body"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-hd"><span class="panel-ico">▎</span><span class="panel-ttl">Performances remarquables</span><span class="panel-ct">FINA %</span></div>
-      <div class="panel-bd" id="nr-body"></div>
     </div>
   </div>
 
@@ -637,7 +685,7 @@ document.getElementById('years-strip').addEventListener('click', e => {
 // ════════════════════════════════════════════════════════════════════════
 
 function fmtSwim(r){
-  return `${r.d}${r.k} ${r.p}m`;
+  return `${r.d} ${r.k} ${r.p}m`;
 }
 
 function pctClass(p){ return p >= 90 ? 'gold' : 'teal'; }
@@ -699,6 +747,7 @@ function renderAnnual(){
   renderRecordsBroken(yr);
   renderTopSwimmers(yData);
   renderNotables(yData);
+  renderActiveSwimmers(yr);
   renderSnapshot(yr);
 }
 
@@ -746,14 +795,14 @@ function renderRecordsBroken(yr){
       if (r._relay){
         const swimmers = (r.sw || []).join(' · ');
         html += `<div class="swim-row relay">
-          <span class="swim-ev">${r.d}${r.k}</span>
+          <span class="swim-ev">${r.d} ${r.k}</span>
           <span class="swim-tm ${tmCls}">${r.t}</span>
           <span class="swim-nm" title="${swimmers}">${r.c.toUpperCase()} · ${swimmers}</span>
           <span class="swim-ag">${r.mn}+ ${r.p}m</span>
         </div>`;
       } else {
         html += `<div class="swim-row">
-          <span class="swim-ev">${r.d}${r.k}</span>
+          <span class="swim-ev">${r.d} ${r.k}</span>
           <span class="swim-tm ${tmCls}">${r.t}</span>
           <span class="swim-nm">${r.n}</span>
           <span class="swim-ag">${r.a} ${r.p}m</span>
@@ -812,6 +861,39 @@ function monthNumFromAbbr(s){
   return map[m] || 0;
 }
 
+// "Plus actifs" — celebrates participation, not just record-breaking.
+// Sourced from swimrankings per-event swims (window.BrossardData), so it only
+// appears for years we have swim data on (broadly 2002+).
+function renderActiveSwimmers(year){
+  const panel = document.getElementById('active-panel');
+  const body = document.getElementById('active-body');
+  if (!panel || !body) return;
+  if (typeof BrossardData === 'undefined') { panel.style.display = 'none'; return; }
+  BrossardData.load().then(() => {
+    const top = BrossardData.getYearActivity(year).slice(0, 10);
+    if (!top.length){
+      // Only show the panel when we have data. Hide otherwise so old years stay clean.
+      panel.style.display = 'none';
+      return;
+    }
+    panel.style.display = '';
+    let html = '';
+    top.forEach((s, i) => {
+      const distKm = (s.totalDistance / 1000).toFixed(1);
+      const href = 'swimmer.html?aid=' + s.aid;
+      const niceName = (s.first || '') + ' ' + (s.last || '');
+      html += `<div class="actrow">
+        <span class="actrow-rk">${i + 1}</span>
+        <span class="actrow-nm"><a href="${href}">${niceName.trim()}</a></span>
+        <span class="actrow-met">${s.meets}<em>Compé.</em></span>
+        <span class="actrow-ev">${s.distinctEvents}<em>Nages</em></span>
+        <span class="actrow-km">${distKm}<em>km</em></span>
+      </div>`;
+    });
+    body.innerHTML = html;
+  }).catch(e => { console.warn('Active swimmers load failed:', e); panel.style.display = 'none'; });
+}
+
 // ════════════════════════════════════════════════════════════════════════
 // Snapshot section (year-end leaderboards + oldest standing)
 // ════════════════════════════════════════════════════════════════════════
@@ -843,17 +925,18 @@ function renderSnapshot(yr){
       const swimmers = (r.swimmers || []).join(' · ');
       return `<div class="old-row">
         <div class="old-tp">
-          <span class="old-ev">${r.distance}${r.stroke} ${r.pool}m</span>
+          <span class="old-ev">${r.distance} ${r.stroke} ${r.pool}m</span>
           <span class="old-age">${r.category.toUpperCase()} · ${r.min_age}+</span>
           <span class="old-yr">${r.year}</span>
         </div>
         <div class="old-sub"><span class="old-tm">${r.time}</span>${swimmers}</div>
       </div>`;
     }
+    const catTag = r.category ? `${r.category.toUpperCase()} · ` : '';
     return `<div class="old-row">
       <div class="old-tp">
-        <span class="old-ev">${r.distance}${r.stroke} ${r.pool}m</span>
-        <span class="old-age">${r.age_group}</span>
+        <span class="old-ev">${r.distance} ${r.stroke} ${r.pool}m</span>
+        <span class="old-age">${catTag}${r.age_group}</span>
         <span class="old-yr">${r.year}</span>
       </div>
       <div class="old-sub"><span class="old-tm">${r.time}</span>${r.name} · ${r.meet}</div>
@@ -1411,8 +1494,27 @@ renderAnnual();
 
 <!-- SITE FOOTER (copy verbatim onto new pages) -->
 <footer class="site-footer">
-  Données : <a href="https://www.statsman.ca/index0.html" target="_blank" rel="noopener">statsman.ca</a>, maintenu par Christian Berger depuis 1980. Avec reconnaissance.
+  Données : <a href="https://www.statsman.ca/index0.html" target="_blank" rel="noopener">statsman.ca</a>, maintenu par Christian Berger depuis 1980 · <a href="https://www.swimrankings.net" target="_blank" rel="noopener">swimrankings.net</a> (historique de nages).
 </footer>
+
+<!-- Shared data layer (loaded last; renderActiveSwimmers awaits load()). -->
+<script src="brossard_inline_data.js"></script>
+<script src="brossard_data.js"></script>
+<script>
+  // BrossardData defines after the inline render code already ran renderAnnual()
+  // for the first time. That first call hides the "Vedettes de l'année" panel
+  // because BrossardData was still undefined. Once it's loaded, re-render that
+  // panel so the current year shows it on initial page load (not just after a
+  // year-strip click). See: chronology-page bug, fixed 2026-05-17.
+  if (typeof BrossardData !== 'undefined') {
+    BrossardData.load().then(() => {
+      if (typeof renderActiveSwimmers === 'function' &&
+          typeof state !== 'undefined' && state && state.year != null) {
+        renderActiveSwimmers(state.year);
+      }
+    }).catch(() => { /* renderActiveSwimmers already handled the failure path */ });
+  }
+</script>
 
 </body>
 </html>

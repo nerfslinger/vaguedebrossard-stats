@@ -549,8 +549,15 @@ OLDEST_REL_SWIMMERS_RE = re.compile(
 )
 
 
-def parse_snapshot(lines: list[str], year_full: int) -> dict:
-    """Parse a single rmb<YY>sta.htm file."""
+def parse_snapshot(lines: list[str], year_full: int, name_to_cat: dict | None = None) -> dict:
+    """Parse a single rmb<YY>sta.htm file.
+
+    ``name_to_cat`` is the {NAME_RAW: 'F'|'M'} lookup built from
+    brossard_individual.json. The "Plus vieux records" section in the source
+    files lists individual oldest records without a gender marker (only the
+    relay lines say hom/fem/mix), so we tag each individual entry by name.
+    """
+    name_to_cat = name_to_cat or {}
     leaderboard_w = []
     leaderboard_m = []
     oldest = []
@@ -625,14 +632,16 @@ def parse_snapshot(lines: list[str], year_full: int) -> dict:
                 sec_part = float(mi.group("sec"))
                 time_sec = int(mi.group("min")) * 60 + sec_part
                 t_str = fmt_time(int(mi.group("min")), sec_part)
+            name_raw = mi.group("name").strip().upper()
             oldest.append({
                 "kind":      "individual",
                 "stroke":    mi.group("stroke").lower(),
                 "distance":  int(mi.group("distance")),
                 "pool":      int(mi.group("pool")),
                 "age_group": mi.group("age"),
+                "category":  name_to_cat.get(name_raw, ""),
                 "name":      title_name(mi.group("name")),
-                "name_raw":  mi.group("name").strip().upper(),
+                "name_raw":  name_raw,
                 "time":      t_str,
                 "time_sec":  round(time_sec, 2),
                 "meet":      mi.group("meet").upper(),
@@ -722,7 +731,7 @@ def by_year_summary(records: list[dict], relays: list[dict]) -> dict:
                 {
                     "name": r.get("name") or " / ".join(r.get("swimmers", [])),
                     "event": (
-                        f"{r['distance']}{r['stroke']} {r['pool']}m "
+                        f"{r['distance']} {r['stroke']} {r['pool']}m "
                         + (r.get("age_group") or f"{r.get('min_age', '?')}+")
                     ),
                     "time": r["time"],
@@ -909,7 +918,7 @@ def main():
         if not lines:
             print(f"  {yr}: skipped (no data)")
             continue
-        snap = parse_snapshot(lines, yr)
+        snap = parse_snapshot(lines, yr, name_to_cat)
         snapshots.append(snap)
         print(
             f"  {yr}: {len(snap['leaderboard_women']):2d}W / "
